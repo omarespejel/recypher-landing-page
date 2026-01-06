@@ -7,7 +7,8 @@
   "ignore": {
     "customPatterns": [
       "*.lock",
-      "context*.xml",
+      "context-full-20*.xml",
+      "context-*-*.xml",
       "node_modules/**",
       ".git/**",
       ".astro/**",
@@ -19,7 +20,10 @@
       "*.swo",
       ".vercel/**",
       ".netlify/**",
-      "verdant-venus/**"
+      "verdant-venus/**",
+      "project.inlang/cache/**",
+      "src/paraglide/messages/**",
+      "*.tsbuildinfo"
     ]
   },
   "include": [
@@ -32,6 +36,9 @@
     ".gitignore",
     "src/**",
     "public/**",
+    "messages/**",
+    "project.inlang/settings.json",
+    "project.inlang/project_id",
     "repomix.config.json"
   ]
 }
