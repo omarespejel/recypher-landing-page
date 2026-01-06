@@ -23,7 +23,12 @@
       "verdant-venus/**",
       "project.inlang/cache/**",
       "src/paraglide/messages/**",
-      "*.tsbuildinfo"
+      "*.tsbuildinfo",
+      "coverage/**",
+      "*.lcov",
+      "logs/**",
+      "*.log",
+      ".idea/**"
     ]
   },
   "include": [

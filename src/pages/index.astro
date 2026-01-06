@@ -30,7 +30,6 @@ const countdownLabels = {
   starts: m.countdown_starts_in(),
   ends: m.countdown_ends_in(),
 };
-const splineSceneUrl = 'https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode';
 
 const tracks = [
   {
@@ -97,7 +96,19 @@ const faqs = [
   {
     q: m.faq_4_q(),
     a: m.faq_4_a(),
-  }
+  },
+  {
+    q: m.faq_submit_q(),
+    a: m.faq_submit_a(),
+  },
+  {
+    q: m.faq_questions_q(),
+    a: m.faq_questions_a(),
+  },
+  {
+    q: m.faq_prizes_q(),
+    a: m.faq_prizes_a(),
+  },
 ];
 
 const stats = [
@@ -202,7 +213,6 @@ const testimonials = [
     <!-- Fonts -->
     <link rel="preload" as="font" href="/fonts/InterVariable.woff2" type="font/woff2" crossorigin />
     <link rel="preload" as="font" href="/fonts/SpaceGroteskVariable.woff2" type="font/woff2" crossorigin />
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
     
     <!-- Global Styles -->
     <style is:global>
@@ -293,15 +303,8 @@ const testimonials = [
         <span class="font-display font-bold text-xl text-snf-white">{hackathonName}</span>
         <div class="flex items-center gap-4">
           <LanguageSwitcher />
-          <button
-            type="button"
-            class="theme-toggle button-animated border border-snf-white/15 text-snf-white/70 hover:text-snf-white px-3 py-2 rounded-full text-xs uppercase tracking-[0.2em] transition-colors"
-            aria-pressed="false"
-          >
-            Dark
-          </button>
           <a 
-            href="https://dorahacks.io/hackathon/recypher" 
+            href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
             target="_blank"
             rel="noopener noreferrer"
             class="button-animated bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-5 py-2 rounded-lg font-medium transition-colors duration-300 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none"
@@ -335,15 +338,10 @@ const testimonials = [
       
       <!-- Subtle grid pattern -->
       <div class="absolute inset-0 pointer-events-none hero-grid"></div>
+      <div class="organic-blob blob-1"></div>
+      <div class="organic-blob blob-2"></div>
+      <div class="organic-blob blob-3"></div>
       
-      <!-- Spline 3D Accent -->
-      <div
-        class="spline-wrap pointer-events-none hidden md:block"
-        data-spline-fallback-url={splineFallbackUrl}
-      >
-        <canvas id="spline-canvas" data-spline-url={splineSceneUrl} aria-hidden="true"></canvas>
-        <iframe class="spline-iframe" title="Spline 3D scene" loading="lazy"></iframe>
-      </div>
       
       <!-- Main Content -->
       <div class="relative z-10 text-center max-w-4xl mx-auto">
@@ -357,12 +355,12 @@ const testimonials = [
         <!-- Main Title with gradient -->
         <h1 class="hero-title hero-element gs-hidden font-display text-display-xl font-bold mb-4" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
           <span class="gradient-text" data-split>{m.hero_title_line1()}</span><br/>
-          <span class="text-snf-white" data-split>{m.hero_title_line2()}</span>
+          <span class="text-snf-white scribble-underline" data-split>{m.hero_title_line2()}</span>
         </h1>
         
         <!-- Subheadline -->
         <p class="hero-element gs-hidden text-snf-white/60 text-body-large max-w-xl mx-auto mb-10">
-          {m.hero_subtitle_line1({ hackathonName })}<br class="hidden md:block" />
+          {m.hero_subtitle_line1()}<br class="hidden md:block" />
           <span class="text-snf-blue-500 font-medium">{m.hero_subtitle_line2()}</span>
         </p>
         
@@ -390,12 +388,22 @@ const testimonials = [
               <p class="text-snf-white/30 text-[10px] tracking-[0.2em] mt-1">{m.countdown_seconds()}</p>
             </div>
           </div>
+          <p class="text-snf-white/40 text-xs mt-3">{m.hero_countdown_urgency()}</p>
         </div>
         
         <!-- CTA Buttons -->
         <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://t.me/+-5zNW47GSdQ1ZDkx"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button-animated cta-glow inline-flex items-center justify-center bg-gradient-to-r from-snf-blue-500 to-snf-blue-700 text-snf-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-snf-blue-500/30 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none group"
+          >
+            {m.cta_join_telegram()}
+            <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+          </a>
           <a 
-            href="https://dorahacks.io/hackathon/recypher" 
+            href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
             target="_blank"
             rel="noopener noreferrer"
             class="button-animated cta-glow inline-flex items-center justify-center bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none group"
@@ -486,6 +494,10 @@ const testimonials = [
             {m.quote_2_cite()} (<a href="https://a16zcrypto.com/posts/article/big-ideas-things-excited-about-crypto-2026/" target="_blank" rel="noopener noreferrer" class="underline hover:text-snf-blue-700 transition-colors">{m.source_label()}</a>)
           </cite>
         </blockquote>
+
+        <p class="gs-hidden text-snf-white/60 text-center max-w-2xl mx-auto mt-8">
+          {m.story_blurb()}
+        </p>
         
       </div>
     </section>
@@ -505,9 +517,12 @@ const testimonials = [
           </p>
         </div>
         
-        <div class="tracks-grid grid md:grid-cols-3 gap-6">
+        <div class="tracks-grid anti-grid grid md:grid-cols-3 gap-6">
           {tracks.map((track, i) => (
-            <div class="track-card card-shine gs-hidden bg-gradient-to-b from-snf-blue-900/30 to-transparent border border-snf-blue-900/40 rounded-2xl p-8 hover:border-snf-blue-500/50">
+            <div class:list={[
+              'track-card card-shine gs-hidden bg-gradient-to-b from-snf-blue-900/30 to-transparent border border-snf-blue-900/40 rounded-2xl p-8 hover:border-snf-blue-500/50',
+              i === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
+            ]}>
               
               <div class="flex justify-between items-start mb-6">
                 <h3 class="font-display text-xl font-semibold">{track.name}</h3>
@@ -528,6 +543,59 @@ const testimonials = [
           ))}
         </div>
         
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- HACKATHON DETAILS SECTION -->
+    <!-- ============================================ -->
+    <section id="details" class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{m.section_details_title()}</h2>
+          <p class="section-subtitle gs-hidden text-snf-white/60 text-lg md:text-xl text-center max-w-2xl mx-auto">{m.section_details_subtitle()}</p>
+        </div>
+        
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_timeline_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_timeline_a()}</p>
+          </div>
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_eligibility_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_eligibility_a()}</p>
+          </div>
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_submissions_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_submissions_a()}</p>
+          </div>
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_judging_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_judging_a()}</p>
+          </div>
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_prizes_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_prizes_a()}</p>
+          </div>
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_ip_rules_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_ip_rules_a()}</p>
+          </div>
+          <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30 md:col-span-2 lg:col-span-1">
+            <h3 class="text-snf-white font-medium mb-2">{m.details_support_q()}</h3>
+            <p class="text-snf-white/60 text-sm">{m.details_support_a()}</p>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a
+            href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=details&utm_campaign=2026"
+            class="button-animated bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 inline-flex items-center gap-2"
+          >
+            {m.cta_register_primary()}
+            <ArrowRight class="w-4 h-4" />
+          </a>
+        </div>
       </div>
     </section>
 
@@ -577,7 +645,7 @@ const testimonials = [
           </p>
         </div>
         
-        <div class="resources-grid grid md:grid-cols-3 gap-6">
+        <div class="resources-grid anti-grid grid md:grid-cols-3 gap-6">
           {resources.map((resource) => (
             <a 
               href={resource.link}
@@ -733,7 +801,7 @@ const testimonials = [
         </p>
         
         <a 
-          href="https://dorahacks.io/hackathon/recypher" 
+          href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
           target="_blank"
           rel="noopener noreferrer"
           class="button-animated cta-button cta-glow gs-hidden inline-block bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-12 py-5 rounded-full font-semibold text-xl transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none"
@@ -766,6 +834,16 @@ const testimonials = [
           <a href="https://starknet.io" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded">{m.footer_starknet()}</a>
         </div>
         
+      </div>
+
+      <div class="mt-8 border-t border-snf-blue-900/30 pt-6 text-center">
+        <h4 class="text-snf-white font-medium mb-4">{m.footer_community_title()}</h4>
+        <div class="flex flex-wrap justify-center gap-6 text-sm">
+          <a href="https://discord.gg/starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_discord()}</a>
+          <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_twitter()}</a>
+          <a href="https://dorahacks.io/hackathon/recypher/forum?utm_source=recypher-landing&utm_medium=footer&utm_campaign=2026" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_forum()}</a>
+          <a href="https://t.me/+-5zNW47GSdQ1ZDkx" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_telegram()}</a>
+        </div>
       </div>
     </footer>
 
@@ -823,7 +901,6 @@ const testimonials = [
       import Lenis from '@studio-freight/lenis';
       import VanillaTilt from 'vanilla-tilt';
       import { createNoise3D } from 'simplex-noise';
-      import { Application } from '@splinetool/runtime';
       
       // Ensure this runs only on client
       if (typeof window !== 'undefined') {
@@ -918,32 +995,6 @@ const testimonials = [
         requestAnimationFrame(render);
       }
 
-      const splineCanvas = document.getElementById('spline-canvas');
-      const splineUrl = splineCanvas?.dataset.splineUrl;
-      const splineWrap = splineCanvas?.closest('.spline-wrap');
-      const splineIframe = splineWrap?.querySelector('.spline-iframe');
-      const fallbackUrl = splineWrap?.dataset.splineFallbackUrl;
-      if (splineCanvas && splineUrl && window.innerWidth > 768 && !prefersReducedMotion) {
-        const app = new Application(splineCanvas);
-        const loadPromise = app.load(splineUrl);
-        loadPromise
-          .then(() => {
-            splineWrap?.classList.add('spline-loaded');
-          })
-          .catch(() => {
-            if (splineWrap && splineIframe && fallbackUrl) {
-              splineIframe.src = fallbackUrl;
-              splineWrap.classList.add('spline-fallback');
-            }
-          });
-
-        setTimeout(() => {
-          if (splineWrap && !splineWrap.classList.contains('spline-loaded') && splineIframe && fallbackUrl) {
-            splineIframe.src = fallbackUrl;
-            splineWrap.classList.add('spline-fallback');
-          }
-        }, 3000);
-      }
       
       if (!prefersReducedMotion) {
         // Register GSAP plugins
@@ -1202,6 +1253,23 @@ const testimonials = [
             ease: 'power2.out',
             scrollTrigger: {
               trigger: '.tracks-grid',
+              start: 'top 80%',
+              toggleActions: 'play none none none',
+            }
+          }
+        );
+
+        // Details cards stagger
+        gsap.fromTo('#details .card-shine',
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: '#details',
               start: 'top 80%',
               toggleActions: 'play none none none',
             }
