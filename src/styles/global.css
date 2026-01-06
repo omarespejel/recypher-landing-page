@@ -538,6 +538,7 @@ html[data-theme='light'] .gradient-text {
 
 .faq-item[data-state="open"] .faq-answer {
   opacity: 1;
+  max-height: 600px;
 }
 
 .rotate-180 {
