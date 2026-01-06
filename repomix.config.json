@@ -1,0 +1,37 @@
+{
+  "output": {
+    "filePath": "context-full.xml",
+    "style": "xml",
+    "showLineNumbers": true
+  },
+  "ignore": {
+    "customPatterns": [
+      "*.lock",
+      "context*.xml",
+      "node_modules/**",
+      ".git/**",
+      ".astro/**",
+      "dist/**",
+      ".DS_Store",
+      ".env*",
+      ".cursor/**",
+      "*.swp",
+      "*.swo",
+      ".vercel/**",
+      ".netlify/**",
+      "verdant-venus/**"
+    ]
+  },
+  "include": [
+    "README.md",
+    "package.json",
+    "astro.config.mjs",
+    "tailwind.config.mjs",
+    "tsconfig.json",
+    "Makefile",
+    ".gitignore",
+    "src/**",
+    "public/**",
+    "repomix.config.json"
+  ]
+}
