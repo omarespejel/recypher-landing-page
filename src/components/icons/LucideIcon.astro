@@ -1,0 +1,22 @@
+---
+import { icons } from 'lucide-static';
+
+const { name, class: className = '', strokeWidth = 1.5 } = Astro.props;
+const svg = icons[name];
+
+if (!svg) {
+  throw new Error(`Unknown Lucide icon: ${name}`);
+}
+
+let html = svg;
+if (className) {
+  html = html.replace('<svg ', `<svg class="${className}" `);
+}
+
+if (html.includes('stroke-width=')) {
+  html = html.replace(/stroke-width="[^"]*"/, `stroke-width="${strokeWidth}"`);
+} else {
+  html = html.replace('<svg ', `<svg stroke-width="${strokeWidth}" `);
+}
+---
+<Fragment set:html={html} />
