@@ -30,6 +30,9 @@ const countdownLabels = {
   starts: m.countdown_starts_in(),
   ends: m.countdown_ends_in(),
 };
+const personalizationCopy = {
+  privacy: m.hero_subtitle_privacy(),
+};
 
 const tracks = [
   {
@@ -338,9 +341,9 @@ const testimonials = [
       
       <!-- Subtle grid pattern -->
       <div class="absolute inset-0 pointer-events-none hero-grid"></div>
-      <div class="organic-blob blob-1"></div>
-      <div class="organic-blob blob-2"></div>
-      <div class="organic-blob blob-3"></div>
+      <div class="organic-blob blob-1 glow-1"></div>
+      <div class="organic-blob blob-2 glow-2"></div>
+      <div class="organic-blob blob-3 glow-1"></div>
       
       
       <!-- Main Content -->
@@ -359,8 +362,8 @@ const testimonials = [
         </h1>
         
         <!-- Subheadline -->
-        <p class="hero-element gs-hidden text-snf-white/60 text-body-large max-w-xl mx-auto mb-10">
-          {m.hero_subtitle_line1()}<br class="hidden md:block" />
+        <p class="hero-subtitle hero-element gs-hidden text-snf-white/60 text-body-large max-w-xl mx-auto mb-10">
+          <span class="hero-subtitle-line">{m.hero_subtitle_line1()}</span><br class="hidden md:block" />
           <span class="text-snf-blue-500 font-medium">{m.hero_subtitle_line2()}</span>
         </p>
         
@@ -452,7 +455,7 @@ const testimonials = [
     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
       <div class="max-w-6xl mx-auto">
         
-        <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
           {m.section_why_title()}
         </h2>
         
@@ -509,7 +512,7 @@ const testimonials = [
       <div class="max-w-6xl mx-auto">
         
         <div class="text-center mb-16">
-          <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {m.section_tracks_title()}
           </h2>
           <p class="section-subtitle gs-hidden text-snf-white/50 text-lg">
@@ -552,7 +555,7 @@ const testimonials = [
     <section id="details" class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{m.section_details_title()}</h2>
+          <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{m.section_details_title()}</h2>
           <p class="section-subtitle gs-hidden text-snf-white/60 text-lg md:text-xl text-center max-w-2xl mx-auto">{m.section_details_subtitle()}</p>
         </div>
         
@@ -606,7 +609,7 @@ const testimonials = [
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
           <p class="section-subtitle gs-hidden text-snf-blue-500 text-sm tracking-[0.2em] uppercase mb-4">{m.social_proof_kicker()}</p>
-          <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {m.social_proof_title({ hackathonName })}
           </h2>
         </div>
@@ -637,7 +640,7 @@ const testimonials = [
         
         <div class="text-center mb-16">
           <p class="section-subtitle gs-hidden text-snf-blue-500 text-sm tracking-[0.2em] uppercase mb-4">{m.resources_kicker()}</p>
-          <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {m.resources_title()}
           </h2>
           <p class="gs-hidden text-snf-white/50 text-lg max-w-2xl mx-auto">
@@ -688,7 +691,7 @@ const testimonials = [
     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
       <div class="max-w-6xl mx-auto">
         
-        <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
           {m.mentors_title()}
         </h2>
         
@@ -734,7 +737,7 @@ const testimonials = [
     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
       <div class="max-w-4xl mx-auto text-center">
         
-        <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16">
+        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16">
           {m.sponsors_title()}
         </h2>
         
@@ -765,7 +768,7 @@ const testimonials = [
     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
       <div class="max-w-3xl mx-auto">
         
-        <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
           {m.faq_title()}
         </h2>
         
@@ -792,7 +795,7 @@ const testimonials = [
     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
       <div class="max-w-4xl mx-auto text-center">
         
-        <h2 class="section-title gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
           {m.final_cta_title()}
         </h2>
         
@@ -895,7 +898,7 @@ const testimonials = [
         countdownIntervalId = setInterval(updateCountdown, 1000);
       })();
     </script>
-    <script define:vars={{ countdownLabels }}>
+    <script define:vars={{ countdownLabels, personalizationCopy }}>
       import { gsap } from 'gsap';
       import { ScrollTrigger } from 'gsap/ScrollTrigger';
       import Lenis from '@studio-freight/lenis';
@@ -907,6 +910,14 @@ const testimonials = [
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) {
         document.documentElement.classList.add('reduced-motion');
+      }
+
+      const heroSubtitleLine = document.querySelector('.hero-subtitle-line');
+      if (heroSubtitleLine) {
+        const trackParam = new URLSearchParams(window.location.search).get('track');
+        if (trackParam === 'privacy') {
+          heroSubtitleLine.textContent = personalizationCopy.privacy;
+        }
       }
 
       const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
