@@ -1,11 +1,16 @@
 ---
-import { icons } from 'lucide-static';
+import lucideStatic from 'lucide-static';
 
 const { name, class: className = '', strokeWidth = 1.5 } = Astro.props;
-const svg = icons[name];
+// Convert kebab-case to PascalCase (e.g., "arrow-right" -> "ArrowRight")
+const pascalName = name
+  .split('-')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join('');
+const svg = lucideStatic[pascalName];
 
 if (!svg) {
-  throw new Error(`Unknown Lucide icon: ${name}`);
+  throw new Error(`Unknown Lucide icon: ${name} (tried: ${pascalName})`);
 }
 
 let html = svg;
