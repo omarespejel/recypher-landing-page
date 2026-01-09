@@ -80,8 +80,8 @@ const mentors = [
 ];
 
 const sponsors = [
-  { name: 'Starknet Foundation', logo: '/sponsors/starknet.svg' },
-  { name: 'StarkWare', logo: '/sponsors/starkware.svg' },
+  { name: 'Starknet Foundation', logo: '/partners/starknet-foundation.png' },
+  { name: 'StarkWare', logo: '/partners/starkware.png' },
 ];
 
 const faqs = [
@@ -170,9 +170,9 @@ const testimonials = [
     role: m.testimonial_4_role({ solve: "{solve}" }),
   },
   {
-    quote: m.testimonial_5_quote(),
-    author: m.testimonial_5_author(),
-    role: m.testimonial_5_role({ solve: "{solve}" }),
+    metric: true,
+    value: m.social_proof_metric_2_value(),
+    label: m.social_proof_metric_2_label(),
   },
 ];
 ---
@@ -367,6 +367,14 @@ const testimonials = [
           <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
           <span class="text-snf-white/70 text-sm">{m.hero_badge()}</span>
         </div>
+
+        <div class="hero-element gs-hidden hero-partners">
+          <p class="text-snf-white/70 text-xs tracking-[0.25em] uppercase mb-3">{m.hero_backed_by()}</p>
+          <div class="hero-partners-logos">
+            <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" loading="lazy" />
+            <img src="/partners/starkware.png" alt="StarkWare" loading="lazy" />
+          </div>
+        </div>
         
         <!-- Main Title with gradient -->
         <h1 class="hero-title hero-element gs-hidden font-display text-display-xl font-bold mb-4" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
@@ -379,6 +387,16 @@ const testimonials = [
           <span class="hero-subtitle-line">{m.hero_subtitle_line1()}</span><br class="hidden md:block" />
           <span class="text-snf-blue-500 font-medium">{m.hero_subtitle_line2()}</span>
         </p>
+
+        <div class="hero-element gs-hidden mb-10">
+          <p class="text-snf-blue-500 text-xs tracking-[0.3em] uppercase mb-4">{m.hero_examples_kicker()}</p>
+          <div class="hero-examples">
+            <span class="hero-example-chip">{m.hero_example_1()}</span>
+            <span class="hero-example-chip">{m.hero_example_2()}</span>
+            <span class="hero-example-chip">{m.hero_example_3()}</span>
+            <span class="hero-example-chip">{m.hero_example_4()}</span>
+          </div>
+        </div>
         
         <!-- Countdown Timer -->
         <div class="hero-element gs-hidden mb-10">
@@ -434,6 +452,10 @@ const testimonials = [
             {m.cta_view_tracks()}
           </a>
         </div>
+
+        <p class="hero-element gs-hidden text-snf-white/70 text-base mt-4">
+          {m.hero_grant_note()}
+        </p>
         
       </div>
       
@@ -627,16 +649,39 @@ const testimonials = [
           <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             {m.social_proof_title({ hackathonName })}
           </h2>
+          <p class="gs-hidden text-snf-white/70 text-base max-w-2xl mx-auto">
+            {m.social_proof_note()}
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 mb-10">
+          <div class="glass rounded-xl p-6 border border-snf-blue-900/30 text-left">
+            <div class="text-snf-blue-500 text-3xl font-bold">{m.social_proof_metric_1_value()}</div>
+            <p class="text-snf-white/70 text-sm mt-2">{m.social_proof_metric_1_label()}</p>
+          </div>
+          <div class="glass rounded-xl p-6 border border-snf-blue-900/30 text-left">
+            <div class="text-snf-blue-500 text-3xl font-bold">{m.social_proof_metric_2_value()}</div>
+            <p class="text-snf-white/70 text-sm mt-2">{m.social_proof_metric_2_label()}</p>
+          </div>
         </div>
       </div>
       
       <div class="testimonial-track">
         <div class="testimonial-row">
           {testimonials.concat(testimonials).map((item) => (
-            <div class="testimonial-card">
-              <p class="text-snf-white/70 text-lg leading-relaxed mb-6">{item.quote}</p>
-              <div class="text-snf-blue-500 font-medium">{item.author}</div>
-              <div class="text-snf-white/40 text-sm">{item.role}</div>
+            <div class={`testimonial-card ${item.metric ? 'testimonial-metric' : ''}`}>
+              {item.metric ? (
+                <>
+                  <div class="text-snf-blue-500 text-4xl font-bold">{item.value}</div>
+                  <p class="text-snf-white/70 text-base leading-relaxed mt-3">{item.label}</p>
+                </>
+              ) : (
+                <>
+                  <p class="text-snf-white/70 text-lg leading-relaxed mb-6">{item.quote}</p>
+                  <div class="text-snf-blue-500 font-medium">{item.author}</div>
+                  <div class="text-snf-white/40 text-sm">{item.role}</div>
+                </>
+              )}
             </div>
           ))}
         </div>
@@ -750,26 +795,49 @@ const testimonials = [
     <!-- SPONSORS SECTION -->
     <!-- ============================================ -->
     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
-      <div class="max-w-4xl mx-auto text-center">
+      <div class="max-w-5xl mx-auto text-center">
         
-        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16">
+        <p class="section-subtitle gs-hidden text-snf-blue-500 text-sm tracking-[0.2em] uppercase mb-4">
+          {m.sponsors_kicker()}
+        </p>
+        <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12">
           {m.sponsors_title()}
         </h2>
         
-        <div class="sponsors-grid gs-hidden flex flex-wrap justify-center items-center gap-12 md:gap-16">
-          {sponsors.map((sponsor) => (
-            <div class="sponsor-logo text-snf-white/40 hover:text-snf-white transition-colors duration-300">
-              <div class="w-40 h-16 bg-snf-white/5 hover:bg-snf-white/10 rounded-xl flex items-center justify-center transition-colors duration-300">
-                <!-- Replace with actual logo -->
-                <span class="skeleton-block px-3 py-2 rounded-md text-sm font-medium">{sponsor.name}</span>
-              </div>
-            </div>
-          ))}
+        <div class="sponsors-grid gs-hidden flex flex-wrap justify-center items-center gap-10 md:gap-14">
+          <a
+            href="https://www.starknet.io/foundation/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner-logo"
+            aria-label="Starknet Foundation"
+          >
+            <img
+              src="/partners/starknet-foundation.png"
+              alt="Starknet Foundation"
+              loading="lazy"
+              class="partner-logo-img"
+            />
+          </a>
+          <a
+            href="https://starkware.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="partner-logo"
+            aria-label="StarkWare"
+          >
+            <img
+              src="/partners/starkware.png"
+              alt="StarkWare"
+              loading="lazy"
+              class="partner-logo-img"
+            />
+          </a>
         </div>
         
-        <p class="gs-hidden mt-16 text-snf-white/40 text-sm">
+        <p class="gs-hidden mt-12 text-snf-white/60 text-base">
           {m.sponsor_cta_text()}
-          <a href="mailto:hackathon@starknet.io" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300 underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded">
+          <a href="mailto:hackathon@starknet.io" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300 underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded ml-1">
             {m.sponsor_cta_link()}
           </a>
         </p>
@@ -827,7 +895,7 @@ const testimonials = [
           {m.final_cta_button()}
         </a>
         
-        <p class="gs-hidden text-snf-white/70 text-sm mt-10">
+        <p class="gs-hidden text-snf-white/70 text-base mt-10">
           {m.final_cta_note()}
         </p>
         
