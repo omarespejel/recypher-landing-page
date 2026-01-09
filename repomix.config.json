@@ -28,7 +28,12 @@
       "*.lcov",
       "logs/**",
       "*.log",
-      ".idea/**"
+      ".idea/**",
+      "out/**",
+      "*.tgz",
+      ".eslintcache",
+      ".cache/**",
+      "report.*.json"
     ]
   },
   "include": [
