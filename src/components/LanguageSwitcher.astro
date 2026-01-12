@@ -2,12 +2,12 @@
 import { languageTag } from '../paraglide/runtime';
 
 const languages = [
-  { code: 'en', label: 'EN', flag: '🇺🇸' },
-  { code: 'es', label: 'ES', flag: '🇪🇸' },
-  { code: 'zh-CN', label: '简中', flag: '🇨🇳' },
-  { code: 'pt', label: 'PT', flag: '🇧🇷' },
-  { code: 'uk', label: 'УК', flag: '🇺🇦' },
-  { code: 'ru', label: 'РУ', flag: '🇷🇺' },
+  { code: 'en', label: 'EN', flags: ['🇺🇸', '🇬🇧'] },
+  { code: 'es', label: 'ES', flags: ['🇪🇸', '🇲🇽', '🇦🇷', '🇨🇷'] },
+  { code: 'zh-CN', label: '简中', flags: ['🇨🇳', '🇸🇬'] },
+  { code: 'pt', label: 'PT', flags: ['🇧🇷', '🇵🇹'] },
+  { code: 'uk', label: 'УК', flags: ['🇺🇦'] },
+  { code: 'ru', label: 'РУ', flags: ['🇷🇺', '🇧🇾', '🇰🇿'] },
 ];
 
 const localePattern = new RegExp(`^/(${languages.map((lang) => lang.code).join('|')})(?=/|$)`);
@@ -16,19 +16,22 @@ const normalizedPath = pathWithoutLocale === '' ? '/' : pathWithoutLocale;
 const buildHref = (code) => `${code === 'en' ? '' : `/${code}`}${normalizedPath}`;
 ---
 
-<div class="flex items-center gap-1">
+<div class="flex items-center gap-1 flex-wrap justify-center">
   {languages.map((lang) => (
     <a
       href={buildHref(lang.code)}
       class:list={[
-        'px-2.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200',
+        'px-2 py-1.5 rounded-full text-xs font-medium transition-all duration-200 inline-flex items-center gap-1',
         languageTag() === lang.code
           ? 'bg-snf-white/10 text-snf-white'
           : 'text-snf-white/40 hover:text-snf-white/80 hover:bg-snf-white/5',
       ]}
       aria-current={languageTag() === lang.code ? 'page' : undefined}
+      title={lang.flags.length > 1 ? `${lang.label} - Multiple regions` : lang.label}
     >
-      <span class="mr-0.5 text-[10px]" aria-hidden="true">{lang.flag}</span>
+      <span class="text-[9px] flex gap-px" aria-hidden="true">
+        {lang.flags.map((flag) => <span>{flag}</span>)}
+      </span>
       <span>{lang.label}</span>
     </a>
   ))}
