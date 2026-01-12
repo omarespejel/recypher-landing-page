@@ -265,6 +265,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  isolation: isolate; /* Creates new stacking context */
 }
 
 .btn-gradient::before {
@@ -274,6 +275,7 @@ body {
   background: linear-gradient(135deg, #6B8EDF 0%, #8B5CF6 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
+  z-index: -1; /* Push behind content */
 }
 
 .btn-gradient:hover::before {
@@ -283,12 +285,6 @@ body {
 .btn-gradient:hover {
   transform: translateY(-1px);
   box-shadow: 0 8px 25px rgba(91, 126, 207, 0.4), 0 4px 12px rgba(124, 58, 237, 0.3);
-}
-
-.btn-gradient span,
-.btn-gradient svg {
-  position: relative;
-  z-index: 1;
 }
 
 /* Secondary outline button enhancement */
