@@ -1862,3 +1862,137 @@ html.neo-brutal #success .success-title-frame {
 .step-animated {
   animation: step-fade-in 0.5s ease forwards;
 }
+
+/* ============================================ */
+/* IMPROVED FAQ ACCORDION */
+/* ============================================ */
+
+.faq-item {
+  transition: background-color 0.2s ease;
+}
+
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.faq-item[data-state="open"] {
+  background-color: rgba(91, 126, 207, 0.05);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.2s ease,
+              padding 0.2s ease;
+  opacity: 0;
+}
+
+.faq-item[data-state="open"] .faq-answer {
+  opacity: 1;
+}
+
+.faq-chevron {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item[data-state="open"] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-toggle:focus-visible {
+  outline: 2px solid rgba(91, 126, 207, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================ */
+/* VISUAL TIMELINE */
+/* ============================================ */
+
+.timeline-step {
+  opacity: 0;
+  animation: timeline-fade-in 0.5s ease forwards;
+}
+
+.timeline-step:nth-child(1) { animation-delay: 0s; }
+.timeline-step:nth-child(2) { animation-delay: 0.1s; }
+.timeline-step:nth-child(3) { animation-delay: 0.2s; }
+.timeline-step:nth-child(4) { animation-delay: 0.3s; }
+.timeline-step:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes timeline-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-dot {
+  transition: all 0.3s ease;
+}
+
+.timeline-dot:hover {
+  transform: scale(1.1);
+}
+
+.timeline-progress {
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile timeline vertical line */
+@media (max-width: 767px) {
+  .timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 60px;
+    width: 2px;
+    height: calc(100% - 12px);
+    background: linear-gradient(180deg, rgba(91, 126, 207, 0.3) 0%, rgba(168, 85, 247, 0.2) 100%);
+  }
+  
+  .timeline-step:last-child::before {
+    display: none;
+  }
+}
+
+/* ============================================ */
+/* TRUST BADGES / SOCIAL PROOF */
+/* ============================================ */
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  color: rgba(243, 242, 241, 0.7);
+  transition: all 0.2s ease;
+}
+
+.trust-badge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(91, 126, 207, 0.3);
+}
+
+.trust-badge-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+}
+
+/* ============================================ */
+/* SCROLL PROGRESS BAR */
+/* ============================================ */
+
+#scroll-progress {
+  box-shadow: 0 0 10px rgba(91, 126, 207, 0.5);
+}
