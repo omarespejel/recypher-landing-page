@@ -15,7 +15,7 @@ import * as m from '../paraglide/messages';
 
 const hackathonName = 'The Bitcoin and Privacy Hackathon';
 const siteUrl = 'https://bitcoinxprivacy.com';
-const supportedLocales = ['en', 'es', 'zh-CN', 'zh-TW', 'pt', 'uk', 'ru'];
+const supportedLocales = ['en', 'es', 'zh-CN', 'zh-TW', 'pt', 'ar', 'uk', 'ru'];
 const defaultLocale = 'en';
 const locale = Astro.currentLocale ?? defaultLocale;
 const localePattern = new RegExp(`^/(${supportedLocales.join('|')})(?=/|$)`);
@@ -207,7 +207,7 @@ const testimonials = [
 ];
 ---
 
-<html lang={locale} class="neo-brutal">
+<html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} class="neo-brutal">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

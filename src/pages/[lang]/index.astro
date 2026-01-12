@@ -2,7 +2,7 @@
 export const prerender = true;
 
 export function getStaticPaths() {
-  const locales = ['es', 'zh-CN', 'zh-TW', 'pt', 'uk', 'ru'];
+  const locales = ['es', 'zh-CN', 'zh-TW', 'pt', 'ar', 'uk', 'ru'];
   return locales.map((lang) => ({ params: { lang } }));
 }
 
