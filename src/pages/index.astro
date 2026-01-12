@@ -399,19 +399,19 @@ const testimonials = [
       <!-- Main Content -->
       <div class="relative z-10 text-center max-w-3xl mx-auto">
         
-        <!-- Status badges row -->
+        <!-- Status badges row - unified color palette -->
         <div class="hero-element gs-hidden flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
-          <!-- Virtual badge -->
+          <!-- Virtual badge (purple = privacy theme) -->
           <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-3 py-1">
             <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
             <span class="text-purple-300 text-xs font-medium">{m.badge_virtual()}</span>
           </div>
-          <!-- Registration badge -->
-          <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-3 py-1">
-            <span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-            <span class="text-green-300 text-xs font-medium">Register anytime until Feb 28</span>
+          <!-- Registration badge (blue = brand, with pulse animation for "live") -->
+          <div class="inline-flex items-center gap-2 bg-snf-blue-500/10 border border-snf-blue-500/20 rounded-full px-3 py-1">
+            <span class="w-1.5 h-1.5 bg-snf-blue-500 rounded-full animate-pulse"></span>
+            <span class="text-snf-blue-500 text-xs font-medium">Register anytime until Feb 28</span>
           </div>
           <!-- Date badge -->
           <div class="inline-flex items-center gap-2 bg-snf-white/5 border border-snf-white/10 rounded-full px-3 py-1">
@@ -419,15 +419,15 @@ const testimonials = [
           </div>
         </div>
         
-        <!-- Main Title -->
+        <!-- Main Title - Clean white with subtle brand accent -->
         <h1 class="hero-element gs-hidden font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-4 md:mb-6" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
-          <span class="text-snf-blue-500">{m.hero_title_line1()}</span><br/>
-          <span class="text-snf-white">{m.hero_title_line2()}</span>
+          <span class="text-snf-white/90">{m.hero_title_line1()}</span><br/>
+          <span class="bg-gradient-to-r from-snf-blue-500 to-purple-500 bg-clip-text text-transparent">{m.hero_title_line2()}</span>
         </h1>
         
-        <!-- Simple subtitle -->
-        <p class="hero-element gs-hidden text-snf-white/50 text-sm md:text-base lg:text-lg max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed px-2">
-          Build <span class="text-orange-400">Bitcoin</span> & <span class="text-purple-400">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-medium">Up to $20,000 in prizes.</span> Apply for grants. Launch your project.
+        <!-- Simple subtitle - unified color palette -->
+        <p class="hero-element gs-hidden text-snf-white/60 text-sm md:text-base lg:text-lg max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed px-2">
+          Build <span class="text-snf-white font-medium">Bitcoin</span> & <span class="text-purple-400 font-medium">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-medium">Up to $20,000 in prizes.</span> Apply for grants. Launch your project.
         </p>
         
         <!-- Dual countdown timers -->

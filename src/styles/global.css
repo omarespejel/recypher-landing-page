@@ -183,11 +183,11 @@ body {
   animation: float-slow 20s ease-in-out infinite;
 }
 
-/* Bitcoin orb (orange/amber) */
+/* Secondary orb (warm but muted - subtle gold that blends with cool palette) */
 .hero-orb-3 {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180, 160, 120, 0.25) 0%, transparent 70%);
   top: 15%;
   right: -5%;
   animation: float-slow 22s ease-in-out infinite;
