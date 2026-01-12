@@ -620,8 +620,10 @@ const testimonials = [
             <!-- Step 5: Winners -->
             <div class="timeline-step relative text-center md:text-left" data-step="5">
               <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-0">
-                <div class="relative z-10 w-12 h-12 rounded-full bg-green-500/20 border-2 border-green-500/50 flex items-center justify-center flex-shrink-0 timeline-dot">
-                  <span class="text-green-400 font-bold">🏆</span>
+                <div class="relative z-10 w-12 h-12 rounded-full bg-snf-blue-500/20 border-2 border-snf-blue-500/50 flex items-center justify-center flex-shrink-0 timeline-dot">
+                  <svg class="w-5 h-5 text-snf-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
                 </div>
                 <div class="md:mt-4">
                   <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Mar 15</p>
@@ -846,27 +848,14 @@ const testimonials = [
                   {m.resource_academy_description()}
                 </p>
                 
-                <!-- Features -->
-                <div class="flex flex-wrap gap-3 mb-4">
-                  <span class="inline-flex items-center gap-1.5 text-snf-white/50 text-xs">
-                    <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Free
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 text-snf-white/50 text-xs">
-                    <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Beginner-friendly
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 text-snf-white/50 text-xs">
-                    <svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Available now
-                  </span>
-                </div>
+                <!-- Features - clean dot-separated style -->
+                <p class="text-snf-white/40 text-xs mb-4 tracking-wide">
+                  <span class="text-snf-white/60">Free</span>
+                  <span class="mx-2 text-snf-white/20">·</span>
+                  <span class="text-snf-white/60">Beginner-friendly</span>
+                  <span class="mx-2 text-snf-white/20">·</span>
+                  <span class="text-snf-blue-400">Available now</span>
+                </p>
                 
                 <!-- CTA -->
                 <span class="inline-flex items-center gap-2 btn-gradient text-white px-5 py-2.5 rounded-full font-medium text-sm">
