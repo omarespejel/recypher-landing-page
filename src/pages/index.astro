@@ -361,85 +361,39 @@ const testimonials = [
     <!-- ============================================ -->
     <section id="main-content" class="min-h-screen flex items-center justify-center px-4 md:px-6 relative overflow-hidden pt-16 md:pt-20 pb-12 md:pb-16">
       
-      <!-- Animated background elements -->
+      <!-- Animated background elements - SIMPLIFIED for focus -->
       <div class="absolute inset-0 pointer-events-none overflow-hidden">
         <!-- Base gradient -->
         <div class="absolute inset-0 bg-gradient-to-b from-snf-blue-900/10 via-transparent to-transparent"></div>
         
-        <!-- Floating orbs - Privacy (purple) -->
+        <!-- Two subtle gradient orbs - Bitcoin (orange) & Privacy (purple) -->
         <div class="hero-orb hero-orb-1"></div>
-        <div class="hero-orb hero-orb-2"></div>
-        
-        <!-- Floating orbs - Bitcoin (orange) -->
         <div class="hero-orb hero-orb-3"></div>
-        <div class="hero-orb hero-orb-4"></div>
         
-        <!-- Network mesh nodes -->
-        <svg class="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
+        <!-- Subtle network mesh - represents blockchain/Starknet -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="rgba(91, 126, 207, 0.8)" />
+              <stop offset="0%" stop-color="rgba(91, 126, 207, 0.6)" />
               <stop offset="100%" stop-color="rgba(91, 126, 207, 0)" />
             </radialGradient>
           </defs>
-          <!-- Animated connection lines -->
+          <!-- Minimal connection lines -->
           <g class="network-lines">
-            <line x1="10%" y1="20%" x2="30%" y2="35%" stroke="url(#node-glow)" stroke-width="1" class="network-line line-1" />
-            <line x1="30%" y1="35%" x2="25%" y2="60%" stroke="url(#node-glow)" stroke-width="1" class="network-line line-2" />
-            <line x1="70%" y1="25%" x2="85%" y2="45%" stroke="url(#node-glow)" stroke-width="1" class="network-line line-3" />
-            <line x1="85%" y1="45%" x2="75%" y2="70%" stroke="url(#node-glow)" stroke-width="1" class="network-line line-4" />
-            <line x1="30%" y1="35%" x2="70%" y2="25%" stroke="url(#node-glow)" stroke-width="0.5" class="network-line line-5" />
+            <line x1="15%" y1="25%" x2="35%" y2="40%" stroke="url(#node-glow)" stroke-width="0.5" class="network-line line-1" />
+            <line x1="65%" y1="30%" x2="85%" y2="50%" stroke="url(#node-glow)" stroke-width="0.5" class="network-line line-3" />
           </g>
-          <!-- Network nodes -->
+          <!-- Minimal nodes -->
           <g class="network-nodes">
-            <circle cx="10%" cy="20%" r="3" fill="url(#node-glow)" class="network-node node-1" />
-            <circle cx="30%" cy="35%" r="4" fill="url(#node-glow)" class="network-node node-2" />
-            <circle cx="25%" cy="60%" r="2" fill="url(#node-glow)" class="network-node node-3" />
-            <circle cx="70%" cy="25%" r="3" fill="url(#node-glow)" class="network-node node-4" />
-            <circle cx="85%" cy="45%" r="4" fill="url(#node-glow)" class="network-node node-5" />
-            <circle cx="75%" cy="70%" r="2" fill="url(#node-glow)" class="network-node node-6" />
+            <circle cx="15%" cy="25%" r="2" fill="url(#node-glow)" class="network-node node-1" />
+            <circle cx="35%" cy="40%" r="3" fill="url(#node-glow)" class="network-node node-2" />
+            <circle cx="65%" cy="30%" r="2" fill="url(#node-glow)" class="network-node node-4" />
+            <circle cx="85%" cy="50%" r="3" fill="url(#node-glow)" class="network-node node-5" />
           </g>
         </svg>
       
-      <!-- Subtle grid pattern -->
-        <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
-        
-        <!-- Privacy scanning line -->
-        <div class="privacy-scan-line"></div>
-        
-        <!-- Floating privacy icons -->
-        <div class="privacy-icon privacy-icon-1">
-          <svg class="w-6 h-6 text-purple-500/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-        </div>
-        <div class="privacy-icon privacy-icon-2">
-          <svg class="w-5 h-5 text-snf-blue-500/25" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-        </div>
-        <div class="privacy-icon privacy-icon-3">
-          <svg class="w-4 h-4 text-purple-400/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-          </svg>
-        </div>
-        <div class="privacy-icon privacy-icon-4">
-          <svg class="w-5 h-5 text-snf-blue-400/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <div class="privacy-icon privacy-icon-5">
-          <svg class="w-6 h-6 text-purple-500/15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-          </svg>
-        </div>
-        
-        <!-- Encrypted text particles -->
-        <div class="crypto-text crypto-text-1">0x7f3a</div>
-        <div class="crypto-text crypto-text-2">ZK</div>
-        <div class="crypto-text crypto-text-3">••••</div>
-        <div class="crypto-text crypto-text-4">SHA</div>
-        <div class="crypto-text crypto-text-5">🔐</div>
+        <!-- Subtle grid pattern -->
+        <div class="absolute inset-0 opacity-[0.015]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 80px 80px;"></div>
       </div>
       
       <!-- Main Content -->
