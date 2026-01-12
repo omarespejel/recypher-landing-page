@@ -1,0 +1,3534 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files and files not matching ignore patterns, combined into a single document by Repomix.
+The content has been processed where line numbers have been added.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: README.md, package.json, astro.config.mjs, tailwind.config.mjs, tsconfig.json, Makefile, .gitignore, src/**, public/**, messages/**, project.inlang/settings.json, project.inlang/project_id, repomix.config.json
+- Files matching these patterns are excluded: *.lock, context-full-20*.xml, context-*-*.xml, node_modules/**, .git/**, .astro/**, dist/**, .DS_Store, .env*, .cursor/**, *.swp, *.swo, .vercel/**, .netlify/**, verdant-venus/**, project.inlang/cache/**, src/paraglide/messages/**, *.tsbuildinfo, coverage/**, *.lcov, logs/**, *.log, .idea/**, out/**, *.tgz, .eslintcache, .cache/**, report.*.json
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Line numbers have been added to the beginning of each line
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+messages/
+  en.json
+  es.json
+  pt.json
+  zh-CN.json
+  zh-TW.json
+project.inlang/
+  project_id
+  settings.json
+public/
+  fonts/
+    InterVariable.woff2
+    SpaceGroteskVariable.woff2
+  mentors/
+    henri.png
+    omar.jpg
+  testimonials/
+    starknet-resolve-hackathon-testimonials.csv
+  favicon.svg
+src/
+  components/
+    icons/
+      ArrowRight.astro
+      Bitcoin.astro
+      BookOpen.astro
+      ChevronDown.astro
+      GraduationCap.astro
+      LucideIcon.astro
+      Monitor.astro
+      Shield.astro
+      Users.astro
+    LanguageSwitcher.astro
+  pages/
+    [lang]/
+      index.astro
+    index.astro
+  styles/
+    global.css
+.gitignore
+astro.config.mjs
+Makefile
+package.json
+README.md
+repomix.config.json
+tailwind.config.mjs
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="public/testimonials/starknet-resolve-hackathon-testimonials.csv">
+ 1: Project,Opinion
+ 2: Midatopay,"Participating in the hackathon was an incredible experience — it allowed us to validate a real idea, learn a lot in a short amount of time, and connect with top-tier builders. Winning was a huge boost for the project; it gave us visibility and confidence to keep building and scaling what we started there.
+ 3: 
+ 4: Best of luck with this new edition, and thanks for thinking of us!"
+ 5: ChipiPay,"I'd encourage anyone, regardless of background, to challenge themselves and participate in a hackathon. You nurture your competitive spirit, spend time with some of the best developers in the world, and most importantly, learn to build fast, talk to early users, and solve real-life problems while competing for prizes. Take the chance. Fortune favors the bold."
+ 6: Starkflow,"I was drawn to Starknet's sub-second finality and how rapidly the ecosystem was evolving—it felt like the right time to build something meaningful. What really stood out was the native mobile SDK support and the fact that scaling isn't bolted on as an afterthought, it's built into the architecture from day one.
+ 7: Adaptation of web3 is possible only if mobile users are exposed to web3, Starknet proves to be one of the leading blockchains who provide mobile SDK's.
+ 8: In simple words Starknet shows what's possible when you're building on infrastructure designed for real-world performance and end user SDK's."
+ 9: zkbadge,"In order to expand my knowledge of safe and scalable blockchain systems, I participated in the StarkNet hackathon. The event greatly expanded my grasp of StarkNet's architecture and tooling. The influence of developing workable solutions on developing infrastructure was reinforced by winning, which was extremely satisfying. I'm glad to motivate other builders. Warm regards David"
+10: Troves.fi AI,"I joined the Starknet hackathon to experiment and push my limits, but I left with way more than I expected, real learning, great feedback, and an amazing builder community. Winning felt surreal — like, “wait… my idea actually worked?” Also, sleep is optional during hackathons"
+</file>
+
+<file path="project.inlang/project_id">
+1: GLOPLhX2Fn8zkFUUuR
+</file>
+
+<file path="project.inlang/settings.json">
+ 1: {
+ 2:   "$schema": "https://inlang.com/schema/project-settings",
+ 3:   "sourceLanguageTag": "en",
+ 4:   "languageTags": [
+ 5:     "en",
+ 6:     "es",
+ 7:     "zh-CN",
+ 8:     "zh-TW",
+ 9:     "pt"
+10:   ],
+11:   "modules": [
+12:     "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@4/dist/index.js",
+13:     "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@2/dist/index.js"
+14:   ],
+15:   "plugin.inlang.messageFormat": {
+16:     "pathPattern": "./messages/{languageTag}.json"
+17:   }
+18: }
+</file>
+
+<file path="public/favicon.svg">
+1: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+2:   <rect width="32" height="32" rx="6" fill="#0C0A18"/>
+3:   <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-weight="bold" font-size="14" fill="#5B7ECF">R{</text>
+4: </svg>
+</file>
+
+<file path="src/components/icons/ArrowRight.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 2 } = Astro.props;
+5: ---
+6: <LucideIcon name="arrow-right" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/Bitcoin.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="bitcoin" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/BookOpen.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="book-open" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/ChevronDown.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="chevron-down" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/GraduationCap.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="graduation-cap" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/Monitor.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="monitor" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/Shield.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="shield" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/icons/Users.astro">
+1: ---
+2: import LucideIcon from './LucideIcon.astro';
+3: 
+4: const { class: className = '', strokeWidth = 1.5 } = Astro.props;
+5: ---
+6: <LucideIcon name="users" class={className} strokeWidth={strokeWidth} />
+</file>
+
+<file path="src/components/LanguageSwitcher.astro">
+ 1: ---
+ 2: import { languageTag } from '../paraglide/runtime';
+ 3: 
+ 4: const languages = [
+ 5:   { code: 'en', label: 'EN', flag: '🇺🇸' },
+ 6:   { code: 'es', label: 'ES', flag: '🇲🇽' },
+ 7:   { code: 'zh-CN', label: '简中', flag: '🇨🇳' },
+ 8:   { code: 'zh-TW', label: '繁中', flag: '🇹🇼' },
+ 9:   { code: 'pt', label: 'PT', flag: '🇧🇷' },
+10: ];
+11: 
+12: const localePattern = new RegExp(`^/(${languages.map((lang) => lang.code).join('|')})(?=/|$)`);
+13: const pathWithoutLocale = Astro.url.pathname.replace(localePattern, '');
+14: const normalizedPath = pathWithoutLocale === '' ? '/' : pathWithoutLocale;
+15: const buildHref = (code) => `${code === 'en' ? '' : `/${code}`}${normalizedPath}`;
+16: ---
+17: 
+18: <div class="flex items-center gap-2 glass rounded-full px-3 py-1.5">
+19:   {languages.map((lang) => (
+20:     <a
+21:       href={buildHref(lang.code)}
+22:       class:list={[
+23:         'px-2 py-1 rounded text-xs font-medium transition-colors',
+24:         languageTag() === lang.code
+25:           ? 'bg-snf-blue-500 text-white'
+26:           : 'text-snf-white/60 hover:text-snf-white',
+27:       ]}
+28:       aria-current={languageTag() === lang.code ? 'page' : undefined}
+29:     >
+30:       <span class="mr-1" aria-hidden="true">{lang.flag}</span>
+31:       <span>{lang.label}</span>
+32:     </a>
+33:   ))}
+34: </div>
+</file>
+
+<file path="src/pages/[lang]/index.astro">
+ 1: ---
+ 2: export const prerender = true;
+ 3: 
+ 4: export function getStaticPaths() {
+ 5:   const locales = ['es', 'zh-CN', 'zh-TW', 'pt'];
+ 6:   return locales.map((lang) => ({ params: { lang } }));
+ 7: }
+ 8: 
+ 9: import Page from '../index.astro';
+10: ---
+11: 
+12: <Page />
+</file>
+
+<file path=".gitignore">
+ 1: # dependencies (bun install)
+ 2: node_modules
+ 3: 
+ 4: # output
+ 5: out
+ 6: dist
+ 7: *.tgz
+ 8: 
+ 9: # code coverage
+10: coverage
+11: *.lcov
+12: 
+13: # logs
+14: logs
+15: _.log
+16: report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
+17: 
+18: # dotenv environment variable files
+19: .env
+20: .env.development.local
+21: .env.test.local
+22: .env.production.local
+23: .env.local
+24: 
+25: # caches
+26: .eslintcache
+27: .cache
+28: *.tsbuildinfo
+29: 
+30: # IntelliJ based IDEs
+31: .idea
+32: 
+33: # Finder (MacOS) folder config
+34: .DS_Store
+</file>
+
+<file path="Makefile">
+ 1: .PHONY: help context clean
+ 2: 
+ 3: help:
+ 4: 	@echo "Context generation commands:"
+ 5: 	@echo "  make context         - Generate full project context using repomix"
+ 6: 	@echo ""
+ 7: 	@echo "Cleanup commands:"
+ 8: 	@echo "  make clean           - Remove generated context files"
+ 9: 
+10: context:
+11: 	@echo "Generating full project context..."
+12: 	@DATE=$$(date '+%Y-%m-%d_%H-%M-%S_%Z'); \
+13: 	OUTPUT_FILE="context-full-$${DATE}.xml"; \
+14: 	cp repomix.config.json repomix.config.json.bak && \
+15: 	jq ".output.filePath = \"$$OUTPUT_FILE\"" repomix.config.json > repomix.config.json.tmp && \
+16: 	mv repomix.config.json.tmp repomix.config.json && \
+17: 	(repomix --config repomix.config.json || (mv repomix.config.json.bak repomix.config.json && exit 1)) && \
+18: 	jq ".output.filePath = \"context-full.xml\"" repomix.config.json > repomix.config.json.tmp && \
+19: 	mv repomix.config.json.tmp repomix.config.json && \
+20: 	rm -f repomix.config.json.bak && \
+21: 	echo "✅ Context written to $$OUTPUT_FILE"
+22: 
+23: clean:
+24: 	@echo "Cleaning generated context files..."
+25: 	rm -f context*.xml
+26: 	rm -f context-*-*.xml
+27: 	rm -f repomix.config.json.bak
+28: 	rm -f repomix.config.json.tmp
+</file>
+
+<file path="README.md">
+ 1: # Re{cypher} Landing Page
+ 2: 
+ 3: Bitcoin × Privacy Hackathon by Starknet Foundation.
+ 4: 
+ 5: ## Development
+ 6: 
+ 7: ```bash
+ 8: bun install
+ 9: bun run dev
+10: ```
+11: 
+12: ## Build
+13: 
+14: ```bash
+15: bun run build
+16: bun run preview
+17: ```
+18: 
+19: ## Deploy
+20: 
+21: Static output in `dist/` folder. Deploy to Render, Vercel, or Netlify.
+</file>
+
+<file path="tailwind.config.mjs">
+ 1: /** @type {import('tailwindcss').Config} */
+ 2: export default {
+ 3:   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+ 4:   theme: {
+ 5:     extend: {
+ 6:       colors: {
+ 7:         'snf-black': '#0C0A18',
+ 8:         'snf-white': '#F3F2F1',
+ 9:         'snf-blue': {
+10:           900: '#263268',
+11:           700: '#354690',
+12:           500: '#5B7ECF',
+13:         },
+14:       },
+15:       fontFamily: {
+16:         sans: ['Inter', 'system-ui', 'sans-serif'],
+17:         display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+18:       },
+19:       animation: {
+20:         'float': 'float 6s ease-in-out infinite',
+21:         'pulse-slow': 'pulse 3s ease-in-out infinite',
+22:       },
+23:     },
+24:   },
+25:   plugins: [],
+26: }
+</file>
+
+<file path="tsconfig.json">
+ 1: {
+ 2:   "compilerOptions": {
+ 3:     // Environment setup & latest features
+ 4:     "lib": ["ESNext"],
+ 5:     "target": "ESNext",
+ 6:     "module": "Preserve",
+ 7:     "moduleDetection": "force",
+ 8:     "jsx": "react-jsx",
+ 9:     "allowJs": true,
+10: 
+11:     // Bundler mode
+12:     "moduleResolution": "bundler",
+13:     "allowImportingTsExtensions": true,
+14:     "verbatimModuleSyntax": true,
+15:     "noEmit": true,
+16: 
+17:     // Best practices
+18:     "strict": true,
+19:     "skipLibCheck": true,
+20:     "noFallthroughCasesInSwitch": true,
+21:     "noUncheckedIndexedAccess": true,
+22:     "noImplicitOverride": true,
+23: 
+24:     // Some stricter flags (disabled by default)
+25:     "noUnusedLocals": false,
+26:     "noUnusedParameters": false,
+27:     "noPropertyAccessFromIndexSignature": false
+28:   }
+29: }
+</file>
+
+<file path="src/components/icons/LucideIcon.astro">
+ 1: ---
+ 2: import lucideStatic from 'lucide-static';
+ 3: 
+ 4: const { name, class: className = '', strokeWidth = 1.5 } = Astro.props;
+ 5: // Convert kebab-case to PascalCase (e.g., "arrow-right" -> "ArrowRight")
+ 6: const pascalName = name
+ 7:   .split('-')
+ 8:   .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+ 9:   .join('');
+10: const svg = lucideStatic[pascalName];
+11: 
+12: if (!svg) {
+13:   throw new Error(`Unknown Lucide icon: ${name} (tried: ${pascalName})`);
+14: }
+15: 
+16: let html = svg;
+17: if (className) {
+18:   html = html.replace('<svg ', `<svg class="${className}" `);
+19: }
+20: 
+21: if (html.includes('stroke-width=')) {
+22:   html = html.replace(/stroke-width="[^"]*"/, `stroke-width="${strokeWidth}"`);
+23: } else {
+24:   html = html.replace('<svg ', `<svg stroke-width="${strokeWidth}" `);
+25: }
+26: ---
+27: <Fragment set:html={html} />
+</file>
+
+<file path="astro.config.mjs">
+ 1: import { defineConfig } from 'astro/config';
+ 2: import tailwind from '@astrojs/tailwind';
+ 3: import paraglide from '@inlang/paraglide-astro';
+ 4: 
+ 5: export default defineConfig({
+ 6:   integrations: [
+ 7:     tailwind(),
+ 8:     paraglide({
+ 9:       project: './project.inlang',
+10:       outdir: './src/paraglide',
+11:     }),
+12:   ],
+13:   i18n: {
+14:     locales: ['en', 'es', 'zh-CN', 'zh-TW', 'pt'],
+15:     defaultLocale: 'en',
+16:     routing: {
+17:       prefixDefaultLocale: false,
+18:     },
+19:   },
+20:   output: 'static',
+21: });
+</file>
+
+<file path="repomix.config.json">
+ 1: {
+ 2:   "output": {
+ 3:     "filePath": "context-full-2026-01-09_12-34-15_CST.xml",
+ 4:     "style": "xml",
+ 5:     "showLineNumbers": true
+ 6:   },
+ 7:   "ignore": {
+ 8:     "customPatterns": [
+ 9:       "*.lock",
+10:       "context-full-20*.xml",
+11:       "context-*-*.xml",
+12:       "node_modules/**",
+13:       ".git/**",
+14:       ".astro/**",
+15:       "dist/**",
+16:       ".DS_Store",
+17:       ".env*",
+18:       ".cursor/**",
+19:       "*.swp",
+20:       "*.swo",
+21:       ".vercel/**",
+22:       ".netlify/**",
+23:       "verdant-venus/**",
+24:       "project.inlang/cache/**",
+25:       "src/paraglide/messages/**",
+26:       "*.tsbuildinfo",
+27:       "coverage/**",
+28:       "*.lcov",
+29:       "logs/**",
+30:       "*.log",
+31:       ".idea/**",
+32:       "out/**",
+33:       "*.tgz",
+34:       ".eslintcache",
+35:       ".cache/**",
+36:       "report.*.json"
+37:     ]
+38:   },
+39:   "include": [
+40:     "README.md",
+41:     "package.json",
+42:     "astro.config.mjs",
+43:     "tailwind.config.mjs",
+44:     "tsconfig.json",
+45:     "Makefile",
+46:     ".gitignore",
+47:     "src/**",
+48:     "public/**",
+49:     "messages/**",
+50:     "project.inlang/settings.json",
+51:     "project.inlang/project_id",
+52:     "repomix.config.json"
+53:   ]
+54: }
+</file>
+
+<file path="messages/en.json">
+  1: {
+  2:   "$schema": "https://inlang.com/schema/inlang-message-format",
+  3:   "meta_description": "{hackathonName}. $15,000 in prizes. Build the future of private, trustless applications on Starknet. February 1 - February 28, 2026.",
+  4:   "og_title": "{hackathonName}",
+  5:   "og_description": "$15,000 in prizes. Build private, trustless applications on Starknet.",
+  6:   "page_title": "{hackathonName}",
+  7:   "og_site_name": "{hackathonName}",
+  8:   "skip_to_content": "Skip to content",
+  9:   "nav_register_now": "Register Now",
+ 10:   "hero_badge": "Hackathon Registration Open · 2026",
+ 11:   "hero_title_line1": "THE BITCOIN AND",
+ 12:   "hero_title_line2": "PRIVACY HACKATHON",
+ 13:   "hero_subtitle_line1": "Join the Bitcoin Privacy Revolution: Build trustless apps on Starknet, win your share of $15k, and launch to funding. Limited spots—claim yours on DoraHacks now!",
+ 14:   "hero_subtitle_privacy": "Focus on Privacy: Master ZK proofs, ship trustless apps on Starknet, and secure your spot on DoraHacks.",
+ 15:   "hero_subtitle_line2": "Feb 1–28, 2026 · $15,000 in prizes.",
+ 16:   "hero_countdown_urgency": "Register early on DoraHacks for exclusive workshops!",
+ 17:   "countdown_starts_in": "Starts In",
+ 18:   "countdown_ends_in": "Ends In",
+ 19:   "countdown_days": "DAYS",
+ 20:   "countdown_hours": "HRS",
+ 21:   "countdown_minutes": "MIN",
+ 22:   "countdown_seconds": "SEC",
+ 23:   "cta_register_primary": "Claim Your Spot on DoraHacks",
+ 24:   "cta_join_telegram": "Join the Telegram",
+ 25:   "cta_view_tracks": "View Tracks",
+ 26:   "hero_dates_line1": "FEB 1 → FEB 28",
+ 27:   "hero_dates_year": "2026",
+ 28:   "hero_powered_by": "Powered by",
+ 29:   "hero_powered_by_org": "Starknet Foundation",
+ 30:   "section_why_title": "Why 2026 is the Year for Privacy",
+ 31:   "stat_1_label": "StarkWare's fastest ZK prover deployed on Starknet mainnet in 2025, delivering 100x efficiency gains to enable scalable privacy, faster proofs, lower costs, and new confidential use cases like shielded transactions and private DeFi",
+ 32:   "stat_2_label": "BTC staked natively on Starknet through trustless staking, powering BTCFi with real yields, liquid staking, and Bitcoin-backed DeFi without wrappers or soft forks",
+ 33:   "stat_3_label": "Starknet's programmable privacy layer integrating Zcash shielding with Cairo smart contracts, enabling quantum-safe, confidential compute for Bitcoin-integrated apps",
+ 34:   "quote_1_text": "The next 8 years in crypto will be the Privacy Era.",
+ 35:   "quote_1_cite": "— Balaji Srinivasan, The 3 Eras of Crypto podcast, January 1, 2026",
+ 36:   "quote_2_text": "Privacy is the one feature that's critical for the world's finance to move onchain.",
+ 37:   "quote_2_cite": "— a16z crypto, \"17 things we're excited about for crypto in 2026\", December 2025",
+ 38:   "story_blurb": "Imagine transforming your ZK idea into a $100k+ funded project, like past Starknet winners. Your breakthrough awaits—starts Feb 1.",
+ 39:   "source_label": "source",
+ 40:   "section_tracks_title": "Tracks & Prizes",
+ 41:   "section_tracks_subtitle": "$15,000 total prize pool from Starknet Foundation",
+ 42:   "section_details_title": "Hackathon Details",
+ 43:   "section_details_subtitle": "Preview what's on DoraHacks – full rules, timelines, and more.",
+ 44:   "details_timeline_q": "Key Timelines",
+ 45:   "details_timeline_a": "Registration: Jan 15 - Feb 1, 2026. Hacking: Feb 1-28. Submissions due: Feb 28, 23:59 UTC. Judging: Mar 1-10. Winners announced: Mar 15.",
+ 46:   "details_eligibility_q": "Eligibility & Teams",
+ 47:   "details_eligibility_a": "Open to all (18+), no geo restrictions (except sanctioned countries). Teams up to 5 members. All skill levels welcome.",
+ 48:   "details_submissions_q": "How to Submit",
+ 49:   "details_submissions_a": "Via DoraHacks: Include GitHub repo, demo video (≤3 min), and Starknet testnet/mainnet deployment. Must be original work created during the hackathon.",
+ 50:   "details_judging_q": "Judging Criteria",
+ 51:   "details_judging_a": "Innovation & Creativity (40%): How original is the idea? Technical Execution (30%): How well-built and complex? Impact on Privacy/Bitcoin (20%): Real-world value? Completeness & User Experience (10%): Functional and intuitive?",
+ 52:   "details_prizes_q": "Prizes & Payouts",
+ 53:   "details_prizes_a": "Per track: 1st $3k, 2nd $2k, 3rd $1k in STRK/USDC. Paid to wallet within 30 days. Winners fast-tracked to accelerator.",
+ 54:   "details_ip_rules_q": "IP & Rules",
+ 55:   "details_ip_rules_a": "You retain ownership. Grant non-exclusive license for promotion. Follow DoraHacks code of conduct (no harassment, inclusive). Original work only.",
+ 56:   "details_support_q": "Support During Hack",
+ 57:   "details_support_a": "DoraHacks forums, Discord channels, mentor office hours, and AI tools. Check 'Resources' tab on DoraHacks.",
+ 58:   "track_privacy_name": "Privacy Track",
+ 59:   "track_privacy_description": "Build privacy-preserving applications using STARKs, zero-knowledge proofs, and confidential transactions on Starknet.",
+ 60:   "track_privacy_example_1": "Private payments",
+ 61:   "track_privacy_example_2": "Anonymous voting",
+ 62:   "track_privacy_example_3": "Confidential DeFi",
+ 63:   "track_privacy_example_4": "Data sovereignty",
+ 64:   "track_bitcoin_name": "Bitcoin Track",
+ 65:   "track_bitcoin_description": "Create trustless Bitcoin bridges, OP_CAT applications, and BTC-native DeFi leveraging Starknet's security.",
+ 66:   "track_bitcoin_example_1": "BTC bridges",
+ 67:   "track_bitcoin_example_2": "Ordinals on Starknet",
+ 68:   "track_bitcoin_example_3": "Lightning integrations",
+ 69:   "track_bitcoin_example_4": "Bitcoin DeFi",
+ 70:   "track_open_name": "Open Track",
+ 71:   "track_open_description": "Build anything innovative on Starknet. Gaming, social, infrastructure—surprise us.",
+ 72:   "track_open_example_1": "Gaming",
+ 73:   "track_open_example_2": "Social apps",
+ 74:   "track_open_example_3": "Dev tools",
+ 75:   "track_open_example_4": "Infrastructure",
+ 76:   "resources_kicker": "Get Started",
+ 77:   "resources_title": "Learning Paths",
+ 78:   "resources_subtitle": "New to Starknet? Choose your track and start building.",
+ 79:   "resource_bitcoin_title": "Bitcoin on Starknet",
+ 80:   "resource_bitcoin_description": "Build trustless BTC bridges and OP_CAT apps",
+ 81:   "resource_bitcoin_link": "Start Tutorial →",
+ 82:   "resource_privacy_title": "Privacy Development",
+ 83:   "resource_privacy_description": "Master ZK proofs and confidential transactions",
+ 84:   "resource_privacy_link": "Learn Privacy →",
+ 85:   "resource_academy_title": "Starknet Academy",
+ 86:   "resource_academy_description": "Complete Cairo & Starknet fundamentals",
+ 87:   "resource_academy_link": "Visit Academy →",
+ 88:   "support_title": "Builder Support",
+ 89:   "support_academy_title": "Starknet Academy",
+ 90:   "support_academy_description": "Free Cairo courses and documentation to get you building fast",
+ 91:   "support_ai_title": "DoraHacks AI",
+ 92:   "support_ai_description": "AI-powered assistance for debugging, ideation, and project review",
+ 93:   "support_mentors_title": "Partner Mentors",
+ 94:   "support_mentors_description": "Direct access to ecosystem experts for technical guidance",
+ 95:   "mentor_omar_role": "Developer Advocate",
+ 96:   "mentor_henri_role": "Ecosystem Lead",
+ 97:   "mentor_org": "Starknet Foundation",
+ 98:   "mentors_title": "Mentors",
+ 99:   "social_proof_kicker": "Social Proof",
+100:   "social_proof_title": "Builders Love {hackathonName}",
+101:   "testimonial_1_quote": "“The best hackathon I’ve joined in years — the mentorship alone is worth it.”",
+102:   "testimonial_1_author": "Elena P.",
+103:   "testimonial_1_role": "ZK Engineer",
+104:   "testimonial_2_quote": "“We shipped a working BTC bridge prototype in two weeks.”",
+105:   "testimonial_2_author": "Miguel R.",
+106:   "testimonial_2_role": "Protocol Builder",
+107:   "testimonial_3_quote": "“The privacy track pushed our team into production-grade ZK.”",
+108:   "testimonial_3_author": "Soojin K.",
+109:   "testimonial_3_role": "Product Lead",
+110:   "testimonial_4_quote": "“Starknet resources were tight, clear, and actually useful.”",
+111:   "testimonial_4_author": "Andre S.",
+112:   "testimonial_4_role": "Full-stack Dev",
+113:   "testimonial_5_quote": "“The best prize pool-to-effort ratio I’ve seen this year.”",
+114:   "testimonial_5_author": "Rina T.",
+115:   "testimonial_5_role": "Hackathon Veteran",
+116:   "sponsors_title": "Backed By",
+117:   "sponsor_cta_text": "Interested in sponsoring?",
+118:   "sponsor_cta_link": "Get in touch",
+119:   "faq_title": "FAQ",
+120:   "faq_1_q": "Who can participate?",
+121:   "faq_1_a": "Anyone! Solo developers and teams up to 5 members. No geographic restrictions. All skill levels welcome.",
+122:   "faq_2_q": "Do I need to know Cairo?",
+123:   "faq_2_a": "Not required to start. We provide learning resources through Starknet Academy and DoraHacks AI assistance.",
+124:   "faq_3_q": "What happens to winners?",
+125:   "faq_3_a": "Winners get fast-tracked to Starknet Foundation's accelerator program with $25k-$500k grant pipeline and VC introductions.",
+126:   "faq_4_q": "Is it fully virtual?",
+127:   "faq_4_a": "Yes. Build at your own pace. Submit on DoraHacks by February 28, 2026.",
+128:   "faq_submit_q": "How do I submit my project?",
+129:   "faq_submit_a": "All submissions via DoraHacks platform—include GitHub repo, demo video (≤3 min), and Starknet deployment link. Deadline: Feb 28, 2026, 23:59 UTC.",
+130:   "faq_questions_q": "What if I have questions during the hack?",
+131:   "faq_questions_a": "Use DoraHacks' built-in forums, our Discord, or schedule mentor calls. Check the 'Resources' tab on DoraHacks for live sessions.",
+132:   "faq_prizes_q": "How are prizes paid out?",
+133:   "faq_prizes_a": "In STRK/USDC to your wallet within 30 days post-announcement. Taxes are your responsibility—details in DoraHacks terms.",
+134:   "final_cta_title": "Ready to Build?",
+135:   "final_cta_subtitle": "Join the biggest privacy hackathon of 2026. 4 weeks. $15,000. Your future.",
+136:   "final_cta_button": "Register on DoraHacks →",
+137:   "final_cta_note": "February 1 – February 28, 2026 · Fully Virtual",
+138:   "footer_by": "by",
+139:   "footer_community_title": "Join the Conversation",
+140:   "footer_twitter": "Twitter",
+141:   "footer_discord": "Discord",
+142:   "footer_forum": "DoraHacks Forum",
+143:   "footer_telegram": "Telegram",
+144:   "footer_starknet": "Starknet"
+145: }
+</file>
+
+<file path="messages/es.json">
+  1: {
+  2:   "$schema": "https://inlang.com/schema/inlang-message-format",
+  3:   "meta_description": "{hackathonName}. $15,000 en premios. Construye el futuro de aplicaciones privadas y sin confianza en Starknet. 1 de febrero - 28 de febrero de 2026.",
+  4:   "og_title": "{hackathonName}",
+  5:   "og_description": "$15,000 en premios. Construye aplicaciones privadas y sin confianza en Starknet.",
+  6:   "page_title": "{hackathonName}",
+  7:   "og_site_name": "{hackathonName}",
+  8:   "skip_to_content": "Saltar al contenido",
+  9:   "nav_register_now": "Regístrate ahora",
+ 10:   "hero_badge": "Inscripciones abiertas · 2026",
+ 11:   "hero_title_line1": "EL HACKATHON DE",
+ 12:   "hero_title_line2": "BITCOIN Y PRIVACIDAD",
+ 13:   "hero_subtitle_line1": "Únete a la revolución de privacidad de Bitcoin: crea apps sin confianza en Starknet, gana tu parte de $15k y acelera hacia financiamiento. Cupos limitados—¡asegura el tuyo en DoraHacks ahora!",
+ 14:   "hero_subtitle_privacy": "Enfoque privacidad: domina pruebas ZK, construye apps sin confianza en Starknet y asegura tu lugar en DoraHacks.",
+ 15:   "hero_subtitle_line2": "1–28 de feb, 2026 · $15,000 en premios.",
+ 16:   "hero_countdown_urgency": "¡Regístrate temprano en DoraHacks para talleres exclusivos!",
+ 17:   "countdown_starts_in": "Empieza en",
+ 18:   "countdown_ends_in": "Termina en",
+ 19:   "countdown_days": "DÍAS",
+ 20:   "countdown_hours": "HRS",
+ 21:   "countdown_minutes": "MIN",
+ 22:   "countdown_seconds": "SEG",
+ 23:   "cta_register_primary": "Asegura tu lugar en DoraHacks",
+ 24:   "cta_join_telegram": "Únete al Telegram",
+ 25:   "cta_view_tracks": "Ver tracks",
+ 26:   "hero_dates_line1": "1 FEB → 28 FEB",
+ 27:   "hero_dates_year": "2026",
+ 28:   "hero_powered_by": "Impulsado por",
+ 29:   "hero_powered_by_org": "Starknet Foundation",
+ 30:   "section_why_title": "Por qué 2026 es el año de la privacidad",
+ 31:   "stat_1_label": "El verificador ZK más rápido de StarkWare desplegado en Starknet mainnet en 2025, con mejoras de 100x para habilitar privacidad escalable, pruebas más rápidas, menores costos y nuevos casos como transacciones blindadas y DeFi privado",
+ 32:   "stat_2_label": "BTC apostado nativamente en Starknet mediante staking sin confianza, impulsando BTCFi con rendimientos reales, liquid staking y DeFi respaldado por Bitcoin sin wrappers ni soft forks",
+ 33:   "stat_3_label": "La capa de privacidad programable de Starknet integra el blindaje de Zcash con contratos Cairo, habilitando cómputo confidencial y resistente a la computación cuántica para apps integradas con Bitcoin",
+ 34:   "quote_1_text": "Los próximos 8 años en cripto serán la Era de la Privacidad.",
+ 35:   "quote_1_cite": "— Balaji Srinivasan, podcast The 3 Eras of Crypto, 1 de enero de 2026",
+ 36:   "quote_2_text": "La privacidad es la característica crítica para que las finanzas del mundo pasen onchain.",
+ 37:   "quote_2_cite": "— a16z crypto, \"17 cosas que nos entusiasman de cripto en 2026\", diciembre de 2025",
+ 38:   "story_blurb": "Imagina convertir tu idea ZK en un proyecto financiado de $100k+, como ganadores anteriores de Starknet. Tu avance empieza el 1 de feb.",
+ 39:   "source_label": "fuente",
+ 40:   "section_tracks_title": "Tracks y premios",
+ 41:   "section_tracks_subtitle": "Bolsa total de $15,000 de la Starknet Foundation",
+ 42:   "section_details_title": "Detalles del hackathon",
+ 43:   "section_details_subtitle": "Un vistazo a DoraHacks: reglas, cronogramas y más.",
+ 44:   "details_timeline_q": "Cronograma clave",
+ 45:   "details_timeline_a": "Registro: 15 ene - 1 feb, 2026. Hacking: 1–28 feb. Entregas: 28 feb, 23:59 UTC. Evaluación: 1–10 mar. Ganadores: 15 mar.",
+ 46:   "details_eligibility_q": "Elegibilidad y equipos",
+ 47:   "details_eligibility_a": "Abierto a todos (18+), sin restricciones geográficas (excepto países sancionados). Equipos de hasta 5 integrantes. Todos los niveles bienvenidos.",
+ 48:   "details_submissions_q": "Cómo enviar",
+ 49:   "details_submissions_a": "Vía DoraHacks: incluye repo GitHub, demo (≤3 min) y despliegue en Starknet testnet/mainnet. Trabajo original creado durante el hackathon.",
+ 50:   "details_judging_q": "Criterios de evaluación",
+ 51:   "details_judging_a": "Innovación y creatividad (40%): ¿Qué tan original? Ejecución técnica (30%): calidad y complejidad. Impacto en privacidad/Bitcoin (20%): valor real. Completitud y UX (10%): funcional e intuitivo.",
+ 52:   "details_prizes_q": "Premios y pagos",
+ 53:   "details_prizes_a": "Por track: 1º $3k, 2º $2k, 3º $1k en STRK/USDC. Pago a la wallet en 30 días. Ganadores con vía rápida al acelerador.",
+ 54:   "details_ip_rules_q": "Propiedad intelectual y reglas",
+ 55:   "details_ip_rules_a": "Conservas la propiedad. Otorgas licencia no exclusiva para promoción. Sigue el código de conducta de DoraHacks (sin acoso, inclusivo). Solo trabajo original.",
+ 56:   "details_support_q": "Soporte durante el hack",
+ 57:   "details_support_a": "Foros DoraHacks, canales de Discord, mentorías y herramientas de IA. Revisa la pestaña 'Resources' en DoraHacks.",
+ 58:   "track_privacy_name": "Track de Privacidad",
+ 59:   "track_privacy_description": "Construye aplicaciones con privacidad usando STARKs, pruebas de conocimiento cero y transacciones confidenciales en Starknet.",
+ 60:   "track_privacy_example_1": "Pagos privados",
+ 61:   "track_privacy_example_2": "Votación anónima",
+ 62:   "track_privacy_example_3": "DeFi confidencial",
+ 63:   "track_privacy_example_4": "Soberanía de datos",
+ 64:   "track_bitcoin_name": "Track de Bitcoin",
+ 65:   "track_bitcoin_description": "Crea puentes de Bitcoin sin confianza, aplicaciones OP_CAT y DeFi nativo de BTC aprovechando la seguridad de Starknet.",
+ 66:   "track_bitcoin_example_1": "Puentes BTC",
+ 67:   "track_bitcoin_example_2": "Ordinals en Starknet",
+ 68:   "track_bitcoin_example_3": "Integraciones Lightning",
+ 69:   "track_bitcoin_example_4": "DeFi de Bitcoin",
+ 70:   "track_open_name": "Track Abierto",
+ 71:   "track_open_description": "Construye algo innovador en Starknet. Gaming, social, infraestructura—sorpréndenos.",
+ 72:   "track_open_example_1": "Gaming",
+ 73:   "track_open_example_2": "Apps sociales",
+ 74:   "track_open_example_3": "Herramientas dev",
+ 75:   "track_open_example_4": "Infraestructura",
+ 76:   "resources_kicker": "Empieza",
+ 77:   "resources_title": "Rutas de aprendizaje",
+ 78:   "resources_subtitle": "¿Nuevo en Starknet? Elige tu track y empieza a construir.",
+ 79:   "resource_bitcoin_title": "Bitcoin en Starknet",
+ 80:   "resource_bitcoin_description": "Construye puentes BTC sin confianza y apps OP_CAT",
+ 81:   "resource_bitcoin_link": "Iniciar tutorial →",
+ 82:   "resource_privacy_title": "Desarrollo de privacidad",
+ 83:   "resource_privacy_description": "Domina pruebas ZK y transacciones confidenciales",
+ 84:   "resource_privacy_link": "Aprender privacidad →",
+ 85:   "resource_academy_title": "Starknet Academy",
+ 86:   "resource_academy_description": "Completa fundamentos de Cairo y Starknet",
+ 87:   "resource_academy_link": "Visitar Academy →",
+ 88:   "support_title": "Soporte para builders",
+ 89:   "support_academy_title": "Starknet Academy",
+ 90:   "support_academy_description": "Cursos gratuitos de Cairo y documentación para empezar rápido",
+ 91:   "support_ai_title": "DoraHacks AI",
+ 92:   "support_ai_description": "Asistencia con IA para depuración, ideas y revisión de proyectos",
+ 93:   "support_mentors_title": "Mentores aliados",
+ 94:   "support_mentors_description": "Acceso directo a expertos del ecosistema para guía técnica",
+ 95:   "mentor_omar_role": "Developer Advocate",
+ 96:   "mentor_henri_role": "Líder de ecosistema",
+ 97:   "mentor_org": "Starknet Foundation",
+ 98:   "mentors_title": "Mentores",
+ 99:   "social_proof_kicker": "Prueba social",
+100:   "social_proof_title": "A los builders les encanta {hackathonName}",
+101:   "testimonial_1_quote": "“El mejor hackathon al que he asistido en años; la mentoría por sí sola lo vale.”",
+102:   "testimonial_1_author": "Elena P.",
+103:   "testimonial_1_role": "Ingeniera ZK",
+104:   "testimonial_2_quote": "“Lanzamos un prototipo funcional de puente BTC en dos semanas.”",
+105:   "testimonial_2_author": "Miguel R.",
+106:   "testimonial_2_role": "Builder de protocolo",
+107:   "testimonial_3_quote": "“El track de privacidad llevó a nuestro equipo a ZK de nivel producción.”",
+108:   "testimonial_3_author": "Soojin K.",
+109:   "testimonial_3_role": "Líder de producto",
+110:   "testimonial_4_quote": "“Los recursos de Starknet fueron concisos, claros y realmente útiles.”",
+111:   "testimonial_4_author": "Andre S.",
+112:   "testimonial_4_role": "Dev full-stack",
+113:   "testimonial_5_quote": "“La mejor relación premio/esfuerzo que he visto este año.”",
+114:   "testimonial_5_author": "Rina T.",
+115:   "testimonial_5_role": "Veterana de hackathons",
+116:   "sponsors_title": "Respaldado por",
+117:   "sponsor_cta_text": "¿Interesado en patrocinar?",
+118:   "sponsor_cta_link": "Escríbenos",
+119:   "faq_title": "FAQ",
+120:   "faq_1_q": "¿Quién puede participar?",
+121:   "faq_1_a": "¡Cualquiera! Desarrolladores solos y equipos de hasta 5 miembros. Sin restricciones geográficas. Todos los niveles son bienvenidos.",
+122:   "faq_2_q": "¿Necesito saber Cairo?",
+123:   "faq_2_a": "No es necesario para empezar. Proveemos recursos de aprendizaje vía Starknet Academy y asistencia con IA de DoraHacks.",
+124:   "faq_3_q": "¿Qué pasa con los ganadores?",
+125:   "faq_3_a": "Los ganadores pasan a la vía rápida del programa acelerador de la Starknet Foundation con pipeline de grants de $25k-$500k e introducciones a VC.",
+126:   "faq_4_q": "¿Es totalmente virtual?",
+127:   "faq_4_a": "Sí. Construye a tu ritmo. Entrega en DoraHacks antes del 28 de febrero de 2026.",
+128:   "faq_submit_q": "¿Cómo envío mi proyecto?",
+129:   "faq_submit_a": "Todas las entregas vía DoraHacks: incluye repo GitHub, demo (≤3 min) y enlace de despliegue en Starknet. Límite: 28 feb 2026, 23:59 UTC.",
+130:   "faq_questions_q": "¿Qué pasa si tengo dudas durante el hack?",
+131:   "faq_questions_a": "Usa los foros de DoraHacks, nuestro Discord o agenda mentorías. Revisa la pestaña 'Resources' en DoraHacks.",
+132:   "faq_prizes_q": "¿Cómo se pagan los premios?",
+133:   "faq_prizes_a": "En STRK/USDC a tu wallet dentro de 30 días tras el anuncio. Impuestos a tu cargo—detalles en los términos de DoraHacks.",
+134:   "final_cta_title": "¿Listo para construir?",
+135:   "final_cta_subtitle": "Únete al hackathon de privacidad más grande de 2026. 4 semanas. $15,000. Tu futuro.",
+136:   "final_cta_button": "Regístrate en DoraHacks →",
+137:   "final_cta_note": "1 de febrero – 28 de febrero de 2026 · Totalmente virtual",
+138:   "footer_by": "por",
+139:   "footer_community_title": "Únete a la conversación",
+140:   "footer_twitter": "Twitter",
+141:   "footer_discord": "Discord",
+142:   "footer_forum": "Foro DoraHacks",
+143:   "footer_telegram": "Telegram",
+144:   "footer_starknet": "Starknet"
+145: }
+</file>
+
+<file path="messages/pt.json">
+  1: {
+  2:   "$schema": "https://inlang.com/schema/inlang-message-format",
+  3:   "meta_description": "{hackathonName}. $15.000 em prêmios. Construa o futuro de aplicações privadas e trustless na Starknet. 1 a 28 de fevereiro de 2026.",
+  4:   "og_title": "{hackathonName}",
+  5:   "og_description": "$15.000 em prêmios. Construa aplicações privadas e trustless na Starknet.",
+  6:   "page_title": "{hackathonName}",
+  7:   "og_site_name": "{hackathonName}",
+  8:   "skip_to_content": "Pular para o conteúdo",
+  9:   "nav_register_now": "Inscreva-se agora",
+ 10:   "hero_badge": "Inscrições abertas · 2026",
+ 11:   "hero_title_line1": "O HACKATHON DE",
+ 12:   "hero_title_line2": "BITCOIN E PRIVACIDADE",
+ 13:   "hero_subtitle_line1": "Junte-se à revolução de privacidade do Bitcoin: construa apps trustless na Starknet, ganhe sua parte dos $15k e acelere rumo a funding. Vagas limitadas — garanta a sua no DoraHacks agora!",
+ 14:   "hero_subtitle_privacy": "Foco em privacidade: domine provas ZK, construa apps trustless na Starknet e garanta sua vaga no DoraHacks.",
+ 15:   "hero_subtitle_line2": "1–28 de fev, 2026 · $15.000 em prêmios.",
+ 16:   "hero_countdown_urgency": "Inscreva-se cedo na DoraHacks para workshops exclusivos!",
+ 17:   "countdown_starts_in": "Começa em",
+ 18:   "countdown_ends_in": "Termina em",
+ 19:   "countdown_days": "DIAS",
+ 20:   "countdown_hours": "HRS",
+ 21:   "countdown_minutes": "MIN",
+ 22:   "countdown_seconds": "SEG",
+ 23:   "cta_register_primary": "Garanta sua vaga no DoraHacks",
+ 24:   "cta_join_telegram": "Entre no Telegram",
+ 25:   "cta_view_tracks": "Ver trilhas",
+ 26:   "hero_dates_line1": "1 FEV → 28 FEV",
+ 27:   "hero_dates_year": "2026",
+ 28:   "hero_powered_by": "Realização",
+ 29:   "hero_powered_by_org": "Starknet Foundation",
+ 30:   "section_why_title": "Por que 2026 é o ano da privacidade",
+ 31:   "stat_1_label": "O provador ZK mais rápido da StarkWare implantado na mainnet da Starknet em 2025, com ganhos de eficiência de 100x para habilitar privacidade escalável, provas mais rápidas, menor custo e novos casos como transações blindadas e DeFi privado",
+ 32:   "stat_2_label": "BTC stakado nativamente na Starknet com staking trustless, impulsionando BTCFi com yields reais, liquid staking e DeFi lastreado em Bitcoin sem wrappers ou soft forks",
+ 33:   "stat_3_label": "A camada de privacidade programável da Starknet integra blindagem do Zcash com contratos Cairo, permitindo computação confidencial e resistente a ataques quânticos para apps integrados ao Bitcoin",
+ 34:   "quote_1_text": "Os próximos 8 anos em cripto serão a Era da Privacidade.",
+ 35:   "quote_1_cite": "— Balaji Srinivasan, podcast The 3 Eras of Crypto, 1 de janeiro de 2026",
+ 36:   "quote_2_text": "Privacidade é o recurso crítico para as finanças do mundo migrarem onchain.",
+ 37:   "quote_2_cite": "— a16z crypto, \"17 coisas que nos empolgam sobre cripto em 2026\", dezembro de 2025",
+ 38:   "story_blurb": "Imagine transformar sua ideia ZK em um projeto com $100k+ em grants, como vencedores anteriores da Starknet. Sua virada começa em 1º de fev.",
+ 39:   "source_label": "fonte",
+ 40:   "section_tracks_title": "Trilhas e prêmios",
+ 41:   "section_tracks_subtitle": "Bolsa total de $15.000 da Starknet Foundation",
+ 42:   "section_details_title": "Detalhes do hackathon",
+ 43:   "section_details_subtitle": "Prévia do DoraHacks: regras, cronogramas e mais.",
+ 44:   "details_timeline_q": "Cronograma principal",
+ 45:   "details_timeline_a": "Inscrições: 15 jan - 1 fev, 2026. Hacking: 1–28 fev. Submissões: 28 fev, 23:59 UTC. Julgamento: 1–10 mar. Resultado: 15 mar.",
+ 46:   "details_eligibility_q": "Elegibilidade e equipes",
+ 47:   "details_eligibility_a": "Aberto a todos (18+), sem restrições geográficas (exceto países sancionados). Times de até 5 pessoas. Todos os níveis são bem-vindos.",
+ 48:   "details_submissions_q": "Como enviar",
+ 49:   "details_submissions_a": "Via DoraHacks: inclua repo GitHub, vídeo demo (≤3 min) e deploy na Starknet testnet/mainnet. Trabalho original feito durante o hackathon.",
+ 50:   "details_judging_q": "Critérios de avaliação",
+ 51:   "details_judging_a": "Inovação e criatividade (40%): quão original? Execução técnica (30%): qualidade e complexidade. Impacto em privacidade/Bitcoin (20%): valor real. Completude e UX (10%): funcional e intuitivo.",
+ 52:   "details_prizes_q": "Prêmios e pagamentos",
+ 53:   "details_prizes_a": "Por trilha: 1º $3k, 2º $2k, 3º $1k em STRK/USDC. Pagamento em até 30 dias. Vencedores com fast-track para o acelerador.",
+ 54:   "details_ip_rules_q": "PI e regras",
+ 55:   "details_ip_rules_a": "Você mantém a propriedade. Concede licença não exclusiva para promoção. Siga o código de conduta da DoraHacks (sem assédio, inclusivo). Apenas trabalho original.",
+ 56:   "details_support_q": "Suporte durante o hack",
+ 57:   "details_support_a": "Fóruns DoraHacks, canais no Discord, mentorias e ferramentas de IA. Veja a aba 'Resources' no DoraHacks.",
+ 58:   "track_privacy_name": "Trilha de Privacidade",
+ 59:   "track_privacy_description": "Construa aplicações com privacidade usando STARKs, provas de conhecimento zero e transações confidenciais na Starknet.",
+ 60:   "track_privacy_example_1": "Pagamentos privados",
+ 61:   "track_privacy_example_2": "Votação anônima",
+ 62:   "track_privacy_example_3": "DeFi confidencial",
+ 63:   "track_privacy_example_4": "Soberania de dados",
+ 64:   "track_bitcoin_name": "Trilha de Bitcoin",
+ 65:   "track_bitcoin_description": "Crie pontes de Bitcoin trustless, aplicações OP_CAT e DeFi nativo de BTC aproveitando a segurança da Starknet.",
+ 66:   "track_bitcoin_example_1": "Pontes BTC",
+ 67:   "track_bitcoin_example_2": "Ordinals na Starknet",
+ 68:   "track_bitcoin_example_3": "Integrações Lightning",
+ 69:   "track_bitcoin_example_4": "DeFi de Bitcoin",
+ 70:   "track_open_name": "Trilha Aberta",
+ 71:   "track_open_description": "Construa algo inovador na Starknet. Games, social, infraestrutura—surpreenda a gente.",
+ 72:   "track_open_example_1": "Games",
+ 73:   "track_open_example_2": "Apps sociais",
+ 74:   "track_open_example_3": "Ferramentas dev",
+ 75:   "track_open_example_4": "Infraestrutura",
+ 76:   "resources_kicker": "Comece agora",
+ 77:   "resources_title": "Trilhas de aprendizado",
+ 78:   "resources_subtitle": "Novo na Starknet? Escolha sua trilha e comece a construir.",
+ 79:   "resource_bitcoin_title": "Bitcoin na Starknet",
+ 80:   "resource_bitcoin_description": "Construa pontes BTC trustless e apps OP_CAT",
+ 81:   "resource_bitcoin_link": "Iniciar tutorial →",
+ 82:   "resource_privacy_title": "Desenvolvimento de privacidade",
+ 83:   "resource_privacy_description": "Domine provas ZK e transações confidenciais",
+ 84:   "resource_privacy_link": "Aprender privacidade →",
+ 85:   "resource_academy_title": "Starknet Academy",
+ 86:   "resource_academy_description": "Complete fundamentos de Cairo e Starknet",
+ 87:   "resource_academy_link": "Visitar Academy →",
+ 88:   "support_title": "Suporte ao builder",
+ 89:   "support_academy_title": "Starknet Academy",
+ 90:   "support_academy_description": "Cursos gratuitos de Cairo e documentação para começar rápido",
+ 91:   "support_ai_title": "DoraHacks AI",
+ 92:   "support_ai_description": "Assistência com IA para depuração, ideação e revisão de projetos",
+ 93:   "support_mentors_title": "Mentores parceiros",
+ 94:   "support_mentors_description": "Acesso direto a especialistas do ecossistema para orientação técnica",
+ 95:   "mentor_omar_role": "Developer Advocate",
+ 96:   "mentor_henri_role": "Líder de ecossistema",
+ 97:   "mentor_org": "Starknet Foundation",
+ 98:   "mentors_title": "Mentores",
+ 99:   "social_proof_kicker": "Prova social",
+100:   "social_proof_title": "Builders amam {hackathonName}",
+101:   "testimonial_1_quote": "“O melhor hackathon em que participei em anos — só a mentoria já vale.”",
+102:   "testimonial_1_author": "Elena P.",
+103:   "testimonial_1_role": "Engenheira ZK",
+104:   "testimonial_2_quote": "“Entregamos um protótipo funcional de ponte BTC em duas semanas.”",
+105:   "testimonial_2_author": "Miguel R.",
+106:   "testimonial_2_role": "Builder de protocolo",
+107:   "testimonial_3_quote": "“A trilha de privacidade levou nosso time a ZK nível produção.”",
+108:   "testimonial_3_author": "Soojin K.",
+109:   "testimonial_3_role": "Product Lead",
+110:   "testimonial_4_quote": "“Os recursos da Starknet foram objetivos, claros e realmente úteis.”",
+111:   "testimonial_4_author": "Andre S.",
+112:   "testimonial_4_role": "Dev full-stack",
+113:   "testimonial_5_quote": "“O melhor custo-benefício de premiação que vi este ano.”",
+114:   "testimonial_5_author": "Rina T.",
+115:   "testimonial_5_role": "Veterana de hackathons",
+116:   "sponsors_title": "Apoio",
+117:   "sponsor_cta_text": "Quer patrocinar?",
+118:   "sponsor_cta_link": "Fale com a gente",
+119:   "faq_title": "FAQ",
+120:   "faq_1_q": "Quem pode participar?",
+121:   "faq_1_a": "Qualquer pessoa! Desenvolvedores solo e equipes de até 5 membros. Sem restrições geográficas. Todos os níveis são bem-vindos.",
+122:   "faq_2_q": "Preciso saber Cairo?",
+123:   "faq_2_a": "Não é necessário para começar. Fornecemos recursos de aprendizado pela Starknet Academy e assistência de IA da DoraHacks.",
+124:   "faq_3_q": "O que acontece com os vencedores?",
+125:   "faq_3_a": "Os vencedores entram na trilha rápida do programa acelerador da Starknet Foundation com pipeline de grants de $25k-$500k e apresentações a VCs.",
+126:   "faq_4_q": "É totalmente virtual?",
+127:   "faq_4_a": "Sim. Construa no seu ritmo. Envie no DoraHacks até 28 de fevereiro de 2026.",
+128:   "faq_submit_q": "Como envio meu projeto?",
+129:   "faq_submit_a": "Todas as submissões via DoraHacks: inclua repo GitHub, demo (≤3 min) e link de deploy na Starknet. Prazo: 28 fev 2026, 23:59 UTC.",
+130:   "faq_questions_q": "E se eu tiver dúvidas durante o hack?",
+131:   "faq_questions_a": "Use os fóruns da DoraHacks, nosso Discord ou agende mentorias. Veja a aba 'Resources' no DoraHacks.",
+132:   "faq_prizes_q": "Como os prêmios são pagos?",
+133:   "faq_prizes_a": "Em STRK/USDC para sua wallet em até 30 dias após o anúncio. Impostos por sua conta — detalhes nos termos da DoraHacks.",
+134:   "final_cta_title": "Pronto para construir?",
+135:   "final_cta_subtitle": "Participe do maior hackathon de privacidade de 2026. 4 semanas. $15.000. Seu futuro.",
+136:   "final_cta_button": "Inscreva-se no DoraHacks →",
+137:   "final_cta_note": "1 de fevereiro – 28 de fevereiro de 2026 · 100% online",
+138:   "footer_by": "por",
+139:   "footer_community_title": "Junte-se à conversa",
+140:   "footer_twitter": "Twitter",
+141:   "footer_discord": "Discord",
+142:   "footer_forum": "Fórum DoraHacks",
+143:   "footer_telegram": "Telegram",
+144:   "footer_starknet": "Starknet"
+145: }
+</file>
+
+<file path="messages/zh-CN.json">
+  1: {
+  2:   "$schema": "https://inlang.com/schema/inlang-message-format",
+  3:   "meta_description": "{hackathonName}。总奖金 $15,000。在 Starknet 上构建私密、无需信任的应用未来。2026年2月1日–2月28日。",
+  4:   "og_title": "{hackathonName}",
+  5:   "og_description": "总奖金 $15,000。在 Starknet 上构建私密、无需信任的应用。",
+  6:   "page_title": "{hackathonName}",
+  7:   "og_site_name": "{hackathonName}",
+  8:   "skip_to_content": "跳到内容",
+  9:   "nav_register_now": "立即报名",
+ 10:   "hero_badge": "黑客松报名开启 · 2026",
+ 11:   "hero_title_line1": "比特币与",
+ 12:   "hero_title_line2": "隐私黑客松",
+ 13:   "hero_subtitle_line1": "加入比特币隐私革命：在 Starknet 上构建无信任应用，赢取 $15k 份额并直通融资。名额有限，立即在 DoraHacks 抢位！",
+ 14:   "hero_subtitle_privacy": "隐私方向：掌握 ZK 证明，在 Starknet 上构建无信任应用，并在 DoraHacks 锁定名额。",
+ 15:   "hero_subtitle_line2": "2026年2月1–28日 · 总奖金 $15,000。",
+ 16:   "hero_countdown_urgency": "尽早在 DoraHacks 报名，参加独家工作坊！",
+ 17:   "countdown_starts_in": "距离开始",
+ 18:   "countdown_ends_in": "距离结束",
+ 19:   "countdown_days": "天",
+ 20:   "countdown_hours": "小时",
+ 21:   "countdown_minutes": "分钟",
+ 22:   "countdown_seconds": "秒",
+ 23:   "cta_register_primary": "在 DoraHacks 立即锁定名额",
+ 24:   "cta_join_telegram": "加入 Telegram 群",
+ 25:   "cta_view_tracks": "查看赛道",
+ 26:   "hero_dates_line1": "2月1日 → 2月28日",
+ 27:   "hero_dates_year": "2026",
+ 28:   "hero_powered_by": "主办方",
+ 29:   "hero_powered_by_org": "Starknet Foundation",
+ 30:   "section_why_title": "为什么 2026 是隐私之年",
+ 31:   "stat_1_label": "StarkWare 最快的 ZK 证明器于 2025 年部署在 Starknet 主网，效率提升 100 倍，实现可扩展隐私、更快证明、更低成本，以及屏蔽交易和隐私 DeFi 等新场景",
+ 32:   "stat_2_label": "BTC 通过无信任质押在 Starknet 原生锁定，推动 BTCFi 提供真实收益、流动性质押和无需包装或软分叉的比特币 DeFi",
+ 33:   "stat_3_label": "Starknet 的可编程隐私层将 Zcash 盾化与 Cairo 合约结合，为比特币集成应用提供量子安全的机密计算",
+ 34:   "quote_1_text": "未来 8 年的加密将是隐私时代。",
+ 35:   "quote_1_cite": "— Balaji Srinivasan，《The 3 Eras of Crypto》播客，2026年1月1日",
+ 36:   "quote_2_text": "隐私是全球金融走向链上的关键特性。",
+ 37:   "quote_2_cite": "— a16z crypto，《我们对 2026 年加密最兴奋的 17 件事》，2025年12月",
+ 38:   "story_blurb": "想象把你的 ZK 想法变成 $100k+ 资助项目，像往届 Starknet 赢家一样。你的突破从 2 月 1 日开始。",
+ 39:   "source_label": "来源",
+ 40:   "section_tracks_title": "赛道与奖金",
+ 41:   "section_tracks_subtitle": "总奖金池 $15,000，由 Starknet Foundation 提供",
+ 42:   "section_details_title": "黑客松详情",
+ 43:   "section_details_subtitle": "DoraHacks 内容预览：规则、时间线等。",
+ 44:   "details_timeline_q": "关键时间线",
+ 45:   "details_timeline_a": "报名：2026年1月15日–2月1日。开发：2月1–28日。提交截止：2月28日 23:59 UTC。评审：3月1–10日。公布：3月15日。",
+ 46:   "details_eligibility_q": "参赛资格与团队",
+ 47:   "details_eligibility_a": "面向所有人（18+），无地域限制（制裁国家除外）。团队最多 5 人。欢迎所有水平。",
+ 48:   "details_submissions_q": "如何提交",
+ 49:   "details_submissions_a": "通过 DoraHacks 提交：包含 GitHub 仓库、演示视频（≤3分钟）以及 Starknet testnet/mainnet 部署。必须为黑客松期间完成的原创作品。",
+ 50:   "details_judging_q": "评审标准",
+ 51:   "details_judging_a": "创新与创意（40%）：是否足够新颖？技术执行（30%）：质量与复杂度。隐私/比特币影响力（20%）：实际价值。完整度与体验（10%）：功能完善且易用。",
+ 52:   "details_prizes_q": "奖金与发放",
+ 53:   "details_prizes_a": "每个赛道：第一名 $3k，第二名 $2k，第三名 $1k（STRK/USDC）。30 天内打款。获奖者可进入加速器快速通道。",
+ 54:   "details_ip_rules_q": "知识产权与规则",
+ 55:   "details_ip_rules_a": "你保留所有权。授予非独占推广许可。遵守 DoraHacks 行为准则（反骚扰、包容）。仅限原创作品。",
+ 56:   "details_support_q": "参赛支持",
+ 57:   "details_support_a": "DoraHacks 论坛、Discord 频道、导师答疑与 AI 工具。查看 DoraHacks 的“Resources”标签。",
+ 58:   "track_privacy_name": "隐私赛道",
+ 59:   "track_privacy_description": "使用 STARK、零知识证明和机密交易在 Starknet 上构建隐私应用。",
+ 60:   "track_privacy_example_1": "私密支付",
+ 61:   "track_privacy_example_2": "匿名投票",
+ 62:   "track_privacy_example_3": "机密 DeFi",
+ 63:   "track_privacy_example_4": "数据主权",
+ 64:   "track_bitcoin_name": "比特币赛道",
+ 65:   "track_bitcoin_description": "利用 Starknet 的安全性构建无信任比特币桥、OP_CAT 应用和 BTC 原生 DeFi。",
+ 66:   "track_bitcoin_example_1": "BTC 桥",
+ 67:   "track_bitcoin_example_2": "Starknet 上的 Ordinals",
+ 68:   "track_bitcoin_example_3": "Lightning 集成",
+ 69:   "track_bitcoin_example_4": "比特币 DeFi",
+ 70:   "track_open_name": "开放赛道",
+ 71:   "track_open_description": "在 Starknet 上构建任何创新项目。游戏、社交、基础设施——欢迎惊喜。",
+ 72:   "track_open_example_1": "游戏",
+ 73:   "track_open_example_2": "社交应用",
+ 74:   "track_open_example_3": "开发工具",
+ 75:   "track_open_example_4": "基础设施",
+ 76:   "resources_kicker": "快速开始",
+ 77:   "resources_title": "学习路径",
+ 78:   "resources_subtitle": "第一次接触 Starknet？选择赛道，开始构建。",
+ 79:   "resource_bitcoin_title": "Starknet 上的比特币",
+ 80:   "resource_bitcoin_description": "构建无信任 BTC 桥和 OP_CAT 应用",
+ 81:   "resource_bitcoin_link": "开始教程 →",
+ 82:   "resource_privacy_title": "隐私开发",
+ 83:   "resource_privacy_description": "掌握 ZK 证明与机密交易",
+ 84:   "resource_privacy_link": "学习隐私 →",
+ 85:   "resource_academy_title": "Starknet Academy",
+ 86:   "resource_academy_description": "完成 Cairo 与 Starknet 基础课程",
+ 87:   "resource_academy_link": "访问 Academy →",
+ 88:   "support_title": "建造者支持",
+ 89:   "support_academy_title": "Starknet Academy",
+ 90:   "support_academy_description": "免费 Cairo 课程与文档，助你快速上手",
+ 91:   "support_ai_title": "DoraHacks AI",
+ 92:   "support_ai_description": "AI 助力调试、创意与项目评审",
+ 93:   "support_mentors_title": "合作导师",
+ 94:   "support_mentors_description": "直接获取生态专家的技术指导",
+ 95:   "mentor_omar_role": "开发者倡导者",
+ 96:   "mentor_henri_role": "生态负责人",
+ 97:   "mentor_org": "Starknet Foundation",
+ 98:   "mentors_title": "导师",
+ 99:   "social_proof_kicker": "社交口碑",
+100:   "social_proof_title": "建造者都爱 {hackathonName}",
+101:   "testimonial_1_quote": "“这是我近几年参加过最棒的黑客松——光是导师支持就值回票价。”",
+102:   "testimonial_1_author": "Elena P.",
+103:   "testimonial_1_role": "ZK 工程师",
+104:   "testimonial_2_quote": "“我们在两周内交付了可用的 BTC 桥原型。”",
+105:   "testimonial_2_author": "Miguel R.",
+106:   "testimonial_2_role": "协议开发者",
+107:   "testimonial_3_quote": "“隐私赛道把我们的团队推向了生产级 ZK。”",
+108:   "testimonial_3_author": "Soojin K.",
+109:   "testimonial_3_role": "产品负责人",
+110:   "testimonial_4_quote": "“Starknet 资源紧凑清晰，而且真的有用。”",
+111:   "testimonial_4_author": "Andre S.",
+112:   "testimonial_4_role": "全栈开发者",
+113:   "testimonial_5_quote": "“这是我今年见过性价比最高的奖池。”",
+114:   "testimonial_5_author": "Rina T.",
+115:   "testimonial_5_role": "黑客松常客",
+116:   "sponsors_title": "支持方",
+117:   "sponsor_cta_text": "想成为赞助方？",
+118:   "sponsor_cta_link": "联系我们",
+119:   "faq_title": "常见问题",
+120:   "faq_1_q": "谁可以参加？",
+121:   "faq_1_a": "任何人都可以！个人开发者或最多 5 人团队均可。无地域限制，欢迎所有水平。",
+122:   "faq_2_q": "需要会 Cairo 吗？",
+123:   "faq_2_a": "无需具备即可开始。我们提供 Starknet Academy 学习资源与 DoraHacks AI 辅助。",
+124:   "faq_3_q": "获胜者会怎样？",
+125:   "faq_3_a": "获胜者将进入 Starknet Foundation 加速器快速通道，获得 $25k-$500k 资助管线与 VC 引荐。",
+126:   "faq_4_q": "是否完全线上？",
+127:   "faq_4_a": "是的。按自己的节奏构建。请在 2026 年 2 月 28 日前在 DoraHacks 提交。",
+128:   "faq_submit_q": "如何提交项目？",
+129:   "faq_submit_a": "所有提交通过 DoraHacks：包含 GitHub 仓库、演示视频（≤3分钟）与 Starknet 部署链接。截止时间：2026年2月28日 23:59 UTC。",
+130:   "faq_questions_q": "开发过程中有问题怎么办？",
+131:   "faq_questions_a": "使用 DoraHacks 论坛、我们的 Discord 或预约导师。查看 DoraHacks “Resources”页面的直播与资料。",
+132:   "faq_prizes_q": "奖金如何发放？",
+133:   "faq_prizes_a": "以 STRK/USDC 打到你的钱包，公布后 30 天内完成。税务由你自行承担，详见 DoraHacks 条款。",
+134:   "final_cta_title": "准备好开始构建了吗？",
+135:   "final_cta_subtitle": "加入 2026 年最大的隐私黑客松。4 周。$15,000。你的未来。",
+136:   "final_cta_button": "在 DoraHacks 报名 →",
+137:   "final_cta_note": "2026年2月1日–2月28日 · 全程线上",
+138:   "footer_by": "由",
+139:   "footer_community_title": "加入讨论",
+140:   "footer_twitter": "Twitter",
+141:   "footer_discord": "Discord",
+142:   "footer_forum": "DoraHacks 论坛",
+143:   "footer_telegram": "Telegram",
+144:   "footer_starknet": "Starknet"
+145: }
+</file>
+
+<file path="messages/zh-TW.json">
+  1: {
+  2:   "$schema": "https://inlang.com/schema/inlang-message-format",
+  3:   "meta_description": "{hackathonName}。總獎金 $15,000。在 Starknet 上打造私密、無需信任的應用未來。2026年2月1日–2月28日。",
+  4:   "og_title": "{hackathonName}",
+  5:   "og_description": "總獎金 $15,000。在 Starknet 上打造私密、無需信任的應用。",
+  6:   "page_title": "{hackathonName}",
+  7:   "og_site_name": "{hackathonName}",
+  8:   "skip_to_content": "跳至內容",
+  9:   "nav_register_now": "立即報名",
+ 10:   "hero_badge": "黑客松報名開放 · 2026",
+ 11:   "hero_title_line1": "比特幣與",
+ 12:   "hero_title_line2": "隱私黑客松",
+ 13:   "hero_subtitle_line1": "加入比特幣隱私革命：在 Starknet 上構建無信任應用，贏得 $15k 份額並直通融資。名額有限，立即在 DoraHacks 搶位！",
+ 14:   "hero_subtitle_privacy": "隱私路線：掌握 ZK 證明，在 Starknet 上構建無信任應用，並在 DoraHacks 鎖定名額。",
+ 15:   "hero_subtitle_line2": "2026年2月1–28日 · 總獎金 $15,000。",
+ 16:   "hero_countdown_urgency": "盡早在 DoraHacks 報名，參加獨家工作坊！",
+ 17:   "countdown_starts_in": "距離開始",
+ 18:   "countdown_ends_in": "距離結束",
+ 19:   "countdown_days": "天",
+ 20:   "countdown_hours": "小時",
+ 21:   "countdown_minutes": "分鐘",
+ 22:   "countdown_seconds": "秒",
+ 23:   "cta_register_primary": "在 DoraHacks 立即鎖定名額",
+ 24:   "cta_join_telegram": "加入 Telegram 群",
+ 25:   "cta_view_tracks": "查看賽道",
+ 26:   "hero_dates_line1": "2月1日 → 2月28日",
+ 27:   "hero_dates_year": "2026",
+ 28:   "hero_powered_by": "主辦單位",
+ 29:   "hero_powered_by_org": "Starknet Foundation",
+ 30:   "section_why_title": "為什麼 2026 是隱私之年",
+ 31:   "stat_1_label": "StarkWare 最快的 ZK 證明器於 2025 年部署在 Starknet 主網，效率提升 100 倍，實現可擴展隱私、更快證明、更低成本，以及屏蔽交易與私密 DeFi 等新場景",
+ 32:   "stat_2_label": "BTC 透過無信任質押在 Starknet 原生鎖定，推動 BTCFi 提供真實收益、流動質押與無需包裝或軟分叉的比特幣 DeFi",
+ 33:   "stat_3_label": "Starknet 的可程式化隱私層結合 Zcash 盾化與 Cairo 合約，為比特幣整合應用提供量子安全的機密計算",
+ 34:   "quote_1_text": "未來 8 年的加密將是隱私時代。",
+ 35:   "quote_1_cite": "— Balaji Srinivasan，《The 3 Eras of Crypto》播客，2026年1月1日",
+ 36:   "quote_2_text": "隱私是全球金融走向鏈上的關鍵特性。",
+ 37:   "quote_2_cite": "— a16z crypto，《我們對 2026 年加密最興奮的 17 件事》，2025年12月",
+ 38:   "story_blurb": "想像把你的 ZK 想法變成 $100k+ 資助專案，像往屆 Starknet 得獎者一樣。你的突破從 2 月 1 日開始。",
+ 39:   "source_label": "來源",
+ 40:   "section_tracks_title": "賽道與獎金",
+ 41:   "section_tracks_subtitle": "總獎金池 $15,000，由 Starknet Foundation 提供",
+ 42:   "section_details_title": "黑客松詳情",
+ 43:   "section_details_subtitle": "DoraHacks 內容預覽：規則、時間線與更多。",
+ 44:   "details_timeline_q": "關鍵時間線",
+ 45:   "details_timeline_a": "報名：2026年1月15日–2月1日。開發：2月1–28日。提交截止：2月28日 23:59 UTC。評審：3月1–10日。公布：3月15日。",
+ 46:   "details_eligibility_q": "參賽資格與團隊",
+ 47:   "details_eligibility_a": "面向所有人（18+），無地區限制（制裁國家除外）。團隊最多 5 人。歡迎各種程度。",
+ 48:   "details_submissions_q": "如何提交",
+ 49:   "details_submissions_a": "透過 DoraHacks 提交：包含 GitHub 倉庫、示範影片（≤3分鐘）與 Starknet testnet/mainnet 部署。必須為黑客松期間完成的原創作品。",
+ 50:   "details_judging_q": "評審標準",
+ 51:   "details_judging_a": "創新與創意（40%）：是否新穎？技術執行（30%）：品質與複雜度。隱私/比特幣影響（20%）：實際價值。完整度與體驗（10%）：功能齊全且好用。",
+ 52:   "details_prizes_q": "獎金與發放",
+ 53:   "details_prizes_a": "每賽道：第一名 $3k、第二名 $2k、第三名 $1k（STRK/USDC）。30 天內發放。得獎者可走加速器快速通道。",
+ 54:   "details_ip_rules_q": "智慧財產與規則",
+ 55:   "details_ip_rules_a": "你保留所有權。授予非獨占推廣授權。遵守 DoraHacks 行為準則（反騷擾、包容）。僅限原創作品。",
+ 56:   "details_support_q": "參賽支援",
+ 57:   "details_support_a": "DoraHacks 論壇、Discord 頻道、導師時段與 AI 工具。查看 DoraHacks 的「Resources」分頁。",
+ 58:   "track_privacy_name": "隱私賽道",
+ 59:   "track_privacy_description": "使用 STARK、零知識證明與機密交易在 Starknet 上構建隱私應用。",
+ 60:   "track_privacy_example_1": "私密支付",
+ 61:   "track_privacy_example_2": "匿名投票",
+ 62:   "track_privacy_example_3": "機密 DeFi",
+ 63:   "track_privacy_example_4": "資料主權",
+ 64:   "track_bitcoin_name": "比特幣賽道",
+ 65:   "track_bitcoin_description": "利用 Starknet 的安全性構建無信任比特幣橋、OP_CAT 應用與 BTC 原生 DeFi。",
+ 66:   "track_bitcoin_example_1": "BTC 橋",
+ 67:   "track_bitcoin_example_2": "Starknet 上的 Ordinals",
+ 68:   "track_bitcoin_example_3": "Lightning 整合",
+ 69:   "track_bitcoin_example_4": "比特幣 DeFi",
+ 70:   "track_open_name": "開放賽道",
+ 71:   "track_open_description": "在 Starknet 上構建任何創新專案。遊戲、社交、基礎設施——歡迎驚喜。",
+ 72:   "track_open_example_1": "遊戲",
+ 73:   "track_open_example_2": "社交應用",
+ 74:   "track_open_example_3": "開發工具",
+ 75:   "track_open_example_4": "基礎設施",
+ 76:   "resources_kicker": "快速開始",
+ 77:   "resources_title": "學習路徑",
+ 78:   "resources_subtitle": "第一次接觸 Starknet？選擇賽道，開始構建。",
+ 79:   "resource_bitcoin_title": "Starknet 上的比特幣",
+ 80:   "resource_bitcoin_description": "構建無信任 BTC 橋與 OP_CAT 應用",
+ 81:   "resource_bitcoin_link": "開始教學 →",
+ 82:   "resource_privacy_title": "隱私開發",
+ 83:   "resource_privacy_description": "掌握 ZK 證明與機密交易",
+ 84:   "resource_privacy_link": "學習隱私 →",
+ 85:   "resource_academy_title": "Starknet Academy",
+ 86:   "resource_academy_description": "完成 Cairo 與 Starknet 基礎課程",
+ 87:   "resource_academy_link": "前往 Academy →",
+ 88:   "support_title": "建造者支援",
+ 89:   "support_academy_title": "Starknet Academy",
+ 90:   "support_academy_description": "免費 Cairo 課程與文件，助你快速上手",
+ 91:   "support_ai_title": "DoraHacks AI",
+ 92:   "support_ai_description": "AI 協助除錯、發想與專案評審",
+ 93:   "support_mentors_title": "合作導師",
+ 94:   "support_mentors_description": "直接取得生態專家的技術指導",
+ 95:   "mentor_omar_role": "開發者倡議者",
+ 96:   "mentor_henri_role": "生態負責人",
+ 97:   "mentor_org": "Starknet Foundation",
+ 98:   "mentors_title": "導師",
+ 99:   "social_proof_kicker": "社群口碑",
+100:   "social_proof_title": "建造者都愛 {hackathonName}",
+101:   "testimonial_1_quote": "“這是我近年參加過最棒的黑客松——光是導師支援就值得。”",
+102:   "testimonial_1_author": "Elena P.",
+103:   "testimonial_1_role": "ZK 工程師",
+104:   "testimonial_2_quote": "“我們在兩週內完成可用的 BTC 橋原型。”",
+105:   "testimonial_2_author": "Miguel R.",
+106:   "testimonial_2_role": "協議開發者",
+107:   "testimonial_3_quote": "“隱私賽道讓我們團隊進入生產級 ZK。”",
+108:   "testimonial_3_author": "Soojin K.",
+109:   "testimonial_3_role": "產品負責人",
+110:   "testimonial_4_quote": "“Starknet 資源精煉、清楚，而且真的好用。”",
+111:   "testimonial_4_author": "Andre S.",
+112:   "testimonial_4_role": "全端開發者",
+113:   "testimonial_5_quote": "“這是我今年看過最划算的獎池。”",
+114:   "testimonial_5_author": "Rina T.",
+115:   "testimonial_5_role": "黑客松常客",
+116:   "sponsors_title": "支持單位",
+117:   "sponsor_cta_text": "有興趣成為贊助方？",
+118:   "sponsor_cta_link": "聯絡我們",
+119:   "faq_title": "常見問題",
+120:   "faq_1_q": "誰可以參加？",
+121:   "faq_1_a": "任何人都可以！個人開發者或最多 5 人團隊皆可。無地區限制，歡迎各種程度。",
+122:   "faq_2_q": "需要會 Cairo 嗎？",
+123:   "faq_2_a": "不用即可開始。我們提供 Starknet Academy 學習資源與 DoraHacks AI 輔助。",
+124:   "faq_3_q": "得獎者會怎樣？",
+125:   "faq_3_a": "得獎者將進入 Starknet Foundation 加速器快速通道，獲得 $25k-$500k 資助管線與 VC 引薦。",
+126:   "faq_4_q": "是否完全線上？",
+127:   "faq_4_a": "是的。按自己的節奏構建。請在 2026 年 2 月 28 日前於 DoraHacks 提交。",
+128:   "faq_submit_q": "如何提交專案？",
+129:   "faq_submit_a": "所有提交透過 DoraHacks：包含 GitHub 倉庫、示範影片（≤3分鐘）與 Starknet 部署連結。截止：2026年2月28日 23:59 UTC。",
+130:   "faq_questions_q": "參賽期間有問題怎麼辦？",
+131:   "faq_questions_a": "使用 DoraHacks 論壇、我們的 Discord 或預約導師。查看 DoraHacks「Resources」的直播與資料。",
+132:   "faq_prizes_q": "獎金如何發放？",
+133:   "faq_prizes_a": "以 STRK/USDC 發送到你的錢包，公告後 30 天內完成。稅務由你自行負責，詳見 DoraHacks 條款。",
+134:   "final_cta_title": "準備好開始構建了嗎？",
+135:   "final_cta_subtitle": "加入 2026 年最大的隱私黑客松。4 週。$15,000。你的未來。",
+136:   "final_cta_button": "在 DoraHacks 報名 →",
+137:   "final_cta_note": "2026年2月1日–2月28日 · 全程線上",
+138:   "footer_by": "由",
+139:   "footer_community_title": "加入討論",
+140:   "footer_twitter": "Twitter",
+141:   "footer_discord": "Discord",
+142:   "footer_forum": "DoraHacks 論壇",
+143:   "footer_telegram": "Telegram",
+144:   "footer_starknet": "Starknet"
+145: }
+</file>
+
+<file path="src/styles/global.css">
+  1: @tailwind base;
+  2: @tailwind components;
+  3: @tailwind utilities;
+  4: 
+  5: /* ============================================ */
+  6: /* BASE STYLES */
+  7: /* ============================================ */
+  8: html {
+  9:   scroll-behavior: auto;
+ 10: }
+ 11: 
+ 12: body {
+ 13:   background-color: #0C0A18;
+ 14: }
+ 15: 
+ 16: @font-face {
+ 17:   font-family: 'Inter';
+ 18:   src: url('/fonts/InterVariable.woff2') format('woff2');
+ 19:   font-weight: 100 900;
+ 20:   font-style: normal;
+ 21:   font-display: swap;
+ 22: }
+ 23: 
+ 24: @font-face {
+ 25:   font-family: 'Space Grotesk';
+ 26:   src: url('/fonts/SpaceGroteskVariable.woff2') format('woff2');
+ 27:   font-weight: 300 700;
+ 28:   font-style: normal;
+ 29:   font-display: swap;
+ 30: }
+ 31: 
+ 32: .text-display-xl {
+ 33:   font-size: clamp(3rem, 8vw, 7rem);
+ 34:   line-height: 0.95;
+ 35:   letter-spacing: -0.03em;
+ 36: }
+ 37: 
+ 38: .text-body-large {
+ 39:   font-size: clamp(1.125rem, 2vw, 1.25rem);
+ 40:   line-height: 1.6;
+ 41:   letter-spacing: -0.01em;
+ 42: }
+ 43: 
+ 44: /* ============================================ */
+ 45: /* NOISE TEXTURE OVERLAY (subtle grain) */
+ 46: /* ============================================ */
+ 47: body::before {
+ 48:   content: '';
+ 49:   position: fixed;
+ 50:   inset: 0;
+ 51:   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+ 52:   opacity: 0.015;
+ 53:   pointer-events: none;
+ 54:   z-index: 1000;
+ 55: }
+ 56: 
+ 57: /* ============================================ */
+ 58: /* ANIMATED GRADIENT GLOWS */
+ 59: /* ============================================ */
+ 60: @keyframes glow-pulse {
+ 61:   0%, 100% { opacity: 0.15; transform: scale(1) translate(0, 0); }
+ 62:   33% { opacity: 0.25; transform: scale(1.1) translate(10px, -10px); }
+ 63:   66% { opacity: 0.2; transform: scale(1.05) translate(-5px, 5px); }
+ 64: }
+ 65: 
+ 66: @keyframes glow-drift {
+ 67:   0%, 100% { transform: translate(0, 0) rotate(0deg); }
+ 68:   50% { transform: translate(30px, -20px) rotate(5deg); }
+ 69: }
+ 70: 
+ 71: .glow-1 {
+ 72:   animation: glow-pulse 12s ease-in-out infinite, glow-drift 20s ease-in-out infinite;
+ 73: }
+ 74: 
+ 75: .glow-2 {
+ 76:   animation: glow-pulse 12s ease-in-out infinite 4s, glow-drift 25s ease-in-out infinite reverse;
+ 77: }
+ 78: 
+ 79: /* ============================================ */
+ 80: /* ANIMATED BORDER FOR CARDS */
+ 81: /* ============================================ */
+ 82: @keyframes border-spin {
+ 83:   from { transform: rotate(0deg); }
+ 84:   to { transform: rotate(360deg); }
+ 85: }
+ 86: 
+ 87: .animate-border-spin {
+ 88:   animation: border-spin 3s linear infinite;
+ 89: }
+ 90: 
+ 91: /* ============================================ */
+ 92: /* COUNTDOWN NUMBER ANIMATION */
+ 93: /* ============================================ */
+ 94: @keyframes number-tick {
+ 95:   0%, 100% { transform: translateY(0); }
+ 96:   50% { transform: translateY(-2px); }
+ 97: }
+ 98: 
+ 99: .countdown-unit span {
+100:   transition: transform 0.15s ease-out;
+101: }
+102: 
+103: /* ============================================ */
+104: /* ANIMATED GRADIENT TEXT */
+105: /* ============================================ */
+106: .gradient-text {
+107:   background: linear-gradient(
+108:     90deg,
+109:     #F3F2F1 0%,
+110:     #5B7ECF 25%,
+111:     #8B5CF6 50%,
+112:     #5B7ECF 75%,
+113:     #F3F2F1 100%
+114:   );
+115:   background-size: 400% 100%;
+116:   -webkit-background-clip: text;
+117:   -webkit-text-fill-color: transparent;
+118:   background-clip: text;
+119:   animation: gradient-flow 8s ease-in-out infinite;
+120: }
+121: 
+122: @keyframes gradient-flow {
+123:   0% { background-position: 0% 50%; }
+124:   50% { background-position: 100% 50%; }
+125:   100% { background-position: 0% 50%; }
+126: }
+127: 
+128: /* ============================================ */
+129: /* CARD SHINE EFFECT ON HOVER */
+130: /* ============================================ */
+131: .card-shine {
+132:   position: relative;
+133:   overflow: hidden;
+134: }
+135: 
+136: .card-shine::after {
+137:   content: '';
+138:   position: absolute;
+139:   top: -50%;
+140:   left: -50%;
+141:   width: 200%;
+142:   height: 200%;
+143:   background: linear-gradient(
+144:     to bottom right,
+145:     transparent 40%,
+146:     rgba(91, 126, 207, 0.1) 50%,
+147:     transparent 60%
+148:   );
+149:   transform: rotate(45deg) translateX(-100%);
+150:   transition: transform 0.6s ease-out;
+151: }
+152: 
+153: .card-shine:hover::after {
+154:   transform: rotate(45deg) translateX(100%);
+155: }
+156: 
+157: .scribble-underline {
+158:   text-decoration: underline wavy rgba(91, 126, 207, 0.7);
+159:   text-underline-offset: 10px;
+160: }
+161: 
+162: .organic-blob {
+163:   position: absolute;
+164:   width: 300px;
+165:   height: 300px;
+166:   background: radial-gradient(circle, rgba(91, 126, 207, 0.2) 0%, transparent 70%);
+167:   border-radius: 50% 60% 70% 80% / 60% 70% 80% 50%;
+168:   animation: morph 10s ease-in-out infinite;
+169:   pointer-events: none;
+170:   z-index: 1;
+171:   opacity: 0.5;
+172: }
+173: 
+174: .organic-blob.blob-1 {
+175:   top: 6%;
+176:   left: 8%;
+177: }
+178: 
+179: .organic-blob.blob-2 {
+180:   bottom: 12%;
+181:   right: 10%;
+182:   width: 260px;
+183:   height: 260px;
+184:   animation-delay: -3s;
+185: }
+186: 
+187: .organic-blob.blob-3 {
+188:   top: 50%;
+189:   left: 15%;
+190:   width: 220px;
+191:   height: 220px;
+192:   animation-delay: -6s;
+193: }
+194: 
+195: @keyframes morph {
+196:   0%, 100% { border-radius: 50% 60% 70% 80% / 60% 70% 80% 50%; }
+197:   50% { border-radius: 70% 80% 50% 60% / 80% 50% 60% 70%; }
+198: }
+199: 
+200: .anti-grid {
+201:   grid-auto-flow: dense;
+202: }
+203: 
+204: .secondary-cta {
+205:   transition: opacity 0.3s ease, transform 0.3s ease;
+206: }
+207: 
+208: .secondary-cta.is-hidden {
+209:   opacity: 0;
+210:   transform: translateY(6px);
+211:   pointer-events: none;
+212: }
+213: 
+214: .button-animated {
+215:   transition: border-radius 0.4s ease;
+216: }
+217: 
+218: .button-animated:hover {
+219:   border-radius: 999px;
+220: }
+221: 
+222: .track-card {
+223:   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+224:     box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+225:     border-color 0.3s ease;
+226: }
+227: 
+228: .track-card:hover {
+229:   transform: translateY(-8px) scale(1.02);
+230:   box-shadow:
+231:     0 20px 40px rgba(91, 126, 207, 0.15),
+232:     0 0 0 1px rgba(91, 126, 207, 0.2);
+233: }
+234: 
+235: /* ============================================ */
+236: /* FLOATING ANIMATION FOR DECORATIVE ELEMENTS */
+237: /* ============================================ */
+238: @keyframes float {
+239:   0%, 100% { transform: translateY(0px); }
+240:   50% { transform: translateY(-10px); }
+241: }
+242: 
+243: .animate-float {
+244:   animation: float 6s ease-in-out infinite;
+245: }
+246: 
+247: .animate-float-delayed {
+248:   animation: float 6s ease-in-out infinite 2s;
+249: }
+250: 
+251: /* ============================================ */
+252: /* BLUR BACKDROP FOR GLASSMORPHISM */
+253: /* ============================================ */
+254: .glass {
+255:   background: rgba(12, 10, 24, 0.6);
+256:   backdrop-filter: blur(24px);
+257:   -webkit-backdrop-filter: blur(24px);
+258:   border: 1px solid rgba(91, 126, 207, 0.1);
+259: }
+260: 
+261: /* ============================================ */
+262: /* ACCESSIBILITY */
+263: /* ============================================ */
+264: .sr-only {
+265:   position: absolute;
+266:   width: 1px;
+267:   height: 1px;
+268:   padding: 0;
+269:   margin: -1px;
+270:   overflow: hidden;
+271:   clip: rect(0, 0, 0, 0);
+272:   white-space: nowrap;
+273:   border-width: 0;
+274: }
+275: 
+276: .focus\:not-sr-only:focus {
+277:   position: static;
+278:   width: auto;
+279:   height: auto;
+280:   padding: 1rem;
+281:   margin: 0;
+282:   overflow: visible;
+283:   clip: auto;
+284:   white-space: normal;
+285: }
+286: 
+287: /* ============================================ */
+288: /* REDUCED MOTION PREFERENCES */
+289: /* ============================================ */
+290: @media (prefers-reduced-motion: reduce) {
+291:   .glow-1, .glow-2, .animate-float, .animate-float-delayed, .animate-border-spin {
+292:     animation: none;
+293:   }
+294:   
+295:   *, *::before, *::after {
+296:     animation-duration: 0.01ms !important;
+297:     animation-iteration-count: 1 !important;
+298:     transition-duration: 0.01ms !important;
+299:   }
+300: }
+301: 
+302: /* ============================================ */
+303: /* DYNAMIC COLORS - MODERN EFFECTS */
+304: /* ============================================ */
+305: :root {
+306:   --color-blue: 91, 126, 207;
+307:   --color-purple: 139, 92, 246;
+308:   --color-cyan: 59, 130, 246;
+309:   --snf-black: #0C0A18;
+310: }
+311: 
+312: /* AURORA / MESH GRADIENT BACKGROUND */
+313: .aurora-bg {
+314:   position: absolute;
+315:   inset: 0;
+316:   overflow: hidden;
+317:   pointer-events: none;
+318: }
+319: 
+320: .aurora-bg::before,
+321: .aurora-bg::after {
+322:   content: '';
+323:   position: absolute;
+324:   width: 150%;
+325:   height: 150%;
+326:   top: -25%;
+327:   left: -25%;
+328:   background:
+329:     radial-gradient(ellipse 80% 50% at 20% 40%, rgba(var(--color-blue), 0.3), transparent 50%),
+330:     radial-gradient(ellipse 60% 80% at 80% 50%, rgba(var(--color-purple), 0.2), transparent 50%),
+331:     radial-gradient(ellipse 50% 60% at 40% 80%, rgba(var(--color-cyan), 0.15), transparent 50%);
+332:   animation: aurora-shift 15s ease-in-out infinite;
+333: }
+334: 
+335: .aurora-bg::after {
+336:   animation-delay: -7.5s;
+337:   animation-direction: reverse;
+338:   opacity: 0.7;
+339: }
+340: 
+341: @keyframes aurora-shift {
+342:   0%, 100% { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+343:   25% { transform: translate(5%, -5%) rotate(5deg) scale(1.05); }
+344:   50% { transform: translate(-3%, 8%) rotate(-3deg) scale(0.98); }
+345:   75% { transform: translate(8%, 3%) rotate(8deg) scale(1.02); }
+346: }
+347: 
+348: /* ANIMATED COLOR ORBS */
+349: .color-orb {
+350:   position: absolute;
+351:   border-radius: 50%;
+352:   filter: blur(80px);
+353:   mix-blend-mode: screen;
+354: }
+355: 
+356: .color-orb-1 {
+357:   width: 500px;
+358:   height: 500px;
+359:   top: 10%;
+360:   left: 20%;
+361:   background: linear-gradient(180deg, rgba(var(--color-blue), 0.4) 0%, transparent 100%);
+362:   animation: orb-float-1 25s ease-in-out infinite;
+363: }
+364: 
+365: .color-orb-2 {
+366:   width: 400px;
+367:   height: 400px;
+368:   top: 50%;
+369:   right: 15%;
+370:   background: linear-gradient(180deg, rgba(var(--color-purple), 0.3) 0%, transparent 100%);
+371:   animation: orb-float-2 20s ease-in-out infinite;
+372: }
+373: 
+374: .color-orb-3 {
+375:   width: 350px;
+376:   height: 350px;
+377:   bottom: 20%;
+378:   left: 40%;
+379:   background: linear-gradient(180deg, rgba(var(--color-cyan), 0.25) 0%, transparent 100%);
+380:   animation: orb-float-3 22s ease-in-out infinite;
+381: }
+382: 
+383: @keyframes orb-float-1 {
+384:   0%, 100% { transform: translate(0, 0) scale(1); }
+385:   25% { transform: translate(50px, -30px) scale(1.1); }
+386:   50% { transform: translate(-20px, 40px) scale(0.95); }
+387:   75% { transform: translate(30px, 20px) scale(1.05); }
+388: }
+389: 
+390: @keyframes orb-float-2 {
+391:   0%, 100% { transform: translate(0, 0) scale(1); }
+392:   33% { transform: translate(-40px, 30px) scale(1.08); }
+393:   66% { transform: translate(30px, -40px) scale(0.92); }
+394: }
+395: 
+396: @keyframes orb-float-3 {
+397:   0%, 100% { transform: translate(0, 0) scale(1); }
+398:   50% { transform: translate(-30px, -50px) scale(1.15); }
+399: }
+400: 
+401: /* MOUSE-FOLLOWING GRADIENT */
+402: .mouse-glow {
+403:   position: absolute;
+404:   width: 600px;
+405:   height: 600px;
+406:   background: radial-gradient(
+407:     circle,
+408:     rgba(var(--color-blue), 0.15) 0%,
+409:     rgba(var(--color-purple), 0.08) 30%,
+410:     transparent 70%
+411:   );
+412:   border-radius: 50%;
+413:   pointer-events: none;
+414:   transform: translate(-50%, -50%);
+415:   z-index: 1;
+416:   opacity: 0;
+417:   transition: opacity 0.5s ease;
+418: }
+419: 
+420: #main-content:hover .mouse-glow {
+421:   opacity: 1;
+422: }
+423: 
+424: /* COLOR-CYCLING BACKGROUND */
+425: @property --gradient-angle {
+426:   syntax: '<angle>';
+427:   initial-value: 0deg;
+428:   inherits: false;
+429: }
+430: 
+431: .dynamic-gradient-bg {
+432:   background: linear-gradient(
+433:     var(--gradient-angle),
+434:     rgba(91, 126, 207, 0.1) 0%,
+435:     rgba(139, 92, 246, 0.05) 50%,
+436:     rgba(59, 130, 246, 0.08) 100%
+437:   );
+438:   animation: gradient-rotate 20s linear infinite;
+439: }
+440: 
+441: @keyframes gradient-rotate {
+442:   0% { --gradient-angle: 0deg; }
+443:   100% { --gradient-angle: 360deg; }
+444: }
+445: 
+446: /* ANIMATED GRADIENT BORDER */
+447: .gradient-border {
+448:   position: relative;
+449:   background: linear-gradient(var(--snf-black), var(--snf-black)) padding-box,
+450:               linear-gradient(var(--border-angle, 0deg), #5B7ECF, #8B5CF6, #3B82F6, #5B7ECF) border-box;
+451:   border: 1px solid transparent;
+452:   animation: border-rotate 4s linear infinite;
+453: }
+454: 
+455: @keyframes border-rotate {
+456:   0% { --border-angle: 0deg; }
+457:   100% { --border-angle: 360deg; }
+458: }
+459: 
+460: .gradient-border:hover {
+461:   animation-duration: 2s;
+462:   border-width: 2px;
+463: }
+464: 
+465: /* GLOWING CTA BUTTON */
+466: .cta-glow {
+467:   position: relative;
+468: }
+469: 
+470: .cta-glow::before {
+471:   content: '';
+472:   position: absolute;
+473:   inset: -3px;
+474:   background: linear-gradient(90deg,
+475:     rgb(var(--color-blue)),
+476:     rgb(var(--color-purple)),
+477:     rgb(var(--color-cyan)),
+478:     rgb(var(--color-blue))
+479:   );
+480:   background-size: 300% 100%;
+481:   border-radius: inherit;
+482:   z-index: -1;
+483:   opacity: 0;
+484:   filter: blur(20px);
+485:   transition: opacity 0.3s ease;
+486:   animation: glow-shift 4s linear infinite;
+487: }
+488: 
+489: .cta-glow:hover::before {
+490:   opacity: 0.5;
+491: }
+492: 
+493: @keyframes glow-shift {
+494:   0% { background-position: 0% 50%; }
+495:   100% { background-position: 300% 50%; }
+496: }
+497: 
+498: @media (hover: none), (max-width: 768px) {
+499: .mouse-glow { display: none; }
+500: }
+501: 
+502: html[data-theme='light'] body {
+503:   background-color: #F5F6FB;
+504:   color: #0C0A18;
+505: }
+506: 
+507: html[data-theme='light'] .bg-snf-black\/80 {
+508:   background-color: rgba(245, 246, 251, 0.9) !important;
+509: }
+510: 
+511: html[data-theme='light'] .text-snf-white {
+512:   color: #0C0A18 !important;
+513: }
+514: 
+515: html[data-theme='light'] [class*="text-snf-white/"] {
+516:   color: rgba(12, 10, 24, 0.7) !important;
+517: }
+518: 
+519: html[data-theme='light'] .glass {
+520:   background: rgba(255, 255, 255, 0.7);
+521:   border-color: rgba(91, 126, 207, 0.2);
+522: }
+523: 
+524: html[data-theme='light'] .hero-grid {
+525:   opacity: 0.25;
+526: }
+527: 
+528: html[data-theme='light'] .gradient-text {
+529:   background: linear-gradient(90deg, #0C0A18 0%, #5B7ECF 25%, #8B5CF6 50%, #5B7ECF 75%, #0C0A18 100%);
+530:   background-size: 400% 100%;
+531: }
+532: 
+533: .scroll-progress {
+534:   position: absolute;
+535:   left: 0;
+536:   bottom: 0;
+537:   height: 2px;
+538:   background: linear-gradient(90deg, rgba(91, 126, 207, 1), rgba(139, 92, 246, 1));
+539:   width: 0%;
+540: }
+541: 
+542: .faq-answer {
+543:   max-height: 0;
+544:   opacity: 0;
+545:   overflow: hidden;
+546:   transition: max-height 0.5s ease, opacity 0.3s ease;
+547: }
+548: 
+549: .faq-item[data-state="open"] .faq-answer {
+550:   opacity: 1;
+551:   max-height: 600px;
+552: }
+553: 
+554: .rotate-180 {
+555:   transform: rotate(180deg);
+556: }
+557: 
+558: .hero-grid {
+559:   background-image:
+560:     linear-gradient(rgba(91, 126, 207, 0.03) 1px, transparent 1px),
+561:     linear-gradient(90deg, rgba(91, 126, 207, 0.03) 1px, transparent 1px),
+562:     radial-gradient(ellipse at 50% 0%, rgba(91, 126, 207, 0.1) 0%, transparent 50%);
+563:   background-size: 80px 80px, 80px 80px, 100% 100%;
+564:   mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+565:   opacity: 0.35;
+566: }
+567: 
+568: .gradient-canvas {
+569:   position: absolute;
+570:   inset: 0;
+571:   width: 100%;
+572:   height: 100%;
+573:   opacity: 0.35;
+574:   pointer-events: none;
+575:   z-index: 0;
+576: }
+577: 
+578: 
+579: .testimonial-track {
+580:   overflow: hidden;
+581:   padding: 0 1.5rem 2rem;
+582: }
+583: 
+584: .testimonial-row {
+585:   display: flex;
+586:   gap: 1.5rem;
+587:   width: max-content;
+588:   animation: marquee 30s linear infinite;
+589: }
+590: 
+591: .testimonial-card {
+592:   width: 320px;
+593:   padding: 2rem;
+594:   border-radius: 1.5rem;
+595:   background: rgba(12, 10, 24, 0.6);
+596:   border: 1px solid rgba(91, 126, 207, 0.2);
+597:   backdrop-filter: blur(16px);
+598: }
+599: 
+600: @keyframes marquee {
+601:   0% { transform: translateX(0); }
+602:   100% { transform: translateX(-50%); }
+603: }
+604: 
+605: .skeleton-block {
+606:   position: relative;
+607:   overflow: hidden;
+608: }
+609: 
+610: .skeleton-block::after {
+611:   content: '';
+612:   position: absolute;
+613:   inset: 0;
+614:   transform: translateX(-100%);
+615:   background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+616:   animation: shimmer 2.5s ease-in-out infinite;
+617: }
+618: 
+619: @keyframes shimmer {
+620:   0% { transform: translateX(-100%); }
+621:   100% { transform: translateX(100%); }
+622: }
+623: 
+624: .custom-cursor,
+625: .custom-cursor-ring {
+626:   position: fixed;
+627:   top: 0;
+628:   left: 0;
+629:   pointer-events: none;
+630:   z-index: 9999;
+631:   opacity: 0;
+632:   transition: opacity 0.2s ease;
+633: }
+634: 
+635: .custom-cursor {
+636:   width: 8px;
+637:   height: 8px;
+638:   border-radius: 999px;
+639:   background: #5B7ECF;
+640: }
+641: 
+642: .custom-cursor-ring {
+643:   width: 36px;
+644:   height: 36px;
+645:   border-radius: 999px;
+646:   border: 1px solid rgba(91, 126, 207, 0.6);
+647:   transform: translate(-50%, -50%);
+648: }
+649: 
+650: html.custom-cursor-enabled,
+651: html.custom-cursor-enabled body {
+652:   cursor: none;
+653: }
+654: 
+655: html.custom-cursor-enabled a,
+656: html.custom-cursor-enabled button,
+657: html.custom-cursor-enabled [role="button"] {
+658:   cursor: none;
+659: }
+660: 
+661: /* ============================================ */
+662: /* GRADIENT ICON STYLING */
+663: /* ============================================ */
+664: .icon-gradient svg {
+665:   stroke: url(#icon-gradient-blue);
+666: }
+667: 
+668: .icon-gradient-orange svg {
+669:   stroke: url(#icon-gradient-orange);
+670: }
+671: 
+672: .icon-gradient-purple svg {
+673:   stroke: url(#icon-gradient-purple);
+674: }
+675: 
+676: .icon-duotone {
+677:   position: relative;
+678: }
+679: 
+680: .icon-duotone::before {
+681:   content: '';
+682:   position: absolute;
+683:   inset: 0;
+684:   background: linear-gradient(135deg, rgba(91, 126, 207, 0.2), rgba(139, 92, 246, 0.1));
+685:   border-radius: inherit;
+686:   z-index: -1;
+687: }
+688: 
+689: .icon-glow {
+690:   transition: filter 0.3s ease;
+691: }
+692: 
+693: .icon-glow:hover {
+694:   filter: drop-shadow(0 0 8px rgba(91, 126, 207, 0.5));
+695: }
+696: 
+697: /* ============================================ */
+698: /* ANIMATED ICON EFFECTS */
+699: /* ============================================ */
+700: .icon-bounce:hover svg {
+701:   animation: icon-bounce 0.5s ease;
+702: }
+703: 
+704: @keyframes icon-bounce {
+705:   0%, 100% { transform: translateY(0); }
+706:   50% { transform: translateY(-4px); }
+707: }
+708: 
+709: .icon-pulse:hover svg {
+710:   animation: icon-pulse 1s ease-in-out infinite;
+711: }
+712: 
+713: @keyframes icon-pulse {
+714:   0%, 100% { filter: drop-shadow(0 0 0 rgba(91, 126, 207, 0)); }
+715:   50% { filter: drop-shadow(0 0 12px rgba(91, 126, 207, 0.6)); }
+716: }
+717: 
+718: .icon-spin:hover svg {
+719:   animation: icon-spin 0.6s ease;
+720: }
+721: 
+722: @keyframes icon-spin {
+723:   0% { transform: rotate(0deg); }
+724:   100% { transform: rotate(360deg); }
+725: }
+726: 
+727: .icon-pop:hover svg {
+728:   animation: icon-pop 0.3s ease;
+729: }
+730: 
+731: @keyframes icon-pop {
+732:   0% { transform: scale(1); }
+733:   50% { transform: scale(1.2); }
+734:   100% { transform: scale(1); }
+735: }
+</file>
+
+<file path="package.json">
+ 1: {
+ 2:   "name": "recypher-landing",
+ 3:   "type": "module",
+ 4:   "private": true,
+ 5:   "scripts": {
+ 6:     "dev": "astro dev",
+ 7:     "start": "astro dev",
+ 8:     "build": "astro build",
+ 9:     "preview": "astro preview"
+10:   },
+11:   "devDependencies": {
+12:     "@inlang/paraglide-astro": "^0.4.1",
+13:     "@inlang/paraglide-js": "^2.7.1",
+14:     "@types/bun": "latest"
+15:   },
+16:   "peerDependencies": {
+17:     "typescript": "^5"
+18:   },
+19:   "dependencies": {
+20:     "@astrojs/tailwind": "^6.0.2",
+21:     "@studio-freight/lenis": "^1.0.42",
+22:     "astro": "^5.16.6",
+23:     "gsap": "^3.14.2",
+24:     "lucide-static": "^0.562.0",
+25:     "simplex-noise": "^4.0.1",
+26:     "tailwindcss": "3.4.17",
+27:     "vanilla-tilt": "^1.8.1"
+28:   }
+29: }
+</file>
+
+<file path="src/pages/index.astro">
+   1: ---
+   2: // src/pages/index.astro
+   3: import '../styles/global.css';
+   4: import ArrowRight from '../components/icons/ArrowRight.astro';
+   5: import Bitcoin from '../components/icons/Bitcoin.astro';
+   6: import BookOpen from '../components/icons/BookOpen.astro';
+   7: import ChevronDown from '../components/icons/ChevronDown.astro';
+   8: import GraduationCap from '../components/icons/GraduationCap.astro';
+   9: import Monitor from '../components/icons/Monitor.astro';
+  10: import Shield from '../components/icons/Shield.astro';
+  11: import Users from '../components/icons/Users.astro';
+  12: import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+  13: import * as m from '../paraglide/messages';
+  14: 
+  15: const hackathonName = 'The Bitcoin and Privacy Hackathon';
+  16: const siteUrl = 'https://bitcoinxprivacy.com';
+  17: const supportedLocales = ['en', 'es', 'zh-CN', 'zh-TW', 'pt'];
+  18: const defaultLocale = 'en';
+  19: const locale = Astro.currentLocale ?? defaultLocale;
+  20: const localePattern = new RegExp(`^/(${supportedLocales.join('|')})(?=/|$)`);
+  21: const pathWithoutLocale = Astro.url.pathname.replace(localePattern, '');
+  22: const normalizedPath = pathWithoutLocale === '' ? '/' : pathWithoutLocale;
+  23: const hrefForLocale = (code) => `${siteUrl}${code === defaultLocale ? '' : `/${code}`}${normalizedPath}`;
+  24: const canonicalUrl = hrefForLocale(locale);
+  25: const metaDescription = m.meta_description({ hackathonName });
+  26: const ogTitle = m.og_title({ hackathonName });
+  27: const ogSiteName = m.og_site_name({ hackathonName });
+  28: const pageTitle = m.page_title({ hackathonName });
+  29: const countdownLabels = {
+  30:   starts: m.countdown_starts_in(),
+  31:   ends: m.countdown_ends_in(),
+  32: };
+  33: const personalizationCopy = {
+  34:   privacy: m.hero_subtitle_privacy(),
+  35: };
+  36: 
+  37: const tracks = [
+  38:   {
+  39:     name: m.track_privacy_name(),
+  40:     prize: '$6,000',
+  41:     percentage: '40%',
+  42:     description: m.track_privacy_description(),
+  43:     examples: [
+  44:       m.track_privacy_example_1(),
+  45:       m.track_privacy_example_2(),
+  46:       m.track_privacy_example_3(),
+  47:       m.track_privacy_example_4(),
+  48:     ],
+  49:   },
+  50:   {
+  51:     name: m.track_bitcoin_name(),
+  52:     prize: '$6,000',
+  53:     percentage: '40%',
+  54:     description: m.track_bitcoin_description(),
+  55:     examples: [
+  56:       m.track_bitcoin_example_1(),
+  57:       m.track_bitcoin_example_2(),
+  58:       m.track_bitcoin_example_3(),
+  59:       m.track_bitcoin_example_4(),
+  60:     ],
+  61:   },
+  62:   {
+  63:     name: m.track_open_name(),
+  64:     prize: '$3,000',
+  65:     percentage: '20%',
+  66:     description: m.track_open_description(),
+  67:     examples: [
+  68:       m.track_open_example_1(),
+  69:       m.track_open_example_2(),
+  70:       m.track_open_example_3(),
+  71:       m.track_open_example_4(),
+  72:     ],
+  73:   }
+  74: ];
+  75: 
+  76: const mentors = [
+  77:   { name: 'Omar Espejel', role: m.mentor_omar_role(), org: m.mentor_org(), image: '/mentors/omar.jpg', xAccount: 'https://x.com/espejelomar' },
+  78:   { name: 'Henri', role: m.mentor_henri_role(), org: m.mentor_org(), image: '/mentors/henri.png', xAccount: 'https://x.com/henrlihenrli' },
+  79: ];
+  80: 
+  81: const sponsors = [
+  82:   { name: 'Starknet Foundation', logo: '/sponsors/starknet.svg' },
+  83:   { name: 'StarkWare', logo: '/sponsors/starkware.svg' },
+  84: ];
+  85: 
+  86: const faqs = [
+  87:   {
+  88:     q: m.faq_1_q(),
+  89:     a: m.faq_1_a(),
+  90:   },
+  91:   {
+  92:     q: m.faq_2_q(),
+  93:     a: m.faq_2_a(),
+  94:   },
+  95:   {
+  96:     q: m.faq_3_q(),
+  97:     a: m.faq_3_a(),
+  98:   },
+  99:   {
+ 100:     q: m.faq_4_q(),
+ 101:     a: m.faq_4_a(),
+ 102:   },
+ 103:   {
+ 104:     q: m.faq_submit_q(),
+ 105:     a: m.faq_submit_a(),
+ 106:   },
+ 107:   {
+ 108:     q: m.faq_questions_q(),
+ 109:     a: m.faq_questions_a(),
+ 110:   },
+ 111:   {
+ 112:     q: m.faq_prizes_q(),
+ 113:     a: m.faq_prizes_a(),
+ 114:   },
+ 115: ];
+ 116: 
+ 117: const stats = [
+ 118:   { value: 'STWO', label: m.stat_1_label() },
+ 119:   { value: '$200M+', label: m.stat_2_label(), count: { value: 200, prefix: '$', suffix: 'M+' } },
+ 120:   { value: 'Ztarknet', label: m.stat_3_label() },
+ 121: ];
+ 122: 
+ 123: const resources = [
+ 124:   {
+ 125:     title: m.resource_bitcoin_title(),
+ 126:     description: m.resource_bitcoin_description(),
+ 127:     icon: 'bitcoin',
+ 128:     link: '#',
+ 129:     linkText: m.resource_bitcoin_link(),
+ 130:     gradient: 'from-orange-500/20 to-orange-600/5',
+ 131:   },
+ 132:   {
+ 133:     title: m.resource_privacy_title(),
+ 134:     description: m.resource_privacy_description(),
+ 135:     icon: 'shield',
+ 136:     link: '#',
+ 137:     linkText: m.resource_privacy_link(),
+ 138:     gradient: 'from-purple-500/20 to-purple-600/5',
+ 139:   },
+ 140:   {
+ 141:     title: m.resource_academy_title(),
+ 142:     description: m.resource_academy_description(),
+ 143:     icon: 'academic',
+ 144:     link: 'https://www.starknet.io/learn/',
+ 145:     linkText: m.resource_academy_link(),
+ 146:     gradient: 'from-snf-blue-500/20 to-snf-blue-700/5',
+ 147:   }
+ 148: ];
+ 149: 
+ 150: const testimonials = [
+ 151:   {
+ 152:     quote: m.testimonial_1_quote(),
+ 153:     author: m.testimonial_1_author(),
+ 154:     role: m.testimonial_1_role(),
+ 155:   },
+ 156:   {
+ 157:     quote: m.testimonial_2_quote(),
+ 158:     author: m.testimonial_2_author(),
+ 159:     role: m.testimonial_2_role(),
+ 160:   },
+ 161:   {
+ 162:     quote: m.testimonial_3_quote(),
+ 163:     author: m.testimonial_3_author(),
+ 164:     role: m.testimonial_3_role(),
+ 165:   },
+ 166:   {
+ 167:     quote: m.testimonial_4_quote(),
+ 168:     author: m.testimonial_4_author(),
+ 169:     role: m.testimonial_4_role(),
+ 170:   },
+ 171:   {
+ 172:     quote: m.testimonial_5_quote(),
+ 173:     author: m.testimonial_5_author(),
+ 174:     role: m.testimonial_5_role(),
+ 175:   },
+ 176: ];
+ 177: ---
+ 178: 
+ 179: <html lang={locale}>
+ 180:   <head>
+ 181:     <meta charset="utf-8" />
+ 182:     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+ 183:     <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 184:     <meta name="description" content={metaDescription} />
+ 185:     <meta name="view-transition" content="same-origin" />
+ 186:     
+ 187:     <!-- Open Graph -->
+ 188:     <meta property="og:title" content={ogTitle} />
+ 189:     <meta property="og:description" content={m.og_description()} />
+ 190:     <meta property="og:image" content="https://bitcoinxprivacy.com/og-image.jpg" />
+ 191:     <meta property="og:image:width" content="1200" />
+ 192:     <meta property="og:image:height" content="630" />
+ 193:     <meta property="og:url" content={canonicalUrl} />
+ 194:     <meta property="og:type" content="website" />
+ 195:     <meta property="og:site_name" content={ogSiteName} />
+ 196:     
+ 197:     <!-- Twitter -->
+ 198:     <meta name="twitter:card" content="summary_large_image" />
+ 199:     <meta name="twitter:image" content="https://bitcoinxprivacy.com/og-image.jpg" />
+ 200:     <meta name="twitter:site" content="@Starknet" />
+ 201:     <meta name="twitter:creator" content="@StarknetFndn" />
+ 202:     
+ 203:     <!-- SEO & Accessibility -->
+ 204:     <meta name="robots" content="index, follow" />
+ 205:     <meta name="theme-color" content="#0C0A18" />
+ 206:     <link rel="canonical" href={canonicalUrl} />
+ 207:     <link rel="alternate" hreflang="en" href={hrefForLocale('en')} />
+ 208:     <link rel="alternate" hreflang="es" href={hrefForLocale('es')} />
+ 209:     <link rel="alternate" hreflang="zh-CN" href={hrefForLocale('zh-CN')} />
+ 210:     <link rel="alternate" hreflang="zh-TW" href={hrefForLocale('zh-TW')} />
+ 211:     <link rel="alternate" hreflang="pt" href={hrefForLocale('pt')} />
+ 212:     <link rel="alternate" hreflang="x-default" href={hrefForLocale('en')} />
+ 213:     
+ 214:     <title>{pageTitle}</title>
+ 215:     
+ 216:     <!-- Fonts -->
+ 217:     <link rel="preload" as="font" href="/fonts/InterVariable.woff2" type="font/woff2" crossorigin />
+ 218:     <link rel="preload" as="font" href="/fonts/SpaceGroteskVariable.woff2" type="font/woff2" crossorigin />
+ 219:     
+ 220:     <!-- Global Styles -->
+ 221:     <style is:global>
+ 222:       html {
+ 223:         scroll-behavior: auto; /* Lenis handles smooth scroll */
+ 224:       }
+ 225:       
+ 226:       body {
+ 227:         background-color: #0C0A18;
+ 228:         color: #F3F2F1;
+ 229:         font-family: 'Inter', system-ui, sans-serif;
+ 230:         overflow-x: hidden;
+ 231:       }
+ 232:       
+ 233:       .font-display {
+ 234:         font-family: 'Space Grotesk', system-ui, sans-serif;
+ 235:       }
+ 236:       
+ 237:       /* Hide elements before GSAP animation */
+ 238:       .gs-hidden {
+ 239:         opacity: 1;
+ 240:         transform: none;
+ 241:       }
+ 242: 
+ 243:       .anim-ready .gs-hidden {
+ 244:         opacity: 0;
+ 245:         transform: translateY(20px);
+ 246:       }
+ 247: 
+ 248:       @media (prefers-reduced-motion: reduce) {
+ 249:         .gs-hidden {
+ 250:           opacity: 1;
+ 251:           transform: none;
+ 252:         }
+ 253:       }
+ 254: 
+ 255:       .reduced-motion .gs-hidden {
+ 256:         opacity: 1 !important;
+ 257:         transform: none !important;
+ 258:       }
+ 259: 
+ 260:       @view-transition {
+ 261:         navigation: auto;
+ 262:       }
+ 263: 
+ 264:       ::view-transition-old(root),
+ 265:       ::view-transition-new(root) {
+ 266:         animation-duration: 0.3s;
+ 267:       }
+ 268:     </style>
+ 269:   </head>
+ 270:   
+ 271:   <body class="antialiased">
+ 272:     
+ 273:     <!-- Skip to content link for accessibility -->
+ 274:     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-snf-blue-500 text-white px-4 py-2 rounded-lg z-[100] focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none">
+ 275:       {m.skip_to_content()}
+ 276:     </a>
+ 277: 
+ 278:     <!-- SVG Gradient Definitions -->
+ 279:     <svg width="0" height="0" class="hidden" aria-hidden="true" focusable="false">
+ 280:       <defs>
+ 281:         <linearGradient id="icon-gradient-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+ 282:           <stop offset="0%" style="stop-color:#5B7ECF" />
+ 283:           <stop offset="100%" style="stop-color:#8B5CF6" />
+ 284:         </linearGradient>
+ 285:         <linearGradient id="icon-gradient-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+ 286:           <stop offset="0%" style="stop-color:#F97316" />
+ 287:           <stop offset="100%" style="stop-color:#FBBF24" />
+ 288:         </linearGradient>
+ 289:         <linearGradient id="icon-gradient-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+ 290:           <stop offset="0%" style="stop-color:#8B5CF6" />
+ 291:           <stop offset="100%" style="stop-color:#EC4899" />
+ 292:         </linearGradient>
+ 293:       </defs>
+ 294:     </svg>
+ 295:     
+ 296:     <noscript>
+ 297:       <style>
+ 298:         .gs-hidden { opacity: 1 !important; transform: none !important; }
+ 299:       </style>
+ 300:     </noscript>
+ 301:     
+ 302:     <!-- Navigation -->
+ 303:     <nav class="fixed top-0 w-full z-50 bg-snf-black/80 backdrop-blur-xl border-b border-snf-blue-900/30 relative">
+ 304:       <div class="scroll-progress" id="scroll-progress"></div>
+ 305:       <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+ 306:         <span class="font-display font-bold text-xl text-snf-white">{hackathonName}</span>
+ 307:         <div class="flex items-center gap-4">
+ 308:           <LanguageSwitcher />
+ 309:           <a 
+ 310:             href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
+ 311:             target="_blank"
+ 312:             rel="noopener noreferrer"
+ 313:             class="button-animated bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-5 py-2 rounded-lg font-medium transition-colors duration-300 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none"
+ 314:           >
+ 315:             {m.nav_register_now()}
+ 316:           </a>
+ 317:         </div>
+ 318:       </div>
+ 319:     </nav>
+ 320: 
+ 321:     <!-- ============================================ -->
+ 322:     <!-- HERO SECTION -->
+ 323:     <!-- ============================================ -->
+ 324:     <section id="main-content" class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden dynamic-gradient-bg">
+ 325:       
+ 326:       <!-- Dynamic Aurora Background -->
+ 327:       <div class="aurora-bg"></div>
+ 328:       <canvas id="gradient-canvas" class="gradient-canvas" aria-hidden="true"></canvas>
+ 329:       
+ 330:       <!-- Animated color orbs -->
+ 331:       <div class="absolute inset-0 pointer-events-none overflow-hidden">
+ 332:         <div class="color-orb color-orb-1"></div>
+ 333:         <div class="color-orb color-orb-2"></div>
+ 334:         <div class="color-orb color-orb-3"></div>
+ 335:       </div>
+ 336:       
+ 337:       <!-- Floating Decorative Elements -->
+ 338:       <div class="absolute top-1/4 right-[10%] w-32 h-32 border border-snf-blue-500/10 rounded-2xl rotate-12 animate-float pointer-events-none hidden md:block"></div>
+ 339:       <div class="absolute bottom-1/3 left-[5%] w-24 h-24 bg-gradient-to-br from-snf-blue-500/5 to-transparent rounded-full animate-float-delayed pointer-events-none hidden md:block"></div>
+ 340:       <div class="absolute top-1/2 right-[15%] w-16 h-16 border border-snf-blue-500/5 rounded-lg rotate-45 animate-float pointer-events-none hidden lg:block" style="animation-delay: 1s;"></div>
+ 341:       
+ 342:       <!-- Subtle grid pattern -->
+ 343:       <div class="absolute inset-0 pointer-events-none hero-grid"></div>
+ 344:       <div class="organic-blob blob-1 glow-1"></div>
+ 345:       <div class="organic-blob blob-2 glow-2"></div>
+ 346:       <div class="organic-blob blob-3 glow-1"></div>
+ 347:       
+ 348:       
+ 349:       <!-- Main Content -->
+ 350:       <div class="relative z-10 text-center max-w-4xl mx-auto">
+ 351:         
+ 352:         <!-- Floating badge -->
+ 353:         <div class="hero-element gs-hidden inline-flex items-center gap-2 bg-snf-blue-900/40 border border-snf-blue-500/30 rounded-full px-4 py-1.5 mb-8">
+ 354:           <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+ 355:           <span class="text-snf-white/70 text-sm">{m.hero_badge()}</span>
+ 356:         </div>
+ 357:         
+ 358:         <!-- Main Title with gradient -->
+ 359:         <h1 class="hero-title hero-element gs-hidden font-display text-display-xl font-bold mb-4" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
+ 360:           <span class="gradient-text" data-split>{m.hero_title_line1()}</span><br/>
+ 361:           <span class="text-snf-white scribble-underline" data-split>{m.hero_title_line2()}</span>
+ 362:         </h1>
+ 363:         
+ 364:         <!-- Subheadline -->
+ 365:         <p class="hero-subtitle hero-element gs-hidden text-snf-white/60 text-body-large max-w-xl mx-auto mb-10">
+ 366:           <span class="hero-subtitle-line">{m.hero_subtitle_line1()}</span><br class="hidden md:block" />
+ 367:           <span class="text-snf-blue-500 font-medium">{m.hero_subtitle_line2()}</span>
+ 368:         </p>
+ 369:         
+ 370:         <!-- Countdown Timer -->
+ 371:         <div class="hero-element gs-hidden mb-10">
+ 372:           <p class="text-snf-white/40 text-xs tracking-[0.3em] uppercase mb-4">{m.countdown_starts_in()}</p>
+ 373:           <div class="flex justify-center gap-2 md:gap-4" id="countdown">
+ 374:             <div class="countdown-unit glass rounded-xl px-4 py-3 md:px-6 md:py-4">
+ 375:               <span class="block text-3xl md:text-5xl lg:text-6xl font-light tabular-nums text-snf-white" id="days" aria-live="polite">00</span>
+ 376:               <p class="text-snf-white/30 text-[10px] tracking-[0.2em] mt-1">{m.countdown_days()}</p>
+ 377:             </div>
+ 378:             <span class="text-3xl md:text-5xl lg:text-6xl font-light text-snf-white/10 self-center" aria-hidden="true">:</span>
+ 379:             <div class="countdown-unit glass rounded-xl px-4 py-3 md:px-6 md:py-4">
+ 380:               <span class="block text-3xl md:text-5xl lg:text-6xl font-light tabular-nums text-snf-white" id="hours" aria-live="polite">00</span>
+ 381:               <p class="text-snf-white/30 text-[10px] tracking-[0.2em] mt-1">{m.countdown_hours()}</p>
+ 382:             </div>
+ 383:             <span class="text-3xl md:text-5xl lg:text-6xl font-light text-snf-white/10 self-center" aria-hidden="true">:</span>
+ 384:             <div class="countdown-unit glass rounded-xl px-4 py-3 md:px-6 md:py-4">
+ 385:               <span class="block text-3xl md:text-5xl lg:text-6xl font-light tabular-nums text-snf-white" id="mins" aria-live="polite">00</span>
+ 386:               <p class="text-snf-white/30 text-[10px] tracking-[0.2em] mt-1">{m.countdown_minutes()}</p>
+ 387:             </div>
+ 388:             <span class="text-3xl md:text-5xl lg:text-6xl font-light text-snf-white/10 self-center" aria-hidden="true">:</span>
+ 389:             <div class="countdown-unit glass rounded-xl px-4 py-3 md:px-6 md:py-4">
+ 390:               <span class="block text-3xl md:text-5xl lg:text-6xl font-light tabular-nums text-snf-white" id="secs" aria-live="polite">00</span>
+ 391:               <p class="text-snf-white/30 text-[10px] tracking-[0.2em] mt-1">{m.countdown_seconds()}</p>
+ 392:             </div>
+ 393:           </div>
+ 394:           <p class="text-snf-white/40 text-xs mt-3">{m.hero_countdown_urgency()}</p>
+ 395:         </div>
+ 396:         
+ 397:         <!-- CTA Buttons -->
+ 398:         <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-4 justify-center">
+ 399:           <a
+ 400:             href="https://t.me/+-5zNW47GSdQ1ZDkx"
+ 401:             target="_blank"
+ 402:             rel="noopener noreferrer"
+ 403:             class="button-animated cta-glow inline-flex items-center justify-center bg-gradient-to-r from-snf-blue-500 to-snf-blue-700 text-snf-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-snf-blue-500/30 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none group"
+ 404:           >
+ 405:             {m.cta_join_telegram()}
+ 406:             <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+ 407:           </a>
+ 408:           <a 
+ 409:             href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
+ 410:             target="_blank"
+ 411:             rel="noopener noreferrer"
+ 412:             class="button-animated cta-glow inline-flex items-center justify-center bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none group"
+ 413:           >
+ 414:             {m.cta_register_primary()}
+ 415:             <ArrowRight class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+ 416:           </a>
+ 417:           <a 
+ 418:             href="#tracks"
+ 419:             class="secondary-cta is-hidden button-animated inline-flex items-center justify-center border border-snf-white/20 hover:border-snf-white/40 text-snf-white/70 hover:text-snf-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none"
+ 420:           >
+ 421:             {m.cta_view_tracks()}
+ 422:           </a>
+ 423:         </div>
+ 424:         
+ 425:       </div>
+ 426:       
+ 427:       <!-- Bottom Left: Dates -->
+ 428:       <div class="absolute bottom-8 left-8 text-left hidden md:block">
+ 429:         <p class="hero-meta gs-hidden font-mono text-sm text-snf-white/40">
+ 430:           {m.hero_dates_line1()}<br/>
+ 431:           <span class="text-snf-white/60">{m.hero_dates_year()}</span>
+ 432:         </p>
+ 433:       </div>
+ 434:       
+ 435:       <!-- Bottom Right: Starknet Foundation -->
+ 436:       <div class="absolute bottom-8 right-8 text-right hidden md:block">
+ 437:         <p class="hero-meta gs-hidden text-sm text-snf-white/40">
+ 438:           {m.hero_powered_by()}<br/>
+ 439:           <span class="text-snf-blue-500 font-medium">{m.hero_powered_by_org()}</span>
+ 440:         </p>
+ 441:       </div>
+ 442:       
+ 443:       <!-- Scroll indicator -->
+ 444:       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+ 445:         <div class="hero-meta gs-hidden animate-float">
+ 446:           <ChevronDown class="w-6 h-6 text-snf-white/30" strokeWidth={1.5} />
+ 447:         </div>
+ 448:       </div>
+ 449:       
+ 450:     </section>
+ 451: 
+ 452:     <!-- ============================================ -->
+ 453:     <!-- WHY NOW SECTION -->
+ 454:     <!-- ============================================ -->
+ 455:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 456:       <div class="max-w-6xl mx-auto">
+ 457:         
+ 458:         <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+ 459:           {m.section_why_title()}
+ 460:         </h2>
+ 461:         
+ 462:         <div class="stats-grid grid md:grid-cols-3 gap-6 md:gap-8">
+ 463:           {stats.map((stat, i) => (
+ 464:             <div class="stat-card gs-hidden bg-gradient-to-b from-snf-blue-900/30 to-snf-blue-900/5 border border-snf-blue-900/40 rounded-2xl p-8 hover:border-snf-blue-500/50 transition-colors duration-300">
+ 465:               <div class="text-snf-blue-500 text-4xl md:text-5xl font-bold mb-4 stat-value">
+ 466:                 {stat.count ? (
+ 467:                   <span
+ 468:                     data-count-value={stat.count.value}
+ 469:                     data-count-prefix={stat.count.prefix}
+ 470:                     data-count-suffix={stat.count.suffix}
+ 471:                   >
+ 472:                     {stat.count.prefix}{stat.count.value}{stat.count.suffix}
+ 473:                   </span>
+ 474:                 ) : (
+ 475:                   <span>{stat.value}</span>
+ 476:                 )}
+ 477:               </div>
+ 478:               <p class="text-snf-white/60 leading-relaxed">{stat.label}</p>
+ 479:             </div>
+ 480:           ))}
+ 481:         </div>
+ 482:         
+ 483:         <blockquote class="quote gs-hidden mt-16 text-center">
+ 484:           <p class="text-xl md:text-2xl text-snf-white/50 italic max-w-3xl mx-auto leading-relaxed">
+ 485:             "{m.quote_1_text()}"
+ 486:           </p>
+ 487:           <cite class="block text-snf-blue-500 not-italic mt-4 text-base font-medium">
+ 488:             {m.quote_1_cite()} (<a href="https://www.youtube.com/watch?v=u3B8xqsf66w" target="_blank" rel="noopener noreferrer" class="underline hover:text-snf-blue-700 transition-colors">{m.source_label()}</a>)
+ 489:           </cite>
+ 490:         </blockquote>
+ 491: 
+ 492:         <blockquote class="quote gs-hidden mt-8 text-center">
+ 493:           <p class="text-xl md:text-2xl text-snf-white/50 italic max-w-3xl mx-auto leading-relaxed">
+ 494:             "{m.quote_2_text()}"
+ 495:           </p>
+ 496:           <cite class="block text-snf-blue-500 not-italic mt-4 text-base font-medium">
+ 497:             {m.quote_2_cite()} (<a href="https://a16zcrypto.com/posts/article/big-ideas-things-excited-about-crypto-2026/" target="_blank" rel="noopener noreferrer" class="underline hover:text-snf-blue-700 transition-colors">{m.source_label()}</a>)
+ 498:           </cite>
+ 499:         </blockquote>
+ 500: 
+ 501:         <p class="gs-hidden text-snf-white/60 text-center max-w-2xl mx-auto mt-8">
+ 502:           {m.story_blurb()}
+ 503:         </p>
+ 504:         
+ 505:       </div>
+ 506:     </section>
+ 507: 
+ 508:     <!-- ============================================ -->
+ 509:     <!-- TRACKS SECTION -->
+ 510:     <!-- ============================================ -->
+ 511:     <section id="tracks" class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 512:       <div class="max-w-6xl mx-auto">
+ 513:         
+ 514:         <div class="text-center mb-16">
+ 515:           <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+ 516:             {m.section_tracks_title()}
+ 517:           </h2>
+ 518:           <p class="section-subtitle gs-hidden text-snf-white/50 text-lg">
+ 519:             {m.section_tracks_subtitle()}
+ 520:           </p>
+ 521:         </div>
+ 522:         
+ 523:         <div class="tracks-grid anti-grid grid md:grid-cols-3 gap-6">
+ 524:           {tracks.map((track, i) => (
+ 525:             <div class:list={[
+ 526:               'track-card card-shine gs-hidden bg-gradient-to-b from-snf-blue-900/30 to-transparent border border-snf-blue-900/40 rounded-2xl p-8 hover:border-snf-blue-500/50',
+ 527:               i === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
+ 528:             ]}>
+ 529:               
+ 530:               <div class="flex justify-between items-start mb-6">
+ 531:                 <h3 class="font-display text-xl font-semibold">{track.name}</h3>
+ 532:                 <span class="text-snf-blue-500 text-sm font-medium bg-snf-blue-500/10 px-3 py-1 rounded-full">{track.percentage}</span>
+ 533:               </div>
+ 534:               
+ 535:               <div class="text-4xl font-bold text-snf-blue-500 mb-6">{track.prize}</div>
+ 536:               
+ 537:               <p class="text-snf-white/60 text-sm mb-6 leading-relaxed">{track.description}</p>
+ 538:               
+ 539:               <div class="flex flex-wrap gap-2">
+ 540:                 {track.examples.map((ex) => (
+ 541:                   <span class="text-xs bg-snf-blue-900/50 px-3 py-1.5 rounded-full text-snf-white/50">{ex}</span>
+ 542:                 ))}
+ 543:               </div>
+ 544:               
+ 545:             </div>
+ 546:           ))}
+ 547:         </div>
+ 548:         
+ 549:       </div>
+ 550:     </section>
+ 551: 
+ 552:     <!-- ============================================ -->
+ 553:     <!-- HACKATHON DETAILS SECTION -->
+ 554:     <!-- ============================================ -->
+ 555:     <section id="details" class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 556:       <div class="max-w-6xl mx-auto">
+ 557:         <div class="text-center mb-12">
+ 558:           <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{m.section_details_title()}</h2>
+ 559:           <p class="section-subtitle gs-hidden text-snf-white/60 text-lg md:text-xl text-center max-w-2xl mx-auto">{m.section_details_subtitle()}</p>
+ 560:         </div>
+ 561:         
+ 562:         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+ 563:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+ 564:             <h3 class="text-snf-white font-medium mb-2">{m.details_timeline_q()}</h3>
+ 565:             <p class="text-snf-white/60 text-sm">{m.details_timeline_a()}</p>
+ 566:           </div>
+ 567:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+ 568:             <h3 class="text-snf-white font-medium mb-2">{m.details_eligibility_q()}</h3>
+ 569:             <p class="text-snf-white/60 text-sm">{m.details_eligibility_a()}</p>
+ 570:           </div>
+ 571:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+ 572:             <h3 class="text-snf-white font-medium mb-2">{m.details_submissions_q()}</h3>
+ 573:             <p class="text-snf-white/60 text-sm">{m.details_submissions_a()}</p>
+ 574:           </div>
+ 575:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+ 576:             <h3 class="text-snf-white font-medium mb-2">{m.details_judging_q()}</h3>
+ 577:             <p class="text-snf-white/60 text-sm">{m.details_judging_a()}</p>
+ 578:           </div>
+ 579:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+ 580:             <h3 class="text-snf-white font-medium mb-2">{m.details_prizes_q()}</h3>
+ 581:             <p class="text-snf-white/60 text-sm">{m.details_prizes_a()}</p>
+ 582:           </div>
+ 583:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30">
+ 584:             <h3 class="text-snf-white font-medium mb-2">{m.details_ip_rules_q()}</h3>
+ 585:             <p class="text-snf-white/60 text-sm">{m.details_ip_rules_a()}</p>
+ 586:           </div>
+ 587:           <div class="card-shine glass rounded-xl p-6 border border-snf-blue-900/30 md:col-span-2 lg:col-span-1">
+ 588:             <h3 class="text-snf-white font-medium mb-2">{m.details_support_q()}</h3>
+ 589:             <p class="text-snf-white/60 text-sm">{m.details_support_a()}</p>
+ 590:           </div>
+ 591:         </div>
+ 592:         
+ 593:         <div class="text-center mt-12">
+ 594:           <a
+ 595:             href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=details&utm_campaign=2026"
+ 596:             class="button-animated bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-8 py-3 rounded-lg font-medium transition-colors duration-300 inline-flex items-center gap-2"
+ 597:           >
+ 598:             {m.cta_register_primary()}
+ 599:             <ArrowRight class="w-4 h-4" />
+ 600:           </a>
+ 601:         </div>
+ 602:       </div>
+ 603:     </section>
+ 604: 
+ 605:     <!-- ============================================ -->
+ 606:     <!-- SOCIAL PROOF SECTION -->
+ 607:     <!-- ============================================ -->
+ 608:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30 overflow-hidden">
+ 609:       <div class="max-w-6xl mx-auto">
+ 610:         <div class="text-center mb-12">
+ 611:           <p class="section-subtitle gs-hidden text-snf-blue-500 text-sm tracking-[0.2em] uppercase mb-4">{m.social_proof_kicker()}</p>
+ 612:           <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+ 613:             {m.social_proof_title({ hackathonName })}
+ 614:           </h2>
+ 615:         </div>
+ 616:       </div>
+ 617:       
+ 618:       <div class="testimonial-track">
+ 619:         <div class="testimonial-row">
+ 620:           {testimonials.concat(testimonials).map((item) => (
+ 621:             <div class="testimonial-card">
+ 622:               <p class="text-snf-white/70 text-lg leading-relaxed mb-6">{item.quote}</p>
+ 623:               <div class="text-snf-blue-500 font-medium">{item.author}</div>
+ 624:               <div class="text-snf-white/40 text-sm">{item.role}</div>
+ 625:             </div>
+ 626:           ))}
+ 627:         </div>
+ 628:       </div>
+ 629:     </section>
+ 630: 
+ 631:     <!-- ============================================ -->
+ 632:     <!-- LEARNING RESOURCES SECTION -->
+ 633:     <!-- ============================================ -->
+ 634:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30 relative overflow-hidden">
+ 635:       
+ 636:       <!-- Subtle gradient accent -->
+ 637:       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-snf-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+ 638:       
+ 639:       <div class="max-w-6xl mx-auto relative">
+ 640:         
+ 641:         <div class="text-center mb-16">
+ 642:           <p class="section-subtitle gs-hidden text-snf-blue-500 text-sm tracking-[0.2em] uppercase mb-4">{m.resources_kicker()}</p>
+ 643:           <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+ 644:             {m.resources_title()}
+ 645:           </h2>
+ 646:           <p class="gs-hidden text-snf-white/50 text-lg max-w-2xl mx-auto">
+ 647:             {m.resources_subtitle()}
+ 648:           </p>
+ 649:         </div>
+ 650:         
+ 651:         <div class="resources-grid anti-grid grid md:grid-cols-3 gap-6">
+ 652:           {resources.map((resource) => (
+ 653:             <a 
+ 654:               href={resource.link}
+ 655:               target="_blank"
+ 656:               rel="noopener noreferrer"
+ 657:               class="resource-card gradient-border gs-hidden group relative block rounded-2xl p-[1px] transition-all duration-500 hover:-translate-y-1 overflow-hidden"
+ 658:             >
+ 659:               <div class={`relative z-10 bg-gradient-to-b ${resource.gradient} border border-snf-blue-900/40 rounded-2xl p-8 hover:border-snf-blue-500/50 transition-all duration-500`}>
+ 660:                 <!-- Icon -->
+ 661:                 <div class="icon-pop icon-glow w-14 h-14 bg-snf-blue-900/60 rounded-xl flex items-center justify-center mb-6 group-hover:bg-snf-blue-900/80 transition-colors duration-300">
+ 662:                   {resource.icon === "bitcoin" && (
+ 663:                     <Bitcoin class="w-7 h-7 text-orange-500 group-hover:text-orange-400 transition-colors" strokeWidth={1.5} />
+ 664:                   )}
+ 665:                   {resource.icon === "shield" && (
+ 666:                     <Shield class="w-7 h-7 text-purple-500 group-hover:text-purple-400 transition-colors" strokeWidth={1.5} />
+ 667:                   )}
+ 668:                   {resource.icon === "academic" && (
+ 669:                     <GraduationCap class="w-7 h-7 text-snf-blue-500 group-hover:text-snf-blue-400 transition-colors" strokeWidth={1.5} />
+ 670:                   )}
+ 671:                 </div>
+ 672:                 
+ 673:                 <h3 class="font-display text-xl font-semibold mb-2 group-hover:text-snf-blue-500 transition-colors duration-300">{resource.title}</h3>
+ 674:                 <p class="text-snf-white/50 text-sm mb-6 leading-relaxed">{resource.description}</p>
+ 675:                 
+ 676:                 <span class="inline-flex items-center text-snf-blue-500 text-sm font-medium group-hover:gap-2 transition-all duration-300">
+ 677:                   {resource.linkText}
+ 678:                   <ArrowRight class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" strokeWidth={2} />
+ 679:                 </span>
+ 680:               </div>
+ 681:             </a>
+ 682:           ))}
+ 683:         </div>
+ 684:         
+ 685:       </div>
+ 686:     </section>
+ 687: 
+ 688:     <!-- ============================================ -->
+ 689:     <!-- MENTORS SECTION -->
+ 690:     <!-- ============================================ -->
+ 691:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 692:       <div class="max-w-6xl mx-auto">
+ 693:         
+ 694:         <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+ 695:           {m.mentors_title()}
+ 696:         </h2>
+ 697:         
+ 698:         <!-- Mentors Grid -->
+ 699:         <div class="mentors-section gs-hidden">
+ 700:           <div class="flex flex-wrap justify-center gap-12">
+ 701:             {mentors.map((mentor) => (
+ 702:               <div class="mentor-card text-center">
+ 703:                 <div class="w-24 h-24 bg-snf-blue-900/40 rounded-full mx-auto mb-4 overflow-hidden ring-2 ring-snf-blue-900/50">
+ 704:                   <img 
+ 705:                     src={mentor.image} 
+ 706:                     alt={`${mentor.name} - ${mentor.role}`}
+ 707:                     class="w-full h-full object-cover"
+ 708:                     loading="lazy"
+ 709:                   />
+ 710:                 </div>
+ 711:                 <p class="font-medium text-lg">{mentor.name}</p>
+ 712:                 <p class="text-snf-white/50 text-sm">{mentor.role}</p>
+ 713:                 <p class="text-snf-blue-500 text-xs mt-1">{mentor.org}</p>
+ 714:                 <a 
+ 715:                   href={mentor.xAccount}
+ 716:                   target="_blank"
+ 717:                   rel="noopener noreferrer"
+ 718:                   class="inline-flex items-center justify-center w-6 h-6 text-snf-white/40 hover:text-snf-blue-500 mt-2 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded"
+ 719:                   aria-label={`Follow ${mentor.name} on X`}
+ 720:                   title={`Follow ${mentor.name} on X`}
+ 721:                 >
+ 722:                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+ 723:                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+ 724:                   </svg>
+ 725:                 </a>
+ 726:               </div>
+ 727:             ))}
+ 728:           </div>
+ 729:         </div>
+ 730:         
+ 731:       </div>
+ 732:     </section>
+ 733: 
+ 734:     <!-- ============================================ -->
+ 735:     <!-- SPONSORS SECTION -->
+ 736:     <!-- ============================================ -->
+ 737:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 738:       <div class="max-w-4xl mx-auto text-center">
+ 739:         
+ 740:         <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16">
+ 741:           {m.sponsors_title()}
+ 742:         </h2>
+ 743:         
+ 744:         <div class="sponsors-grid gs-hidden flex flex-wrap justify-center items-center gap-12 md:gap-16">
+ 745:           {sponsors.map((sponsor) => (
+ 746:             <div class="sponsor-logo text-snf-white/40 hover:text-snf-white transition-colors duration-300">
+ 747:               <div class="w-40 h-16 bg-snf-white/5 hover:bg-snf-white/10 rounded-xl flex items-center justify-center transition-colors duration-300">
+ 748:                 <!-- Replace with actual logo -->
+ 749:                 <span class="skeleton-block px-3 py-2 rounded-md text-sm font-medium">{sponsor.name}</span>
+ 750:               </div>
+ 751:             </div>
+ 752:           ))}
+ 753:         </div>
+ 754:         
+ 755:         <p class="gs-hidden mt-16 text-snf-white/40 text-sm">
+ 756:           {m.sponsor_cta_text()}
+ 757:           <a href="mailto:hackathon@starknet.io" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300 underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded">
+ 758:             {m.sponsor_cta_link()}
+ 759:           </a>
+ 760:         </p>
+ 761:         
+ 762:       </div>
+ 763:     </section>
+ 764: 
+ 765:     <!-- ============================================ -->
+ 766:     <!-- FAQ SECTION -->
+ 767:     <!-- ============================================ -->
+ 768:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 769:       <div class="max-w-3xl mx-auto">
+ 770:         
+ 771:         <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+ 772:           {m.faq_title()}
+ 773:         </h2>
+ 774:         
+ 775:         <div class="faq-list space-y-0">
+ 776:           {faqs.map((faq, i) => (
+ 777:             <div class="faq-item gs-hidden border-b border-snf-blue-900/30" data-state="closed" data-faq-index={i}>
+ 778:               <button type="button" class="faq-toggle group w-full flex justify-between items-center py-6 text-left" aria-expanded="false" aria-controls={`faq-answer-${i}`}>
+ 779:                 <h3 class="font-semibold text-xl group-hover:text-snf-blue-500 transition-colors">{faq.q}</h3>
+ 780:                 <ChevronDown class="w-5 h-5 text-snf-white/40 transition-transform duration-300 faq-chevron flex-shrink-0 ml-4" strokeWidth={2} />
+ 781:               </button>
+ 782:               <div id={`faq-answer-${i}`} class="faq-answer" role="region">
+ 783:                 <p class="text-snf-white/60 leading-relaxed pb-6">{faq.a}</p>
+ 784:               </div>
+ 785:             </div>
+ 786:           ))}
+ 787:         </div>
+ 788:         
+ 789:       </div>
+ 790:     </section>
+ 791: 
+ 792:     <!-- ============================================ -->
+ 793:     <!-- FINAL CTA SECTION -->
+ 794:     <!-- ============================================ -->
+ 795:     <section class="py-32 md:py-40 px-6 border-t border-snf-blue-900/30">
+ 796:       <div class="max-w-4xl mx-auto text-center">
+ 797:         
+ 798:         <h2 class="section-title scribble-underline gs-hidden font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+ 799:           {m.final_cta_title()}
+ 800:         </h2>
+ 801:         
+ 802:         <p class="section-subtitle gs-hidden text-snf-white/60 text-xl mb-10 max-w-xl mx-auto">
+ 803:           {m.final_cta_subtitle()}
+ 804:         </p>
+ 805:         
+ 806:         <a 
+ 807:           href="https://dorahacks.io/hackathon/recypher?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
+ 808:           target="_blank"
+ 809:           rel="noopener noreferrer"
+ 810:           class="button-animated cta-button cta-glow gs-hidden inline-block bg-snf-blue-500 hover:bg-snf-blue-700 text-snf-white px-12 py-5 rounded-full font-semibold text-xl transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black focus:outline-none"
+ 811:         >
+ 812:           {m.final_cta_button()}
+ 813:         </a>
+ 814:         
+ 815:         <p class="gs-hidden text-snf-white/30 text-sm mt-10">
+ 816:           {m.final_cta_note()}
+ 817:         </p>
+ 818:         
+ 819:       </div>
+ 820:     </section>
+ 821: 
+ 822:     <!-- ============================================ -->
+ 823:     <!-- FOOTER -->
+ 824:     <!-- ============================================ -->
+ 825:     <footer class="py-12 px-6 border-t border-snf-blue-900/30">
+ 826:       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+ 827:         
+ 828:         <div class="flex items-center gap-3">
+ 829:           <span class="font-display font-bold text-xl">{hackathonName}</span>
+ 830:           <span class="text-snf-white/30">{m.footer_by()}</span>
+ 831:           <span class="text-snf-blue-500 font-medium">{m.hero_powered_by_org()}</span>
+ 832:         </div>
+ 833:         
+ 834:         <div class="flex gap-8 text-sm text-snf-white/40">
+ 835:           <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded">{m.footer_twitter()}</a>
+ 836:           <a href="https://discord.com/invite/starknet-community" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded">{m.footer_discord()}</a>
+ 837:           <a href="https://starknet.io" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-snf-blue-500 focus:ring-offset-2 focus:ring-offset-snf-black rounded">{m.footer_starknet()}</a>
+ 838:         </div>
+ 839:         
+ 840:       </div>
+ 841: 
+ 842:       <div class="mt-8 border-t border-snf-blue-900/30 pt-6 text-center">
+ 843:         <h4 class="text-snf-white font-medium mb-4">{m.footer_community_title()}</h4>
+ 844:         <div class="flex flex-wrap justify-center gap-6 text-sm">
+ 845:           <a href="https://discord.gg/starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_discord()}</a>
+ 846:           <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_twitter()}</a>
+ 847:           <a href="https://dorahacks.io/hackathon/recypher/forum?utm_source=recypher-landing&utm_medium=footer&utm_campaign=2026" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_forum()}</a>
+ 848:           <a href="https://t.me/+-5zNW47GSdQ1ZDkx" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500 hover:text-snf-blue-700 transition-colors duration-300">{m.footer_telegram()}</a>
+ 849:         </div>
+ 850:       </div>
+ 851:     </footer>
+ 852: 
+ 853:     <!-- ============================================ -->
+ 854:     <!-- SCRIPTS -->
+ 855:     <!-- ============================================ -->
+ 856:     <script define:vars={{ countdownLabels }} is:inline>
+ 857:       (() => {
+ 858:         const targetDate = new Date('2026-02-01T10:00:00-05:00').getTime();
+ 859:         const endDate = new Date('2026-02-28T23:59:59-05:00').getTime();
+ 860:         let countdownIntervalId;
+ 861: 
+ 862:         function updateCountdown() {
+ 863:           const daysEl = document.getElementById('days');
+ 864:           if (!daysEl) return;
+ 865: 
+ 866:           const now = Date.now();
+ 867:           let distance = targetDate - now;
+ 868:           let label = countdownLabels.starts;
+ 869: 
+ 870:           if (distance < 0) {
+ 871:             distance = endDate - now;
+ 872:             label = countdownLabels.ends;
+ 873:             const labelEl = document.querySelector('#countdown')?.previousElementSibling;
+ 874:             if (labelEl) labelEl.textContent = label;
+ 875:           }
+ 876: 
+ 877:           if (distance < 0) {
+ 878:             daysEl.textContent = '00';
+ 879:             document.getElementById('hours').textContent = '00';
+ 880:             document.getElementById('mins').textContent = '00';
+ 881:             document.getElementById('secs').textContent = '00';
+ 882:             if (countdownIntervalId) clearInterval(countdownIntervalId);
+ 883:             return;
+ 884:           }
+ 885: 
+ 886:           const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+ 887:           const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+ 888:           const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+ 889:           const secs = Math.floor((distance % (1000 * 60)) / 1000);
+ 890: 
+ 891:           daysEl.textContent = String(days).padStart(2, '0');
+ 892:           document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+ 893:           document.getElementById('mins').textContent = String(mins).padStart(2, '0');
+ 894:           document.getElementById('secs').textContent = String(secs).padStart(2, '0');
+ 895:         }
+ 896: 
+ 897:         updateCountdown();
+ 898:         countdownIntervalId = setInterval(updateCountdown, 1000);
+ 899:       })();
+ 900:     </script>
+ 901:     <script is:inline>
+ 902:       (() => {
+ 903:         const faqItems = document.querySelectorAll('.faq-item');
+ 904:         faqItems.forEach((item) => {
+ 905:           if (item.dataset.faqBound === 'true') return;
+ 906:           item.dataset.faqBound = 'true';
+ 907:           const toggle = item.querySelector('.faq-toggle');
+ 908:           const answer = item.querySelector('.faq-answer');
+ 909:           const chevron = item.querySelector('.faq-chevron');
+ 910:           if (!toggle || !answer) return;
+ 911: 
+ 912:           toggle.addEventListener('click', () => {
+ 913:             const isOpen = item.getAttribute('data-state') === 'open';
+ 914:             faqItems.forEach((otherItem) => {
+ 915:               if (otherItem === item) return;
+ 916:               otherItem.setAttribute('data-state', 'closed');
+ 917:               const otherToggle = otherItem.querySelector('.faq-toggle');
+ 918:               const otherAnswer = otherItem.querySelector('.faq-answer');
+ 919:               const otherChevron = otherItem.querySelector('.faq-chevron');
+ 920:               if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+ 921:               if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+ 922:               if (otherChevron) otherChevron.classList.remove('rotate-180');
+ 923:             });
+ 924: 
+ 925:             item.setAttribute('data-state', isOpen ? 'closed' : 'open');
+ 926:             toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+ 927:             answer.style.maxHeight = isOpen ? '0px' : `${answer.scrollHeight}px`;
+ 928:             if (chevron) chevron.classList.toggle('rotate-180', !isOpen);
+ 929:           });
+ 930:         });
+ 931:       })();
+ 932:     </script>
+ 933:     <script define:vars={{ countdownLabels, personalizationCopy }}>
+ 934:       import { gsap } from 'gsap';
+ 935:       import { ScrollTrigger } from 'gsap/ScrollTrigger';
+ 936:       import Lenis from '@studio-freight/lenis';
+ 937:       import VanillaTilt from 'vanilla-tilt';
+ 938:       import { createNoise3D } from 'simplex-noise';
+ 939:       
+ 940:       // Ensure this runs only on client
+ 941:       if (typeof window !== 'undefined') {
+ 942:       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 943:       if (prefersReducedMotion) {
+ 944:         document.documentElement.classList.add('reduced-motion');
+ 945:       }
+ 946: 
+ 947:       const heroSubtitleLine = document.querySelector('.hero-subtitle-line');
+ 948:       if (heroSubtitleLine) {
+ 949:         const trackParam = new URLSearchParams(window.location.search).get('track');
+ 950:         if (trackParam === 'privacy') {
+ 951:           heroSubtitleLine.textContent = personalizationCopy.privacy;
+ 952:         }
+ 953:       }
+ 954:       
+ 955:       const secondaryCta = document.querySelector('.secondary-cta');
+ 956:       const heroSection = document.querySelector('#main-content');
+ 957:       if (secondaryCta && heroSection) {
+ 958:         const observer = new IntersectionObserver(
+ 959:           ([entry]) => {
+ 960:             if (entry.isIntersecting) {
+ 961:               secondaryCta.classList.add('is-hidden');
+ 962:             } else {
+ 963:               secondaryCta.classList.remove('is-hidden');
+ 964:             }
+ 965:           },
+ 966:           { threshold: 0.4 }
+ 967:         );
+ 968:         observer.observe(heroSection);
+ 969:       }
+ 970: 
+ 971:       const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+ 972:       if (canHover) {
+ 973:         const cursor = document.createElement('div');
+ 974:         const cursorRing = document.createElement('div');
+ 975:         cursor.className = 'custom-cursor';
+ 976:         cursorRing.className = 'custom-cursor-ring';
+ 977:         document.body.append(cursor, cursorRing);
+ 978:         document.documentElement.classList.add('custom-cursor-enabled');
+ 979: 
+ 980:         let mouseX = 0;
+ 981:         let mouseY = 0;
+ 982:         let ringX = 0;
+ 983:         let ringY = 0;
+ 984: 
+ 985:         const updateCursor = () => {
+ 986:           const ringScale = cursorRing.classList.contains('cursor-ring-active') ? 1.2 : 1;
+ 987:           ringX += (mouseX - ringX) * 0.15;
+ 988:           ringY += (mouseY - ringY) * 0.15;
+ 989:           cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+ 990:           cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) scale(${ringScale})`;
+ 991:           requestAnimationFrame(updateCursor);
+ 992:         };
+ 993: 
+ 994:         window.addEventListener('mousemove', (event) => {
+ 995:           mouseX = event.clientX;
+ 996:           mouseY = event.clientY;
+ 997:           cursor.style.opacity = '1';
+ 998:           cursorRing.style.opacity = '1';
+ 999:         });
+1000: 
+1001:         window.addEventListener('mouseleave', () => {
+1002:           cursor.style.opacity = '0';
+1003:           cursorRing.style.opacity = '0';
+1004:         });
+1005: 
+1006:         document.querySelectorAll('a, button, [role=\"button\"]').forEach((el) => {
+1007:           el.addEventListener('mouseenter', () => {
+1008:             cursorRing.classList.add('cursor-ring-active');
+1009:           });
+1010:           el.addEventListener('mouseleave', () => {
+1011:             cursorRing.classList.remove('cursor-ring-active');
+1012:           });
+1013:         });
+1014: 
+1015:         updateCursor();
+1016:       }
+1017: 
+1018:       const gradientCanvas = document.getElementById('gradient-canvas');
+1019:       if (gradientCanvas && !prefersReducedMotion) {
+1020:         const ctx = gradientCanvas.getContext('2d');
+1021:         const noise3D = createNoise3D();
+1022: 
+1023:         const resizeCanvas = () => {
+1024:           gradientCanvas.width = gradientCanvas.offsetWidth * window.devicePixelRatio;
+1025:           gradientCanvas.height = gradientCanvas.offsetHeight * window.devicePixelRatio;
+1026:         };
+1027: 
+1028:         const colors = [
+1029:           'rgba(91, 126, 207, 0.35)',
+1030:           'rgba(139, 92, 246, 0.25)',
+1031:           'rgba(59, 130, 246, 0.2)',
+1032:           'rgba(249, 115, 22, 0.15)',
+1033:         ];
+1034: 
+1035:         const render = (time) => {
+1036:           if (!ctx) return;
+1037:           ctx.clearRect(0, 0, gradientCanvas.width, gradientCanvas.height);
+1038:           const t = time * 0.0002;
+1039:           colors.forEach((color, index) => {
+1040:             const x = (noise3D(index, t, 0) * 0.5 + 0.5) * gradientCanvas.width;
+1041:             const y = (noise3D(0, index, t) * 0.5 + 0.5) * gradientCanvas.height;
+1042:             const radius = gradientCanvas.width * 0.6;
+1043:             const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+1044:             gradient.addColorStop(0, color);
+1045:             gradient.addColorStop(1, 'rgba(0,0,0,0)');
+1046:             ctx.fillStyle = gradient;
+1047:             ctx.fillRect(0, 0, gradientCanvas.width, gradientCanvas.height);
+1048:           });
+1049:           requestAnimationFrame(render);
+1050:         };
+1051: 
+1052:         resizeCanvas();
+1053:         window.addEventListener('resize', resizeCanvas);
+1054:         requestAnimationFrame(render);
+1055:       }
+1056: 
+1057:       
+1058:       if (!prefersReducedMotion) {
+1059:         // Register GSAP plugins
+1060:         document.documentElement.classList.add('anim-ready');
+1061:         gsap.registerPlugin(ScrollTrigger);
+1062:         gsap.set('.track-card', { willChange: 'transform' });
+1063:         ScrollTrigger.create({
+1064:           trigger: '.tracks-grid',
+1065:           start: 'top bottom',
+1066:           end: 'bottom top',
+1067:           onLeave: () => gsap.set('.track-card', { willChange: 'auto' }),
+1068:           onEnterBack: () => gsap.set('.track-card', { willChange: 'transform' }),
+1069:         });
+1070: 
+1071:         VanillaTilt.init(document.querySelectorAll('.track-card'), {
+1072:           max: 5,
+1073:           speed: 400,
+1074:           glare: true,
+1075:           'max-glare': 0.15,
+1076:           gyroscope: true,
+1077:         });
+1078: 
+1079:         const splitTargets = document.querySelectorAll('[data-split]');
+1080:         splitTargets.forEach((element) => {
+1081:           const text = element.textContent ?? '';
+1082:           element.textContent = '';
+1083:           [...text].forEach((char) => {
+1084:             const span = document.createElement('span');
+1085:             span.className = 'char';
+1086:             span.style.display = 'inline-block';
+1087:             span.textContent = char === ' ' ? '\u00A0' : char;
+1088:             element.appendChild(span);
+1089:           });
+1090:         });
+1091: 
+1092:         gsap.utils.toArray('[data-count-value]').forEach((element) => {
+1093:           const endValue = Number(element.dataset.countValue || 0);
+1094:           const prefix = element.dataset.countPrefix || '';
+1095:           const suffix = element.dataset.countSuffix || '';
+1096:           const counter = { value: 0 };
+1097:           element.textContent = `${prefix}0${suffix}`;
+1098: 
+1099:           gsap.to(counter, {
+1100:             value: endValue,
+1101:             duration: 2,
+1102:             ease: 'power2.out',
+1103:             scrollTrigger: {
+1104:               trigger: element,
+1105:               start: 'top 85%',
+1106:               toggleActions: 'play none none none',
+1107:             },
+1108:             onUpdate: () => {
+1109:               element.textContent = `${prefix}${Math.round(counter.value)}${suffix}`;
+1110:             },
+1111:           });
+1112:         });
+1113:         
+1114:         // ==========================================
+1115:         // SMOOTH SCROLL (Lenis)
+1116:         // ==========================================
+1117:         const lenis = new Lenis({
+1118:           duration: 1.2,
+1119:           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+1120:           orientation: 'vertical',
+1121:           smoothWheel: true,
+1122:         });
+1123:         
+1124:         // Sync Lenis with GSAP ScrollTrigger
+1125:         lenis.on('scroll', ScrollTrigger.update);
+1126:         gsap.ticker.add((time) => lenis.raf(time * 1000));
+1127:         gsap.ticker.lagSmoothing(0);
+1128:         
+1129:         // ==========================================
+1130:         // HERO ANIMATIONS
+1131:         // ==========================================
+1132:         // Set initial states FIRST (before timeline)
+1133:         gsap.set('.hero-element:not(.hero-title)', { opacity: 0, y: 30 });
+1134:         gsap.set('.hero-meta', { opacity: 0 });
+1135:         gsap.set('.hero-title', { opacity: 1 });
+1136:         gsap.set('.hero-title .char', { opacity: 0, y: 20, rotationX: -90, transformOrigin: 'center' });
+1137:         
+1138:         // THEN create timeline
+1139:         const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+1140:         
+1141:         // Hero elements stagger
+1142:         heroTl.to('.hero-element:not(.hero-title)', {
+1143:           opacity: 1,
+1144:           y: 0,
+1145:           duration: 1,
+1146:           stagger: 0.15,
+1147:         }, 0);
+1148: 
+1149:         heroTl.to('.hero-title .char', {
+1150:           opacity: 1,
+1151:           y: 0,
+1152:           rotationX: 0,
+1153:           duration: 0.8,
+1154:           stagger: 0.02,
+1155:           ease: 'back.out(1.7)',
+1156:         }, 0);
+1157:         
+1158:         // Meta elements (dates, foundation)
+1159:         heroTl.to('.hero-meta', {
+1160:           opacity: 1,
+1161:           duration: 0.8,
+1162:         }, 0.5);
+1163: 
+1164:         // ==========================================
+1165:         // MOUSE-FOLLOWING GRADIENT
+1166:         // ==========================================
+1167:         const heroSection = document.getElementById('main-content');
+1168:         if (heroSection && canHover) {
+1169:           const mouseGlow = document.createElement('div');
+1170:           mouseGlow.className = 'mouse-glow';
+1171:           heroSection.appendChild(mouseGlow);
+1172: 
+1173:           let mouseX = 0;
+1174:           let mouseY = 0;
+1175:           let currentX = 0;
+1176:           let currentY = 0;
+1177: 
+1178:           document.addEventListener('mousemove', (e) => {
+1179:             const rect = heroSection.getBoundingClientRect();
+1180:             mouseX = e.clientX - rect.left;
+1181:             mouseY = e.clientY - rect.top;
+1182:           });
+1183: 
+1184:           const animateMouseGlow = () => {
+1185:             currentX += (mouseX - currentX) * 0.08;
+1186:             currentY += (mouseY - currentY) * 0.08;
+1187:             mouseGlow.style.left = `${currentX}px`;
+1188:             mouseGlow.style.top = `${currentY}px`;
+1189:             requestAnimationFrame(animateMouseGlow);
+1190:           };
+1191:           animateMouseGlow();
+1192:         }
+1193:         
+1194:         // ==========================================
+1195:         // HERO PARALLAX
+1196:         // ==========================================
+1197:         gsap.to('.color-orb-1', {
+1198:           yPercent: -30,
+1199:           ease: 'none',
+1200:           scrollTrigger: {
+1201:             trigger: '#main-content',
+1202:             start: 'top top',
+1203:             end: 'bottom top',
+1204:             scrub: 1,
+1205:           }
+1206:         });
+1207:         
+1208:         gsap.to('.color-orb-2', {
+1209:           yPercent: -20,
+1210:           ease: 'none',
+1211:           scrollTrigger: {
+1212:             trigger: '#main-content',
+1213:             start: 'top top',
+1214:             end: 'bottom top',
+1215:             scrub: 1,
+1216:           }
+1217:         });
+1218:         
+1219:         gsap.to('.color-orb-3', {
+1220:           yPercent: -15,
+1221:           ease: 'none',
+1222:           scrollTrigger: {
+1223:             trigger: '#main-content',
+1224:             start: 'top top',
+1225:             end: 'bottom top',
+1226:             scrub: 1,
+1227:           }
+1228:         });
+1229:       
+1230:       // ==========================================
+1231:       // SCROLL ANIMATIONS
+1232:       // ==========================================
+1233:       
+1234:         // Section titles
+1235:         gsap.utils.toArray('.section-title').forEach(title => {
+1236:           gsap.fromTo(title, 
+1237:             { opacity: 0, y: 40 },
+1238:             {
+1239:               opacity: 1,
+1240:               y: 0,
+1241:               duration: 0.8,
+1242:               ease: 'power2.out',
+1243:               scrollTrigger: {
+1244:                 trigger: title,
+1245:                 start: 'top 85%',
+1246:                 toggleActions: 'play none none none',
+1247:               }
+1248:             }
+1249:           );
+1250:         });
+1251:       
+1252:         // Section subtitles
+1253:         gsap.utils.toArray('.section-subtitle').forEach(sub => {
+1254:           gsap.fromTo(sub,
+1255:             { opacity: 0, y: 20 },
+1256:             {
+1257:               opacity: 1,
+1258:               y: 0,
+1259:               duration: 0.6,
+1260:               delay: 0.2,
+1261:               ease: 'power2.out',
+1262:               scrollTrigger: {
+1263:                 trigger: sub,
+1264:                 start: 'top 85%',
+1265:                 toggleActions: 'play none none none',
+1266:               }
+1267:             }
+1268:           );
+1269:         });
+1270:       
+1271:         // Stats cards stagger
+1272:         gsap.fromTo('.stat-card',
+1273:           { opacity: 0, y: 50 },
+1274:           {
+1275:             opacity: 1,
+1276:             y: 0,
+1277:             duration: 0.7,
+1278:             stagger: 0.15,
+1279:             ease: 'power2.out',
+1280:             scrollTrigger: {
+1281:               trigger: '.stats-grid',
+1282:               start: 'top 80%',
+1283:               toggleActions: 'play none none none',
+1284:             }
+1285:           }
+1286:         );
+1287:       
+1288:         // Quote
+1289:         gsap.fromTo('.quote',
+1290:           { opacity: 0, y: 30 },
+1291:           {
+1292:             opacity: 1,
+1293:             y: 0,
+1294:             duration: 0.8,
+1295:             ease: 'power2.out',
+1296:             scrollTrigger: {
+1297:               trigger: '.quote',
+1298:               start: 'top 85%',
+1299:               toggleActions: 'play none none none',
+1300:             }
+1301:           }
+1302:         );
+1303:       
+1304:         // Track cards stagger
+1305:         gsap.fromTo('.track-card',
+1306:           { opacity: 0, y: 50 },
+1307:           {
+1308:             opacity: 1,
+1309:             y: 0,
+1310:             duration: 0.7,
+1311:             stagger: 0.15,
+1312:             ease: 'power2.out',
+1313:             scrollTrigger: {
+1314:               trigger: '.tracks-grid',
+1315:               start: 'top 80%',
+1316:               toggleActions: 'play none none none',
+1317:             }
+1318:           }
+1319:         );
+1320: 
+1321:         // Details cards stagger
+1322:         gsap.fromTo('#details .card-shine',
+1323:           { opacity: 0, y: 50 },
+1324:           {
+1325:             opacity: 1,
+1326:             y: 0,
+1327:             duration: 0.7,
+1328:             stagger: 0.1,
+1329:             ease: 'power2.out',
+1330:             scrollTrigger: {
+1331:               trigger: '#details',
+1332:               start: 'top 80%',
+1333:               toggleActions: 'play none none none',
+1334:             }
+1335:           }
+1336:         );
+1337:       
+1338:         // Support cards stagger
+1339:         gsap.fromTo('.support-card',
+1340:           { opacity: 0, y: 40 },
+1341:           {
+1342:             opacity: 1,
+1343:             y: 0,
+1344:             duration: 0.6,
+1345:             stagger: 0.12,
+1346:             ease: 'power2.out',
+1347:             scrollTrigger: {
+1348:               trigger: '.support-grid',
+1349:               start: 'top 80%',
+1350:               toggleActions: 'play none none none',
+1351:             }
+1352:           }
+1353:         );
+1354:       
+1355:         // Mentors section
+1356:         gsap.fromTo('.mentors-section',
+1357:           { opacity: 0, y: 30 },
+1358:           {
+1359:             opacity: 1,
+1360:             y: 0,
+1361:             duration: 0.7,
+1362:             ease: 'power2.out',
+1363:             scrollTrigger: {
+1364:               trigger: '.mentors-section',
+1365:               start: 'top 85%',
+1366:               toggleActions: 'play none none none',
+1367:             }
+1368:           }
+1369:         );
+1370:       
+1371:         // Sponsors
+1372:         gsap.fromTo('.sponsors-grid',
+1373:           { opacity: 0, y: 30 },
+1374:           {
+1375:             opacity: 1,
+1376:             y: 0,
+1377:             duration: 0.7,
+1378:             ease: 'power2.out',
+1379:             scrollTrigger: {
+1380:               trigger: '.sponsors-grid',
+1381:               start: 'top 85%',
+1382:               toggleActions: 'play none none none',
+1383:             }
+1384:           }
+1385:         );
+1386:       
+1387:         // FAQ items stagger
+1388:         gsap.fromTo('.faq-item',
+1389:           { opacity: 0, y: 30 },
+1390:           {
+1391:             opacity: 1,
+1392:             y: 0,
+1393:             duration: 0.5,
+1394:             stagger: 0.1,
+1395:             ease: 'power2.out',
+1396:             scrollTrigger: {
+1397:               trigger: '.faq-list',
+1398:               start: 'top 80%',
+1399:               toggleActions: 'play none none none',
+1400:             }
+1401:           }
+1402:         );
+1403:         
+1404:         // Resource cards stagger
+1405:         gsap.fromTo('.resource-card',
+1406:           { opacity: 0, y: 50, scale: 0.95 },
+1407:           {
+1408:             opacity: 1,
+1409:             y: 0,
+1410:             scale: 1,
+1411:             duration: 0.7,
+1412:             stagger: 0.15,
+1413:             ease: 'power2.out',
+1414:             scrollTrigger: {
+1415:               trigger: '.resources-grid',
+1416:               start: 'top 80%',
+1417:               toggleActions: 'play none none none',
+1418:             }
+1419:           }
+1420:         );
+1421:       
+1422:         // Final CTA
+1423:         gsap.fromTo('.cta-button',
+1424:           { opacity: 0, y: 20, scale: 0.95 },
+1425:           {
+1426:             opacity: 1,
+1427:             y: 0,
+1428:             scale: 1,
+1429:             duration: 0.6,
+1430:             ease: 'back.out(1.7)',
+1431:             scrollTrigger: {
+1432:               trigger: '.cta-button',
+1433:               start: 'top 90%',
+1434:               toggleActions: 'play none none none',
+1435:             }
+1436:           }
+1437:         );
+1438:         
+1439:         // Scroll progress indicator
+1440:         const scrollProgress = document.getElementById('scroll-progress');
+1441:         if (scrollProgress) {
+1442:           gsap.to(scrollProgress, {
+1443:             width: '100%',
+1444:             ease: 'none',
+1445:             scrollTrigger: {
+1446:               trigger: 'body',
+1447:               start: 'top top',
+1448:               end: 'bottom bottom',
+1449:               scrub: 0.3
+1450:             }
+1451:           });
+1452:         }
+1453:       }
+1454:       
+1455:       // ==========================================
+1456:       // FAQ ACCORDION
+1457:       // ==========================================
+1458:       const faqItems = document.querySelectorAll('.faq-item');
+1459:       faqItems.forEach((item) => {
+1460:         const toggle = item.querySelector('.faq-toggle');
+1461:         const answer = item.querySelector('.faq-answer');
+1462:         const chevron = item.querySelector('.faq-chevron');
+1463:         
+1464:         if (!toggle || !answer) return;
+1465:         
+1466:         toggle.addEventListener('click', () => {
+1467:           const isOpen = item.getAttribute('data-state') === 'open';
+1468:           
+1469:           faqItems.forEach((otherItem) => {
+1470:             if (otherItem === item) return;
+1471:             otherItem.setAttribute('data-state', 'closed');
+1472:             const otherToggle = otherItem.querySelector('.faq-toggle');
+1473:             const otherAnswer = otherItem.querySelector('.faq-answer');
+1474:             const otherChevron = otherItem.querySelector('.faq-chevron');
+1475:             if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+1476:             if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+1477:             if (otherChevron) otherChevron.classList.remove('rotate-180');
+1478:           });
+1479:           
+1480:           item.setAttribute('data-state', isOpen ? 'closed' : 'open');
+1481:           toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+1482:           answer.style.maxHeight = isOpen ? '0px' : `${answer.scrollHeight}px`;
+1483:           if (chevron) chevron.classList.toggle('rotate-180', !isOpen);
+1484:         });
+1485:       });
+1486:       } // End window check
+1487:     </script>
+1488: 
+1489:   </body>
+1490: </html>
+</file>
+
+</files>
