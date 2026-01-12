@@ -400,8 +400,8 @@ const testimonials = [
             <circle cx="75%" cy="70%" r="2" fill="url(#node-glow)" class="network-node node-6" />
           </g>
         </svg>
-        
-        <!-- Subtle grid pattern -->
+      
+      <!-- Subtle grid pattern -->
         <div class="absolute inset-0 opacity-[0.02]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
         
         <!-- Privacy scanning line -->
@@ -487,19 +487,19 @@ const testimonials = [
                 <div class="text-center">
                   <div class="bg-snf-blue-500/10 rounded-lg px-2 md:px-3 py-1.5 md:py-2 min-w-[40px] md:min-w-[50px]">
                     <span class="block text-lg md:text-2xl font-bold tabular-nums text-snf-blue-400" id="begin-days">00</span>
-                  </div>
+            </div>
                   <p class="text-snf-white/30 text-[8px] md:text-[9px] mt-1 uppercase tracking-wider">{m.countdown_days()}</p>
-                </div>
+            </div>
                 <div class="text-center">
                   <div class="bg-snf-blue-500/10 rounded-lg px-2 md:px-3 py-1.5 md:py-2 min-w-[40px] md:min-w-[50px]">
                     <span class="block text-lg md:text-2xl font-bold tabular-nums text-snf-blue-400" id="begin-hours">00</span>
-                  </div>
+            </div>
                   <p class="text-snf-white/30 text-[8px] md:text-[9px] mt-1 uppercase tracking-wider">{m.countdown_hours()}</p>
-                </div>
+            </div>
                 <div class="text-center">
                   <div class="bg-snf-blue-500/10 rounded-lg px-2 md:px-3 py-1.5 md:py-2 min-w-[40px] md:min-w-[50px]">
                     <span class="block text-lg md:text-2xl font-bold tabular-nums text-snf-blue-400" id="begin-mins">00</span>
-                  </div>
+          </div>
                   <p class="text-snf-white/30 text-[8px] md:text-[9px] mt-1 uppercase tracking-wider">{m.countdown_minutes()}</p>
                 </div>
                 <div class="text-center">
@@ -509,8 +509,8 @@ const testimonials = [
                   <p class="text-snf-white/30 text-[8px] md:text-[9px] mt-1 uppercase tracking-wider">{m.countdown_seconds()}</p>
                 </div>
               </div>
-            </div>
-            
+        </div>
+        
             <!-- Divider -->
             <div class="countdown-divider hidden md:block w-px h-16 bg-snf-white/10"></div>
             <div class="countdown-divider block md:hidden w-24 h-px bg-snf-white/10"></div>
@@ -560,7 +560,7 @@ const testimonials = [
             Register on DoraHacks
             <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
           </a>
-          <a
+          <a 
             href="https://t.me/+-5zNW47GSdQ1ZDkx"
             target="_blank"
             rel="noopener noreferrer"
@@ -569,16 +569,16 @@ const testimonials = [
             Join Telegram
           </a>
         </div>
-
+        
         <!-- Backed by -->
         <div class="hero-element gs-hidden mt-12">
           <p class="text-snf-white/30 text-xs uppercase tracking-[0.2em] mb-4">{m.hero_backed_by()}</p>
           <div class="flex justify-center items-center gap-8">
             <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
             <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
-          </div>
-        </div>
-        
+      </div>
+      </div>
+      
       </div>
       
       <!-- Scroll indicator -->
@@ -683,15 +683,15 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- WHY NOW SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-5xl mx-auto">
         
         <!-- Section header -->
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-3 font-medium">{m.section_why_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight pb-2">
-            {m.section_why_title()}
-          </h2>
+          {m.section_why_title()}
+        </h2>
         </div>
         
         <!-- Stats cards -->
@@ -719,14 +719,14 @@ const testimonials = [
                 <div class="flex-1 min-w-0">
                   <p class="text-[10px] tracking-[0.15em] uppercase text-snf-blue-500 font-medium mb-1">{stat.kicker}</p>
                   <div class="text-snf-white text-xl md:text-2xl font-bold font-display leading-tight">
-                    {stat.count ? (
+                {stat.count ? (
                       <span data-count-value={stat.count.value} data-count-prefix={stat.count.prefix} data-count-suffix={stat.count.suffix}>
-                        {stat.count.prefix}{stat.count.value}{stat.count.suffix}
-                      </span>
-                    ) : (
-                      <span>{stat.value}</span>
-                    )}
-                  </div>
+                    {stat.count.prefix}{stat.count.value}{stat.count.suffix}
+                  </span>
+                ) : (
+                  <span>{stat.value}</span>
+                )}
+              </div>
                 </div>
               </div>
               <p class="text-snf-white/40 text-xs leading-relaxed mt-3">{stat.label}</p>
@@ -741,16 +741,16 @@ const testimonials = [
             <cite class="block text-snf-white/30 not-italic mt-2 text-[10px]">
               {m.quote_1_cite()}
               <a href="https://www.youtube.com/watch?v=u3B8xqsf66w" target="_blank" rel="noopener noreferrer" class="ml-1 text-snf-blue-500 hover:text-snf-blue-400 transition-colors">↗</a>
-            </cite>
-          </blockquote>
+          </cite>
+        </blockquote>
 
           <blockquote class="gs-hidden bg-snf-white/[0.02] rounded-xl p-4 border-l-2 border-purple-500/50">
             <p class="text-snf-white/50 text-xs italic leading-relaxed">"{m.quote_2_text()}"</p>
             <cite class="block text-snf-white/30 not-italic mt-2 text-[10px]">
               {m.quote_2_cite()}
               <a href="https://a16zcrypto.com/posts/article/big-ideas-things-excited-about-crypto-2026/" target="_blank" rel="noopener noreferrer" class="ml-1 text-purple-500 hover:text-purple-400 transition-colors">↗</a>
-            </cite>
-          </blockquote>
+          </cite>
+        </blockquote>
         </div>
 
         <!-- CTA blurb -->
@@ -764,7 +764,7 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- TRACKS SECTION -->
     <!-- ============================================ -->
-    <section id="tracks" class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section id="tracks" class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-5xl mx-auto">
         
         <div class="text-center mb-10">
@@ -806,7 +806,7 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- HACKATHON DETAILS SECTION -->
     <!-- ============================================ -->
-    <section id="details" class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section id="details" class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">Rules & Info</p>
@@ -860,7 +860,7 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- SOCIAL PROOF SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.social_proof_kicker()}</p>
@@ -898,14 +898,14 @@ const testimonials = [
             </svg>
             {m.badge_grant_pipeline()}
           </span>
-        </div>
-        
+      </div>
+      
         <!-- Metrics row -->
         <div class="grid grid-cols-3 gap-3 mb-8">
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
             <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">12+</div>
             <p class="text-snf-white/40 text-xs mt-1">{m.metric_teams_funded()}</p>
-          </div>
+            </div>
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
             <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">4</div>
             <p class="text-snf-white/40 text-xs mt-1">{m.metric_projects_launched()}</p>
@@ -984,7 +984,7 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- LEARNING RESOURCES SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-5xl mx-auto">
         
         <div class="text-center mb-10">
@@ -1022,12 +1022,12 @@ const testimonials = [
                 </span>
               </div>
             ) : (
-              <a 
-                href={resource.link}
-                target="_blank"
-                rel="noopener noreferrer"
+            <a 
+              href={resource.link}
+              target="_blank"
+              rel="noopener noreferrer"
                 class="group gs-hidden bg-snf-white/[0.02] rounded-lg md:rounded-xl p-4 md:p-5 hover:bg-snf-white/[0.04] transition-all duration-300"
-              >
+            >
                 <!-- Icon -->
                 <div class="w-8 h-8 md:w-10 md:h-10 bg-snf-blue-900/40 rounded-lg flex items-center justify-center mb-3 md:mb-4">
                   {resource.icon === "academic" && (
@@ -1042,7 +1042,7 @@ const testimonials = [
                   {resource.linkText}
                   <ArrowRight class="w-3 h-3 ml-1 group-hover:translate-x-0.5 transition-transform duration-200" strokeWidth={2} />
                 </span>
-              </a>
+            </a>
             )
           ))}
         </div>
@@ -1053,14 +1053,14 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- MENTORS SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-5xl mx-auto">
         
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_mentors_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            {m.mentors_title()}
-          </h2>
+          {m.mentors_title()}
+        </h2>
           <p class="text-snf-white/40 text-sm mt-3 gs-hidden">
             {m.mentors_subtitle()}
           </p>
@@ -1104,7 +1104,7 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- SPONSORS SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-5xl mx-auto text-center">
         
         <div class="mb-10">
@@ -1112,8 +1112,8 @@ const testimonials = [
             {m.sponsors_kicker()}
           </p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            {m.sponsors_title()}
-          </h2>
+          {m.sponsors_title()}
+        </h2>
           <p class="text-snf-white/40 text-sm mt-3 gs-hidden">
             {m.sponsors_subtitle()}
           </p>
@@ -1163,14 +1163,14 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- FAQ SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-2xl mx-auto">
         
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_faq_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            {m.faq_title()}
-          </h2>
+          {m.faq_title()}
+        </h2>
         </div>
         
         <div class="space-y-0">
@@ -1193,7 +1193,7 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- FINAL CTA SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-xl mx-auto text-center">
         
         <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight">
@@ -1231,14 +1231,14 @@ const testimonials = [
             <span class="font-display font-semibold text-snf-white/80">{hackathonName}</span>
             <span class="hidden md:inline text-snf-white/20">{m.footer_by()}</span>
             <span class="text-snf-blue-500 text-[10px] md:text-xs">{m.hero_powered_by_org()}</span>
-          </div>
-          
+        </div>
+        
           <div class="flex gap-4 md:gap-6 text-[10px] md:text-xs text-snf-white/30">
             <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white/60 transition-colors duration-200">{m.footer_twitter()}</a>
             <a href="https://discord.com/invite/starknet-community" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white/60 transition-colors duration-200">{m.footer_discord()}</a>
             <a href="https://starknet.io" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white/60 transition-colors duration-200">{m.footer_starknet()}</a>
-          </div>
         </div>
+      </div>
 
         <div class="mt-6 pt-6 border-t border-snf-white/5 text-center">
           <p class="text-snf-white/40 text-xs mb-3">{m.footer_community_title()}</p>
@@ -1247,7 +1247,7 @@ const testimonials = [
             <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_twitter()}</a>
             <a href="https://dorahacks.io/hackathon/bitcoinxprivacy/forum?utm_source=recypher-landing&utm_medium=footer&utm_campaign=2026" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_forum()}</a>
             <a href="https://t.me/+-5zNW47GSdQ1ZDkx" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_telegram()}</a>
-          </div>
+        </div>
         </div>
         
       </div>
@@ -1525,13 +1525,13 @@ const testimonials = [
         });
 
         if (!isNeo) {
-          VanillaTilt.init(document.querySelectorAll('.track-card'), {
-            max: 5,
-            speed: 400,
-            glare: true,
-            'max-glare': 0.15,
-            gyroscope: true,
-          });
+        VanillaTilt.init(document.querySelectorAll('.track-card'), {
+          max: 5,
+          speed: 400,
+          glare: true,
+          'max-glare': 0.15,
+          gyroscope: true,
+        });
         }
 
         const splitTargets = document.querySelectorAll('[data-split]');
@@ -1616,12 +1616,12 @@ const testimonials = [
               ease: 'power1.out',
             }
           : {
-              opacity: 1,
-              y: 0,
-              rotationX: 0,
-              duration: 0.8,
-              stagger: 0.02,
-              ease: 'back.out(1.7)',
+          opacity: 1,
+          y: 0,
+          rotationX: 0,
+          duration: 0.8,
+          stagger: 0.02,
+          ease: 'back.out(1.7)',
             }, 0
         );
         
@@ -1709,38 +1709,38 @@ const testimonials = [
         // HERO PARALLAX
         // ==========================================
         if (!isNeo) {
-          gsap.to('.color-orb-1', {
-            yPercent: -30,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: '#main-content',
-              start: 'top top',
-              end: 'bottom top',
-              scrub: 1,
-            }
-          });
-          
-          gsap.to('.color-orb-2', {
-            yPercent: -20,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: '#main-content',
-              start: 'top top',
-              end: 'bottom top',
-              scrub: 1,
-            }
-          });
-          
-          gsap.to('.color-orb-3', {
-            yPercent: -15,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: '#main-content',
-              start: 'top top',
-              end: 'bottom top',
-              scrub: 1,
-            }
-          });
+        gsap.to('.color-orb-1', {
+          yPercent: -30,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#main-content',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1,
+          }
+        });
+        
+        gsap.to('.color-orb-2', {
+          yPercent: -20,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#main-content',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1,
+          }
+        });
+        
+        gsap.to('.color-orb-3', {
+          yPercent: -15,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#main-content',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1,
+          }
+        });
         }
       
       // ==========================================

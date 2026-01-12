@@ -36,6 +36,124 @@ body {
 }
 
 /* ============================================ */
+/* MOBILE SECTION SEPARATION */
+/* ============================================ */
+
+/* Alternating section backgrounds for better separation */
+.section-alt {
+  position: relative;
+}
+
+.section-alt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(91, 126, 207, 0.02) 0%,
+    rgba(91, 126, 207, 0.04) 50%,
+    rgba(91, 126, 207, 0.02) 100%
+  );
+  pointer-events: none;
+}
+
+/* Section divider - gradient line */
+.section-divider-top {
+  position: relative;
+}
+
+.section-divider-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 400px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(91, 126, 207, 0.3) 20%,
+    rgba(91, 126, 207, 0.5) 50%,
+    rgba(91, 126, 207, 0.3) 80%,
+    transparent 100%
+  );
+}
+
+/* Mobile-specific section spacing */
+@media (max-width: 768px) {
+  .section-mobile-spacing {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  /* Add visual break between sections on mobile */
+  .section-mobile-break {
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .section-mobile-break::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgba(91, 126, 207, 0.6),
+      rgba(168, 85, 247, 0.6)
+    );
+    border-radius: 2px;
+  }
+}
+
+/* Section number badge for mobile */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(91, 126, 207, 0.15);
+  border: 1px solid rgba(91, 126, 207, 0.3);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(91, 126, 207, 0.9);
+  margin-bottom: 0.75rem;
+}
+
+/* Dotted separator for subtle breaks */
+.dot-separator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 1.5rem 0;
+}
+
+.dot-separator span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(91, 126, 207, 0.4);
+}
+
+/* Card-style section container for mobile */
+@media (max-width: 768px) {
+  .section-card-mobile {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 0 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* ============================================ */
 /* HERO ANIMATED BACKGROUND */
 /* ============================================ */
 
