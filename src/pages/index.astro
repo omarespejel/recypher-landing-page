@@ -596,6 +596,7 @@ const testimonials = [
     <!-- ============================================ -->
     <section class="py-12 md:py-16 px-4 md:px-6 border-b border-snf-white/5 overflow-hidden">
       <div class="max-w-5xl mx-auto">
+        <div class="section-number">1</div>
         <p class="text-center text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-6 font-medium">{m.timeline_kicker()}</p>
         
         <!-- Timeline container -->
@@ -681,92 +682,11 @@ const testimonials = [
     </section>
 
     <!-- ============================================ -->
-    <!-- WHY NOW SECTION -->
-    <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
-      <div class="max-w-5xl mx-auto">
-        
-        <!-- Section header -->
-        <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-3 font-medium">{m.section_why_kicker()}</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight pb-2">
-          {m.section_why_title()}
-        </h2>
-        </div>
-        
-        <!-- Stats cards -->
-        <div class="grid md:grid-cols-3 gap-3">
-          {stats.map((stat) => (
-            <div class="gs-hidden bg-snf-white/[0.02] rounded-xl p-5 hover:bg-snf-white/[0.04] transition-colors duration-200">
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 rounded-lg bg-snf-blue-500/10 flex items-center justify-center flex-shrink-0">
-                  {stat.icon === 'zap' && (
-                    <svg class="w-4 h-4 text-snf-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  )}
-                  {stat.icon === 'bitcoin' && (
-                    <svg class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.5 15.5h-1v1.5h-1v-1.5h-2v-1h.5c.28 0 .5-.22.5-.5v-5c0-.28-.22-.5-.5-.5H9v-1h2V8h1v1.5h1c1.38 0 2.5 1.12 2.5 2.5 0 .87-.45 1.63-1.13 2.08.68.45 1.13 1.21 1.13 2.08 0 1.38-1.12 2.5-2.5 2.5v.84zm-.5-7h-1.5v2h1.5c.55 0 1-.45 1-1s-.45-1-1-1zm.5 3h-2v2h2c.55 0 1-.45 1-1s-.45-1-1-1z"/>
-                    </svg>
-                  )}
-                  {stat.icon === 'shield' && (
-                    <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  )}
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="text-[10px] tracking-[0.15em] uppercase text-snf-blue-500 font-medium mb-1">{stat.kicker}</p>
-                  <div class="text-snf-white text-xl md:text-2xl font-bold font-display leading-tight">
-                {stat.count ? (
-                      <span data-count-value={stat.count.value} data-count-prefix={stat.count.prefix} data-count-suffix={stat.count.suffix}>
-                    {stat.count.prefix}{stat.count.value}{stat.count.suffix}
-                  </span>
-                ) : (
-                  <span>{stat.value}</span>
-                )}
-              </div>
-                </div>
-              </div>
-              <p class="text-snf-white/40 text-xs leading-relaxed mt-3">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-        
-        <!-- Quotes -->
-        <div class="mt-8 grid md:grid-cols-2 gap-3">
-          <blockquote class="gs-hidden bg-snf-white/[0.02] rounded-xl p-4 border-l-2 border-snf-blue-500/50">
-            <p class="text-snf-white/50 text-xs italic leading-relaxed">"{m.quote_1_text()}"</p>
-            <cite class="block text-snf-white/30 not-italic mt-2 text-[10px]">
-              {m.quote_1_cite()}
-              <a href="https://www.youtube.com/watch?v=u3B8xqsf66w" target="_blank" rel="noopener noreferrer" class="ml-1 text-snf-blue-500 hover:text-snf-blue-400 transition-colors">↗</a>
-          </cite>
-        </blockquote>
-
-          <blockquote class="gs-hidden bg-snf-white/[0.02] rounded-xl p-4 border-l-2 border-purple-500/50">
-            <p class="text-snf-white/50 text-xs italic leading-relaxed">"{m.quote_2_text()}"</p>
-            <cite class="block text-snf-white/30 not-italic mt-2 text-[10px]">
-              {m.quote_2_cite()}
-              <a href="https://a16zcrypto.com/posts/article/big-ideas-things-excited-about-crypto-2026/" target="_blank" rel="noopener noreferrer" class="ml-1 text-purple-500 hover:text-purple-400 transition-colors">↗</a>
-          </cite>
-        </blockquote>
-        </div>
-
-        <!-- CTA blurb -->
-        <p class="gs-hidden text-snf-white/30 text-xs text-center max-w-md mx-auto mt-6">
-          {m.story_blurb()}
-        </p>
-        
-      </div>
-    </section>
-
-    <!-- ============================================ -->
     <!-- TRACKS SECTION -->
     <!-- ============================================ -->
     <section id="tracks" class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-5xl mx-auto">
-        
+        <div class="section-number">2</div>
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_tracks_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
@@ -804,64 +724,11 @@ const testimonials = [
     <SuccessPath />
 
     <!-- ============================================ -->
-    <!-- HACKATHON DETAILS SECTION -->
-    <!-- ============================================ -->
-    <section id="details" class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">Rules & Info</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">{m.section_details_title()}</h2>
-          <p class="gs-hidden text-snf-white/40 text-sm mt-3 max-w-lg mx-auto">{m.section_details_subtitle()}</p>
-        </div>
-        
-        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_timeline_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_timeline_a()}</p>
-          </div>
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_eligibility_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_eligibility_a()}</p>
-          </div>
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_submissions_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_submissions_a()}</p>
-          </div>
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_judging_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_judging_a()}</p>
-          </div>
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_prizes_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_prizes_a()}</p>
-          </div>
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_ip_rules_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_ip_rules_a()}</p>
-          </div>
-          <div class="bg-snf-white/[0.02] rounded-lg p-4 hover:bg-snf-white/[0.04] transition-colors duration-200 md:col-span-2 lg:col-span-1">
-            <h3 class="text-snf-white/90 text-sm font-medium mb-1.5">{m.details_support_q()}</h3>
-            <p class="text-snf-white/40 text-xs leading-relaxed">{m.details_support_a()}</p>
-          </div>
-        </div>
-        
-        <div class="text-center mt-10">
-          <a
-            href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=recypher-landing&utm_medium=details&utm_campaign=2026"
-            class="bg-snf-blue-500 hover:bg-snf-blue-700 text-white text-sm px-6 py-2.5 rounded-full font-medium transition-all duration-300 inline-flex items-center gap-2 hover:shadow-lg hover:shadow-snf-blue-500/20"
-          >
-            {m.cta_register_primary()}
-            <ArrowRight class="w-3.5 h-3.5" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================ -->
     <!-- SOCIAL PROOF SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-5xl mx-auto">
+        <div class="section-number">3</div>
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.social_proof_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
@@ -984,9 +851,9 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- LEARNING RESOURCES SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-5xl mx-auto">
-        
+        <div class="section-number">4</div>
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
@@ -1053,9 +920,9 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- MENTORS SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
       <div class="max-w-5xl mx-auto">
-        
+        <div class="section-number">5</div>
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_mentors_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
@@ -1100,72 +967,12 @@ const testimonials = [
         
       </div>
     </section>
-
-    <!-- ============================================ -->
-    <!-- SPONSORS SECTION -->
-    <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
-      <div class="max-w-5xl mx-auto text-center">
-        
-        <div class="mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">
-            {m.sponsors_kicker()}
-          </p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-          {m.sponsors_title()}
-        </h2>
-          <p class="text-snf-white/40 text-sm mt-3 gs-hidden">
-            {m.sponsors_subtitle()}
-          </p>
-        </div>
-        
-        <div class="gs-hidden flex flex-wrap justify-center items-center gap-10 md:gap-16">
-          <a
-            href="https://www.starknet.io/foundation/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="partner-logo-link group"
-            aria-label="Starknet Foundation"
-          >
-            <img
-              src="/partners/starknet-foundation.png"
-              alt="Starknet Foundation"
-              loading="lazy"
-              class="h-8 md:h-10 w-auto partner-logo-dark"
-            />
-          </a>
-          <a
-            href="https://starkware.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="partner-logo-link group"
-            aria-label="StarkWare"
-          >
-            <img
-              src="/partners/starkware.png"
-              alt="StarkWare"
-              loading="lazy"
-              class="h-8 md:h-10 w-auto partner-logo-dark"
-            />
-          </a>
-        </div>
-        
-        <p class="gs-hidden mt-8 text-snf-white/40 text-xs">
-          {m.sponsor_cta_text()}
-          <a href="mailto:hackathon@starknet.io" class="text-snf-blue-500 hover:text-snf-blue-400 transition-colors duration-200 ml-1">
-            {m.sponsor_cta_link()}
-          </a>
-        </p>
-        
-      </div>
-    </section>
-
     <!-- ============================================ -->
     <!-- FAQ SECTION -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-alt section-divider-top">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-2xl mx-auto">
-        
+        <div class="section-number">6</div>
         <div class="text-center mb-10">
           <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_faq_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">

@@ -111,20 +111,27 @@ body {
   }
 }
 
-/* Section number badge for mobile */
-.section-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(91, 126, 207, 0.15);
-  border: 1px solid rgba(91, 126, 207, 0.3);
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(91, 126, 207, 0.9);
-  margin-bottom: 0.75rem;
+/* Section number badge - visible only on mobile */
+.section-number {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(91, 126, 207, 0.15), rgba(168, 85, 247, 0.1));
+    border: 1px solid rgba(91, 126, 207, 0.3);
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(91, 126, 207, 1);
+    font-family: 'Space Grotesk', sans-serif;
+  }
 }
 
 /* Dotted separator for subtle breaks */
