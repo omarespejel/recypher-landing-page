@@ -15,7 +15,7 @@ import * as m from '../paraglide/messages';
 
 const hackathonName = 'The Bitcoin and Privacy Hackathon';
 const siteUrl = 'https://bitcoinxprivacy.com';
-const supportedLocales = ['en', 'es', 'zh-CN', 'pt', 'uk', 'ru'];
+const supportedLocales = ['en', 'es', 'zh-CN', 'zh-TW', 'pt', 'uk', 'ru'];
 const defaultLocale = 'en';
 const locale = Astro.currentLocale ?? defaultLocale;
 const localePattern = new RegExp(`^/(${supportedLocales.join('|')})(?=/|$)`);
