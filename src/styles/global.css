@@ -259,6 +259,50 @@ body {
   }
 }
 
+/* Gradient CTA Button - adds energy without changing brand */
+.btn-gradient {
+  background: linear-gradient(135deg, #5B7ECF 0%, #7C3AED 100%);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6B8EDF 0%, #8B5CF6 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-gradient:hover::before {
+  opacity: 1;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(91, 126, 207, 0.4), 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.btn-gradient span,
+.btn-gradient svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* Secondary outline button enhancement */
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: rgba(91, 126, 207, 0.5);
+  background: rgba(91, 126, 207, 0.1);
+}
+
 .text-body-large {
   font-size: clamp(1rem, 1.6vw, 1.125rem);
   line-height: 1.5;
