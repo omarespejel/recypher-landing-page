@@ -217,10 +217,10 @@ const testimonials = [
     <meta name="description" content={metaDescription} />
     <meta name="view-transition" content="same-origin" />
     
-    <!-- Fonts: Cooper Hewitt (Headings), Junicode (Subheadings), Martian Mono (Content) -->
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/junicode" rel="stylesheet" />
     
@@ -397,18 +397,18 @@ const testimonials = [
           <span class="text-snf-white/60 text-sm">{m.badge_virtual()}</span>
         </div>
         
-        <!-- Main Title - Bold and clear -->
-        <h1 class="hero-element gs-hidden mb-6 md:mb-8" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
-          <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white" style="font-family: 'Cooper Hewitt', system-ui, sans-serif;">
+        <!-- Main Title - Premium typography -->
+        <h1 class="hero-element gs-hidden mb-8 md:mb-10" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
+          <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-extrabold tracking-[-0.02em] text-white leading-none" style="font-family: 'Inter', system-ui, sans-serif;">
             {m.hero_title_line1()}
           </span>
-          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-snf-blue-400 mt-1" style="font-family: 'Cooper Hewitt', system-ui, sans-serif;">
+          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-extrabold tracking-[-0.02em] text-snf-blue-500 leading-none mt-2" style="font-family: 'Inter', system-ui, sans-serif;">
             {m.hero_title_line2()}
           </span>
         </h1>
         
         <!-- Tagline - Clean and impactful -->
-        <p class="hero-element gs-hidden text-snf-white/80 text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto mb-6 leading-relaxed font-light">
+        <p class="hero-element gs-hidden text-snf-white/70 text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto mb-6 leading-relaxed" style="font-family: 'Space Grotesk', system-ui, sans-serif;">
           {m.hero_subtitle_line1()}
         </p>
         
