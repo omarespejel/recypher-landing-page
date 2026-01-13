@@ -13,8 +13,13 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        // Headings: Cooper Hewitt Heavy
+        display: ['Cooper Hewitt', 'system-ui', 'sans-serif'],
+        // Subheadings: Junicode
+        subheading: ['Junicode', 'Georgia', 'serif'],
+        // Content: Martian Mono
+        sans: ['Martian Mono', 'monospace'],
+        mono: ['Martian Mono', 'monospace'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

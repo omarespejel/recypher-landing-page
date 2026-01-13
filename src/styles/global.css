@@ -13,6 +13,13 @@ body {
   background-color: #0C0A18;
 }
 
+/* Fonts loaded via CDN in index.astro:
+   - Headings: Cooper Hewitt (font-display)
+   - Subheadings: Junicode (font-subheading)
+   - Content: Martian Mono (font-sans/font-mono)
+*/
+
+/* Fallback: Local fonts if needed */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/InterVariable.woff2') format('woff2');
@@ -21,12 +28,18 @@ body {
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Space Grotesk';
-  src: url('/fonts/SpaceGroteskVariable.woff2') format('woff2');
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
+/* Apply font defaults */
+body {
+  font-family: 'Martian Mono', monospace;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Cooper Hewitt', system-ui, sans-serif;
+  font-weight: 800;
+}
+
+.font-subheading {
+  font-family: 'Junicode', Georgia, serif;
 }
 
 .text-display-xl {
