@@ -1280,6 +1280,11 @@ html[data-theme='light'] .gradient-text {
   opacity: 1;
 }
 
+/* Starknet logo invert for dark backgrounds - hero branding */
+.starknet-logo-invert {
+  filter: brightness(0) invert(1);
+}
+
 /* Legacy partner logo styles (neo-brutal theme) */
 .partner-logo {
   display: inline-flex;
