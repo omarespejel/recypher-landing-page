@@ -13,8 +13,8 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import SuccessPath from '../components/SuccessPath.astro';
 import * as m from '../paraglide/messages';
 
-const hackathonName = 'The Bitcoin and Privacy Hackathon';
-const siteUrl = 'https://bitcoinxprivacy.com';
+const hackathonName = 'Recypher Hackathon';
+const siteUrl = 'https://hackathon.starknet.org';
 const supportedLocales = ['en', 'es', 'zh-CN', 'zh-TW', 'pt', 'ar', 'uk', 'ru'];
 const defaultLocale = 'en';
 const locale = Astro.currentLocale ?? defaultLocale;
@@ -227,7 +227,7 @@ const testimonials = [
     <!-- Open Graph -->
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={m.og_description()} />
-    <meta property="og:image" content="https://bitcoinxprivacy.com/og-image.jpg" />
+    <meta property="og:image" content="https://hackathon.starknet.org/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonicalUrl} />
@@ -236,7 +236,7 @@ const testimonials = [
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://bitcoinxprivacy.com/og-image.jpg" />
+    <meta name="twitter:image" content="https://hackathon.starknet.org/og-image.jpg" />
     <meta name="twitter:site" content="@Starknet" />
     <meta name="twitter:creator" content="@StarknetFndn" />
     
@@ -354,7 +354,7 @@ const testimonials = [
         <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
           <LanguageSwitcher />
           <a 
-            href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
+            href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=hackathon-starknet-org&utm_medium=cta&utm_campaign=2026" 
             target="_blank"
             rel="noopener noreferrer"
             class="group relative btn-gradient text-white text-xs md:text-sm px-3 md:px-4 py-2 rounded-full font-medium whitespace-nowrap"
@@ -442,10 +442,23 @@ const testimonials = [
           <span class="bg-gradient-to-r from-snf-blue-500 to-purple-500 bg-clip-text text-transparent">{m.hero_title_line2()}</span>
         </h1>
         
-        <!-- Simple subtitle - unified color palette -->
-        <p class="hero-element gs-hidden text-snf-white/60 text-sm md:text-base lg:text-lg max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed px-2">
-          Build <span class="text-snf-white font-medium">Bitcoin</span> & <span class="text-purple-400 font-medium">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-medium">Up to $21,500 in prizes.</span> Apply for grants. Launch your project.
+        <!-- Tagline -->
+        <p class="hero-element gs-hidden text-snf-white text-base md:text-lg lg:text-xl max-w-xl mx-auto mb-3 leading-relaxed px-2 font-medium">
+          {m.hero_subtitle_line1()}
         </p>
+        
+        <!-- Track subtitle -->
+        <p class="hero-element gs-hidden text-snf-white/50 text-sm md:text-base mb-4 tracking-wide">
+          {m.hero_tracks_subtitle()}
+        </p>
+        
+        <!-- Prize badge -->
+        <div class="hero-element gs-hidden mb-6 md:mb-8">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-snf-blue-500/20 border border-snf-blue-500/30 text-snf-blue-400 text-sm font-semibold">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/></svg>
+            Up to $21,500 in prizes
+          </span>
+        </div>
         
         <!-- Dual countdown timers -->
         <div class="hero-element gs-hidden mb-8 md:mb-10">
@@ -523,7 +536,7 @@ const testimonials = [
         <!-- CTA Buttons - simplified -->
         <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-3 justify-center">
           <a 
-            href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
+            href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=hackathon-starknet-org&utm_medium=cta&utm_campaign=2026" 
             target="_blank"
             rel="noopener noreferrer"
             class="btn-gradient pulse-cta inline-flex items-center justify-center text-white px-6 py-3 rounded-full font-medium text-sm group"
@@ -1043,7 +1056,7 @@ const testimonials = [
         </p>
         
         <a 
-          href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=recypher-landing&utm_medium=cta&utm_campaign=2026" 
+          href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=hackathon-starknet-org&utm_medium=cta&utm_campaign=2026" 
           target="_blank"
           rel="noopener noreferrer"
           class="gs-hidden inline-block btn-gradient text-white px-8 py-3 rounded-full font-medium text-base"
@@ -1083,7 +1096,7 @@ const testimonials = [
           <div class="flex flex-wrap justify-center gap-4 text-xs">
             <a href="https://discord.gg/starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_discord()}</a>
             <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_twitter()}</a>
-            <a href="https://dorahacks.io/hackathon/bitcoinxprivacy/forum?utm_source=recypher-landing&utm_medium=footer&utm_campaign=2026" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_forum()}</a>
+            <a href="https://dorahacks.io/hackathon/bitcoinxprivacy/forum?utm_source=hackathon-starknet-org&utm_medium=footer&utm_campaign=2026" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_forum()}</a>
             <a href="https://t.me/+-5zNW47GSdQ1ZDkx" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_telegram()}</a>
         </div>
         </div>
@@ -1096,7 +1109,7 @@ const testimonials = [
     <!-- ============================================ -->
     <div id="floating-cta" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
       <a 
-        href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=recypher-landing&utm_medium=floating-cta&utm_campaign=2026" 
+        href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=hackathon-starknet-org&utm_medium=floating-cta&utm_campaign=2026" 
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 btn-gradient text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-lg shadow-snf-blue-500/30"
