@@ -375,54 +375,44 @@ const testimonials = [
         <!-- Base gradient -->
         <div class="absolute inset-0 bg-gradient-to-b from-snf-blue-900/10 via-transparent to-transparent"></div>
         
-        <!-- Single subtle gradient orb -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-snf-blue-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl"></div>
+        <!-- Two subtle gradient orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-3"></div>
         
-        <!-- Clean gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-snf-dark/50 to-snf-dark"></div>
+        <!-- Subtle grid pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
       </div>
       
       <!-- Main Content -->
       <div class="relative z-10 text-center max-w-4xl mx-auto">
         
-        <!-- Minimal top line: Starknet + Date -->
-        <div class="hero-element gs-hidden flex items-center justify-center gap-3 mb-8 md:mb-12">
-          <div class="flex items-center gap-2">
-            <img src="/partners/starknet-logo.png" alt="Starknet" class="h-5 w-5" />
-            <span class="text-snf-white/60 text-sm">{m.hero_presented_by()}</span>
+        <!-- Status badges row -->
+        <div class="hero-element gs-hidden flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
+          <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-3 py-1.5">
+            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+            <span class="text-purple-300 text-sm font-medium">{m.badge_virtual()}</span>
           </div>
-          <span class="text-snf-white/20">·</span>
-          <span class="text-snf-white/60 text-sm">Feb 1–28, 2026</span>
-          <span class="text-snf-white/20">·</span>
-          <span class="text-snf-white/60 text-sm">{m.badge_virtual()}</span>
+          <div class="inline-flex items-center gap-2 bg-snf-blue-500/10 border border-snf-blue-500/20 rounded-full px-3 py-1.5">
+            <span class="w-2 h-2 bg-snf-blue-500 rounded-full animate-pulse"></span>
+            <span class="text-snf-blue-400 text-sm font-medium">Register anytime until Feb 28</span>
+          </div>
+          <div class="inline-flex items-center gap-2 bg-snf-white/5 border border-snf-white/10 rounded-full px-3 py-1.5">
+            <span class="text-snf-white/70 text-sm font-medium">Feb 1–28, 2026</span>
+          </div>
         </div>
         
-        <!-- Main Title - Premium typography -->
-        <h1 class="hero-element gs-hidden mb-8 md:mb-10" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
-          <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[7rem] font-extrabold tracking-[-0.02em] text-white leading-none" style="font-family: 'Inter', system-ui, sans-serif;">
-            {m.hero_title_line1()}
-          </span>
-          <span class="block text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-extrabold tracking-[-0.02em] text-snf-blue-500 leading-none mt-2" style="font-family: 'Inter', system-ui, sans-serif;">
-            {m.hero_title_line2()}
-          </span>
+        <!-- Main Title -->
+        <h1 class="hero-element gs-hidden font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 md:mb-8" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
+          <span class="text-white">{m.hero_title_line1()}</span><br/>
+          <span class="bg-gradient-to-r from-purple-400 via-purple-500 to-snf-blue-500 bg-clip-text text-transparent">{m.hero_title_line2()}</span>
         </h1>
         
-        <!-- Tagline - Clean and impactful -->
-        <p class="hero-element gs-hidden text-snf-white/70 text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto mb-6 leading-relaxed" style="font-family: 'Space Grotesk', system-ui, sans-serif;">
-          {m.hero_subtitle_line1()}
+        <!-- Subtitle with highlighted words -->
+        <p class="hero-element gs-hidden text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+          Build <span class="text-white font-semibold">Bitcoin</span> & <span class="text-purple-400 font-semibold">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-semibold">Up to $21,500 in prizes.</span> Apply for grants. Launch your project.
         </p>
-        
-        <!-- Tracks + Prize in one elegant line -->
-        <div class="hero-element gs-hidden flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-8 md:mb-10 text-sm md:text-base">
-          <span class="text-snf-white/50">{m.hero_tracks_subtitle()}</span>
-          <span class="hidden md:inline text-snf-white/20">|</span>
-          <span class="inline-flex items-center gap-2 text-snf-blue-400 font-semibold">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 11.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd"/>
-            </svg>
-            Up to $21,500 in prizes
-          </span>
-        </div>
         
         <!-- Dual countdown timers -->
         <div class="hero-element gs-hidden mb-8 md:mb-10">
