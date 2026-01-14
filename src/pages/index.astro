@@ -69,13 +69,13 @@ const tracks = [
 ];
 
 const mentors = [
-  { name: 'Omar Espejel', role: m.mentor_omar_role(), org: m.mentor_org(), image: '/mentors/omar.jpg', xAccount: 'https://x.com/espejelomar' },
-  { name: 'Henri', role: m.mentor_henri_role(), org: m.mentor_org(), image: '/mentors/henri.png', xAccount: 'https://x.com/henrlihenrli' },
-  { name: 'Akash Neelesh', role: m.mentor_akash_role(), org: m.mentor_org_starkware(), image: '/mentors/akash.jpg', xAccount: 'https://x.com/akashneelesh' },
-  { name: 'Benjamin Sturisky', role: m.mentor_benjamin_role(), org: m.mentor_org(), image: '/mentors/benjamin.jpg', xAccount: 'https://x.com/bsturisky' },
-  { name: 'Teddy', role: m.mentor_teddy_role(), org: m.mentor_org(), image: '/mentors/teddy.jpg', xAccount: 'https://x.com/franklyteddy' },
-  { name: 'Adrien Lacombe', role: m.mentor_adrien_role(), org: m.mentor_org(), image: '/mentors/adrien.jpg', xAccount: 'https://x.com/adrien_lacombe' },
-  { name: 'Jonathan Chang', role: m.mentor_jonathan_role(), org: m.mentor_org(), image: '/mentors/jonathan.jpg', xAccount: '' },
+  { name: 'Omar Espejel', role: m.mentor_omar_role(), org: m.mentor_org(), bio: m.mentor_omar_bio(), image: '/mentors/omar.jpg', xAccount: 'https://x.com/espejelomar', focus: 'general' },
+  { name: 'Henri', role: m.mentor_henri_role(), org: m.mentor_org(), bio: m.mentor_henri_bio(), image: '/mentors/henri.png', xAccount: 'https://x.com/henrlihenrli', focus: 'general' },
+  { name: 'Akash Neelesh', role: m.mentor_akash_role(), org: m.mentor_org_starkware(), bio: m.mentor_akash_bio(), image: '/mentors/akash.jpg', xAccount: 'https://x.com/akashneelesh', focus: 'general' },
+  { name: 'Benjamin Sturisky', role: m.mentor_benjamin_role(), org: m.mentor_org(), bio: m.mentor_benjamin_bio(), image: '/mentors/benjamin.jpg', xAccount: 'https://x.com/bsturisky', focus: 'defi' },
+  { name: 'Teddy', role: m.mentor_teddy_role(), org: m.mentor_org(), bio: m.mentor_teddy_bio(), image: '/mentors/teddy.jpg', xAccount: 'https://x.com/franklyteddy', focus: 'privacy' },
+  { name: 'Adrien Lacombe', role: m.mentor_adrien_role(), org: m.mentor_org(), bio: m.mentor_adrien_bio(), image: '/mentors/adrien.jpg', xAccount: 'https://x.com/adrien_lacombe', focus: 'bitcoin' },
+  { name: 'Jonathan Chang', role: m.mentor_jonathan_role(), org: m.mentor_org(), bio: m.mentor_jonathan_bio(), image: '/mentors/jonathan.jpg', xAccount: '', focus: 'bitcoin' },
 ];
 
 const sponsors = [
@@ -939,11 +939,15 @@ const testimonials = [
         </div>
         
         <!-- Mentors Grid -->
-        <div class="gs-hidden">
-          <div class="flex flex-wrap justify-center gap-8">
-            {mentors.map((mentor) => (
-              <div class="text-center group">
-                <div class="w-16 h-16 bg-snf-blue-900/30 rounded-full mx-auto mb-3 overflow-hidden group-hover:ring-2 group-hover:ring-snf-blue-500/30 transition-all duration-200">
+        <!-- Mentors Grid - 4+3 balanced layout with glassmorphism cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 gs-hidden">
+          {mentors.slice(0, 4).map((mentor) => (
+            <div class="mentor-card group relative bg-snf-white/[0.03] backdrop-blur-sm rounded-xl p-4 border border-snf-white/[0.06] hover:border-snf-blue-500/30 hover:bg-snf-white/[0.05] transition-all duration-300">
+              <!-- Focus indicator -->
+              <div class={`absolute top-3 right-3 w-2 h-2 rounded-full ${mentor.focus === 'bitcoin' ? 'bg-amber-500' : mentor.focus === 'privacy' ? 'bg-purple-500' : mentor.focus === 'defi' ? 'bg-emerald-500' : 'bg-snf-blue-500'}`}></div>
+              
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mb-3 ring-2 ring-snf-white/10 group-hover:ring-snf-blue-500/40 transition-all duration-300">
                   <img 
                     src={mentor.image} 
                     alt={`${mentor.name} - ${mentor.role}`}
@@ -951,23 +955,74 @@ const testimonials = [
                     loading="lazy"
                   />
                 </div>
-                <p class="font-medium text-sm text-snf-white/90">{mentor.name}</p>
-                <p class="text-snf-white/40 text-xs">{mentor.role}</p>
-                <p class="text-snf-blue-500 text-[10px] mt-0.5">{mentor.org}</p>
-                <a 
-                  href={mentor.xAccount}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center justify-center w-5 h-5 text-snf-white/30 hover:text-snf-blue-500 mt-1.5 transition-colors duration-200"
-                  aria-label={`Follow ${mentor.name} on X`}
-                >
-                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
+                <p class="font-display font-bold text-sm md:text-base text-snf-white/95">{mentor.name}</p>
+                <p class="text-snf-white/50 text-xs mt-0.5">{mentor.role}</p>
+                <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5">{mentor.org}</p>
+                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed line-clamp-2">{mentor.bio}</p>
+                
+                {mentor.xAccount && (
+                  <a 
+                    href={mentor.xAccount}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-3 inline-flex items-center gap-1.5 text-snf-white/40 hover:text-snf-blue-500 text-xs transition-colors duration-200"
+                    aria-label={`Follow ${mentor.name} on X`}
+                  >
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                )}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+        
+        <!-- Second row - 3 centered -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 mt-4 md:mt-5 max-w-3xl mx-auto gs-hidden">
+          {mentors.slice(4).map((mentor) => (
+            <div class="mentor-card group relative bg-snf-white/[0.03] backdrop-blur-sm rounded-xl p-4 border border-snf-white/[0.06] hover:border-snf-blue-500/30 hover:bg-snf-white/[0.05] transition-all duration-300 last:col-span-2 md:last:col-span-1">
+              <!-- Focus indicator -->
+              <div class={`absolute top-3 right-3 w-2 h-2 rounded-full ${mentor.focus === 'bitcoin' ? 'bg-amber-500' : mentor.focus === 'privacy' ? 'bg-purple-500' : mentor.focus === 'defi' ? 'bg-emerald-500' : 'bg-snf-blue-500'}`}></div>
+              
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mb-3 ring-2 ring-snf-white/10 group-hover:ring-snf-blue-500/40 transition-all duration-300">
+                  <img 
+                    src={mentor.image} 
+                    alt={`${mentor.name} - ${mentor.role}`}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="font-display font-bold text-sm md:text-base text-snf-white/95">{mentor.name}</p>
+                <p class="text-snf-white/50 text-xs mt-0.5">{mentor.role}</p>
+                <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5">{mentor.org}</p>
+                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed line-clamp-2">{mentor.bio}</p>
+                
+                {mentor.xAccount && (
+                  <a 
+                    href={mentor.xAccount}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-3 inline-flex items-center gap-1.5 text-snf-white/40 hover:text-snf-blue-500 text-xs transition-colors duration-200"
+                    aria-label={`Follow ${mentor.name} on X`}
+                  >
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <!-- Focus legend -->
+        <div class="flex items-center justify-center gap-6 mt-6 text-[10px] text-snf-white/40 gs-hidden">
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Bitcoin</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> Privacy</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> DeFi</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-snf-blue-500"></span> General</span>
         </div>
         
       </div>
