@@ -220,7 +220,7 @@ const testimonials = [
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/junicode" rel="stylesheet" />
     
@@ -252,9 +252,7 @@ const testimonials = [
     
     <title>{pageTitle}</title>
     
-    <!-- Fonts -->
-    <link rel="preload" as="font" href="/fonts/InterVariable.woff2" type="font/woff2" crossorigin />
-    <link rel="preload" as="font" href="/fonts/SpaceGroteskVariable.woff2" type="font/woff2" crossorigin />
+    <!-- Fonts loaded via CDN: Cooper Hewitt, Junicode, Martian Mono -->
     
     <!-- Global Styles -->
     <style is:global>
@@ -378,8 +376,8 @@ const testimonials = [
         <!-- Two subtle gradient orbs -->
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-3"></div>
-        
-        <!-- Subtle grid pattern -->
+      
+      <!-- Subtle grid pattern -->
         <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
       </div>
       
@@ -521,8 +519,8 @@ const testimonials = [
             <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
             <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
             <img src="/partners/openzeppelin.png" alt="OpenZeppelin" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
-          </div>
-        </div>
+      </div>
+      </div>
       
       </div>
       
@@ -557,15 +555,15 @@ const testimonials = [
               <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-0">
                 <div class="relative z-10 w-12 h-12 rounded-full bg-snf-blue-500/20 border-2 border-snf-blue-500 flex items-center justify-center flex-shrink-0 timeline-dot">
                   <span class="text-snf-blue-500 font-bold">1</span>
-                </div>
+              </div>
                 <div class="md:mt-4">
                   <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Jan 15</p>
                   <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step1_title()}</h3>
                   <p class="text-snf-white/40 text-xs">{m.timeline_step1_desc()}</p>
-                </div>
-              </div>
             </div>
-            
+              </div>
+        </div>
+        
             <!-- Step 2: Hacking Starts -->
             <div class="timeline-step relative text-center md:text-left" data-step="2">
               <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-0">
@@ -685,7 +683,7 @@ const testimonials = [
             {m.social_proof_note()}
           </p>
         </div>
-
+        
         <!-- Trust Badges -->
         <div class="flex flex-wrap justify-center gap-2 mb-8">
           <span class="trust-badge">
@@ -712,14 +710,14 @@ const testimonials = [
             </svg>
             {m.badge_grant_pipeline()}
           </span>
-      </div>
+          </div>
       
         <!-- Metrics row -->
         <div class="grid grid-cols-3 gap-3 mb-8">
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
             <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">12+</div>
             <p class="text-snf-white/40 text-xs mt-1">{m.metric_teams_funded()}</p>
-            </div>
+          </div>
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
             <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">4</div>
             <p class="text-snf-white/40 text-xs mt-1">{m.metric_projects_launched()}</p>
@@ -728,7 +726,7 @@ const testimonials = [
             <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">500+</div>
             <p class="text-snf-white/40 text-xs mt-1">{m.metric_builders_supported()}</p>
           </div>
-        </div>
+          </div>
 
         <!-- Testimonials bento grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -739,11 +737,11 @@ const testimonials = [
               <div>
                 <div class="text-snf-white/90 font-medium text-sm">{m.testimonial_1_author()}</div>
                 <div class="text-snf-blue-500/70 text-xs">{m.testimonial_1_role({ solve: "{solve}" })}</div>
-              </div>
-            </div>
-            <p class="text-snf-white/60 text-sm leading-relaxed">"{m.testimonial_1_quote()}"</p>
           </div>
-          
+          </div>
+            <p class="text-snf-white/60 text-sm leading-relaxed">"{m.testimonial_1_quote()}"</p>
+        </div>
+        
           <!-- Testimonial 2 -->
           <div class="gs-hidden bg-snf-white/[0.02] rounded-xl p-5 hover:bg-snf-white/[0.04] transition-colors duration-200">
             <div class="flex items-start gap-3 mb-3">
@@ -751,8 +749,8 @@ const testimonials = [
               <div>
                 <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_2_author()}</div>
                 <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_2_role()}</div>
-              </div>
-            </div>
+        </div>
+      </div>
             <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_2_quote()}"</p>
           </div>
           
@@ -763,11 +761,11 @@ const testimonials = [
               <div>
                 <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_3_author()}</div>
                 <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_3_role({ solve: "{solve}" })}</div>
-              </div>
+        </div>
             </div>
             <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_3_quote()}"</p>
-          </div>
-          
+      </div>
+      
           <!-- Testimonial 4 -->
           <div class="gs-hidden bg-snf-white/[0.02] rounded-xl p-5 hover:bg-snf-white/[0.04] transition-colors duration-200">
             <div class="flex items-start gap-3 mb-3">
@@ -775,7 +773,7 @@ const testimonials = [
               <div>
                 <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_4_author()}</div>
                 <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_4_role({ solve: "{solve}" })}</div>
-              </div>
+            </div>
             </div>
             <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_4_quote()}"</p>
           </div>
@@ -817,8 +815,8 @@ const testimonials = [
           <!-- Starknet Academy -->
           <a 
             href="https://academy.starknet.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             class="group gs-hidden block"
           >
             <div class="relative h-full bg-gradient-to-br from-snf-blue-500/10 via-purple-500/5 to-transparent rounded-xl p-5 md:p-6 border border-snf-blue-500/20 hover:border-snf-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-snf-blue-500/10">
@@ -827,7 +825,7 @@ const testimonials = [
                 Developers
               </span>
               
-              <!-- Icon -->
+                <!-- Icon -->
               <div class="w-12 h-12 bg-gradient-to-br from-snf-blue-500/20 to-purple-500/10 rounded-xl flex items-center justify-center mb-4">
                 <GraduationCap class="w-6 h-6 text-snf-blue-500" strokeWidth={1.5} />
               </div>
@@ -904,17 +902,17 @@ const testimonials = [
               
               <!-- Icon -->
               <div class="w-8 h-8 md:w-10 md:h-10 bg-snf-blue-900/40 rounded-lg flex items-center justify-center mb-3 md:mb-4">
-                {resource.icon === "bitcoin" && (
+                  {resource.icon === "bitcoin" && (
                   <Bitcoin class="w-4 h-4 md:w-5 md:h-5 text-orange-500/40" strokeWidth={1.5} />
-                )}
-                {resource.icon === "shield" && (
+                  )}
+                  {resource.icon === "shield" && (
                   <Shield class="w-4 h-4 md:w-5 md:h-5 text-purple-500/40" strokeWidth={1.5} />
-                )}
-              </div>
-              
+                  )}
+                </div>
+                
               <h3 class="font-display text-sm md:text-base font-semibold mb-1 md:mb-1.5 text-snf-white/50">{resource.title}</h3>
               <p class="text-snf-white/30 text-[10px] md:text-xs leading-relaxed">{resource.description}</p>
-            </div>
+              </div>
           ))}
         </div>
         

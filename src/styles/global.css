@@ -13,19 +13,24 @@ body {
   background-color: #0C0A18;
 }
 
-/* Fonts loaded via Google Fonts CDN:
-   - Headings: Inter (geometric, premium)
-   - Content: Space Grotesk (modern, clean)
+/* Fonts:
+   - Headings: Cooper Hewitt Heavy
+   - Subheadings: Junicode
+   - Content: Martian Mono
 */
 
 /* Apply font defaults */
 body {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: 'Martian Mono', monospace;
 }
 
 h1, h2, h3, .font-display {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Cooper Hewitt', system-ui, sans-serif;
   font-weight: 800;
+}
+
+h4, h5, h6, .font-subheading {
+  font-family: 'Junicode', Georgia, serif;
 }
 
 .text-display-xl {
