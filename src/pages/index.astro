@@ -69,7 +69,7 @@ const tracks = [
 ];
 
 const mentors = [
-  { name: 'Omar Espejel', role: m.mentor_omar_role(), org: m.mentor_org(), bio: m.mentor_omar_bio(), image: '/mentors/omar.jpg', xAccount: 'https://x.com/espejelomar', focus: 'general' },
+  { name: 'Omar Espejel', role: m.mentor_omar_role(), org: m.mentor_org(), bio: m.mentor_omar_bio(), image: '/mentors/omar.jpg', xAccount: 'https://x.com/espejelomar', focus: 'privacy' },
   { name: 'Henri', role: m.mentor_henri_role(), org: m.mentor_org(), bio: m.mentor_henri_bio(), image: '/mentors/henri.png', xAccount: 'https://x.com/henrlihenrli', focus: 'general' },
   { name: 'Akash Neelesh', role: m.mentor_akash_role(), org: m.mentor_org_starkware(), bio: m.mentor_akash_bio(), image: '/mentors/akash.jpg', xAccount: 'https://x.com/akashneelesh', focus: 'general' },
   { name: 'Benjamin Sturisky', role: m.mentor_benjamin_role(), org: m.mentor_org(), bio: m.mentor_benjamin_bio(), image: '/mentors/benjamin.jpg', xAccount: 'https://x.com/bsturisky', focus: 'defi' },
@@ -958,7 +958,7 @@ const testimonials = [
                 <p class="font-display font-bold text-sm md:text-base text-snf-white/95">{mentor.name}</p>
                 <p class="text-snf-white/50 text-xs mt-0.5">{mentor.role}</p>
                 <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5">{mentor.org}</p>
-                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed line-clamp-2">{mentor.bio}</p>
+                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed">{mentor.bio}</p>
                 
                 {mentor.xAccount && (
                   <a 
@@ -997,7 +997,7 @@ const testimonials = [
                 <p class="font-display font-bold text-sm md:text-base text-snf-white/95">{mentor.name}</p>
                 <p class="text-snf-white/50 text-xs mt-0.5">{mentor.role}</p>
                 <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5">{mentor.org}</p>
-                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed line-clamp-2">{mentor.bio}</p>
+                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed">{mentor.bio}</p>
                 
                 {mentor.xAccount && (
                   <a 
