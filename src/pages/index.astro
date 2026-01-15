@@ -323,14 +323,14 @@ const resourceSections = [
       { name: 'Starknet Staking', url: 'https://www.starknet.io/staking/', description: 'BTC and STRK staking guide.' },
       { name: 'Xverse Starknet Bridge', url: 'https://www.xverse.app/blog/starknet-bridge', description: 'Bridge BTC to Starknet tutorial.' },
       { name: 'Xverse Starknet Wallet', url: 'https://www.xverse.app/starknet-wallet', description: 'BTC + Starknet wallet.' },
-      { name: 'Ekubo DEX', url: 'https://defillama.com/protocol/ekubo', description: "Starknet's main DEX." },
+      { name: 'Ekubo Docs', url: 'https://docs.ekubo.org', description: "Official Ekubo protocol and integration documentation." },
     ],
   },
   {
     title: 'Development Frameworks',
     items: [
-      { name: 'Scaffold-Stark', url: 'https://github.com/Scaffold-Stark/scaffold-eth-stark', description: 'Starter template for Starknet dApps.' },
-      { name: 'Starknet-Scaffold Guide', url: 'https://www.ready.co/blog/starknet-scaffold', description: 'Toolkit walkthrough.' },
+      { name: 'Scaffold-Stark', url: 'https://github.com/Scaffold-Stark/scaffold-stark-2', description: 'Starter template for Starknet dApps.' },
+      { name: 'Scaffold-Stark Docs', url: 'https://scaffoldstark.com/docs', description: 'Official documentation and guides.' },
       { name: 'StarknetKit', url: 'https://www.starknetkit.com', description: 'Wallet connection toolkit.' },
     ],
   },
@@ -833,7 +833,7 @@ const testimonials = [
             Tracks & prizes
           </h2>
           <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
-            Choose a track to see curated build ideas and prize guidance. Total prizes up to $21,500 —
+            Every track includes real project ideas for hackers, collected by Starknet Foundation, StarkWare experts, and ecosystem partners. Total prizes up to $21,500 —
             <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-400 hover:text-snf-blue-300 transition-colors"> view the full breakdown on DoraHacks</a>.
           </p>
         </div>
@@ -843,6 +843,7 @@ const testimonials = [
             <details class:list={[
               'track-panel rounded-2xl border bg-snf-white/[0.02] p-5 md:p-6',
               trackIdeaGroups[i]?.accent ?? 'border-snf-white/10',
+              i === 0 ? 'track-panel--privacy' : i === 1 ? 'track-panel--bitcoin' : 'track-panel--open',
             ]}>
               <summary class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 cursor-pointer">
                 <div class="flex items-start gap-4">
@@ -854,10 +855,16 @@ const testimonials = [
                   <div>
                     <h3 class="font-display text-lg md:text-xl text-snf-white">{track.name}</h3>
                     <p class="font-subheading text-snf-white/50 text-xs md:text-sm mt-1">{track.description}</p>
+                    <span class:list={[
+                      'track-pill',
+                      i === 0 ? 'track-pill--privacy' : i === 1 ? 'track-pill--bitcoin' : 'track-pill--open',
+                    ]}>
+                      Curated hacker ideas
+                    </span>
                   </div>
                 </div>
                 <div class="flex items-center gap-3 text-xs text-snf-white/40">
-                  <span class="hidden sm:inline">Ideas & prize notes</span>
+                  <span class="hidden sm:inline">Hacker ideas & prize notes</span>
                   <span class="summary-icon">+</span>
                 </div>
               </summary>
@@ -1166,7 +1173,10 @@ const testimonials = [
             {resourceSections.map((section) => (
               <details class="resource-panel rounded-xl border border-snf-white/10 bg-snf-white/[0.02] p-5">
                 <summary class="flex items-center justify-between gap-4 font-display text-sm md:text-base text-snf-white cursor-pointer">
-                  <span>{section.title}</span>
+                  <div class="flex items-center gap-3">
+                    <span>{section.title}</span>
+                    <span class="resource-chip">Verified</span>
+                  </div>
                   <span class="summary-icon">+</span>
                 </summary>
                 <div class="mt-4 space-y-3 text-xs md:text-sm">

@@ -1572,6 +1572,62 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
+.track-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.track-panel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.track-panel--privacy::before {
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.7), rgba(236, 72, 153, 0.4));
+}
+
+.track-panel--bitcoin::before {
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.7), rgba(249, 115, 22, 0.4));
+}
+
+.track-panel--open::before {
+  background: linear-gradient(180deg, rgba(91, 126, 207, 0.7), rgba(139, 92, 246, 0.4));
+}
+
+.track-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.6rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(243, 242, 241, 0.7);
+  background: rgba(12, 10, 24, 0.5);
+}
+
+.track-pill--privacy {
+  border-color: rgba(168, 85, 247, 0.35);
+  color: rgba(216, 180, 254, 0.9);
+}
+
+.track-pill--bitcoin {
+  border-color: rgba(251, 191, 36, 0.35);
+  color: rgba(253, 230, 138, 0.9);
+}
+
+.track-pill--open {
+  border-color: rgba(91, 126, 207, 0.35);
+  color: rgba(191, 219, 254, 0.9);
+}
+
 .summary-icon {
   display: inline-flex;
   align-items: center;
@@ -1588,6 +1644,49 @@ details summary::-webkit-details-marker {
 details[open] > summary .summary-icon {
   transform: rotate(45deg);
   border-color: rgba(91, 126, 207, 0.6);
+}
+
+.track-panel--privacy .summary-icon {
+  border-color: rgba(168, 85, 247, 0.5);
+  color: rgba(216, 180, 254, 0.9);
+}
+
+.track-panel--bitcoin .summary-icon {
+  border-color: rgba(251, 191, 36, 0.5);
+  color: rgba(253, 230, 138, 0.9);
+}
+
+.track-panel--open .summary-icon {
+  border-color: rgba(91, 126, 207, 0.5);
+  color: rgba(191, 219, 254, 0.9);
+}
+
+.resource-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-panel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(91, 126, 207, 0.6), rgba(139, 92, 246, 0.4));
+}
+
+.resource-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid rgba(91, 126, 207, 0.4);
+  color: rgba(191, 219, 254, 0.9);
+  background: rgba(91, 126, 207, 0.12);
 }
 
 /* Floating CTA specific styles */
