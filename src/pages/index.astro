@@ -68,6 +68,112 @@ const tracks = [
   }
 ];
 
+const trackIdeaGroups = [
+  {
+    accent: 'border-purple-500/30 bg-purple-500/5',
+    groups: [
+      {
+        title: 'ZK protocol implementations',
+        items: [
+          { title: 'Implement Semaphore on Starknet', description: 'Port the Semaphore protocol to Cairo for anonymous group membership and signaling.' },
+          { title: 'Build Cairo verifiers for Sigma protocols', description: 'Implement zero-knowledge Sigma protocol verifiers in Cairo.' },
+          { title: 'Mental Poker implementation', description: 'Provable card shuffles under encryption, foundation for hidden-info games.' },
+          { title: 'Anonymous credentials system', description: 'Prove attributes (age, membership) without revealing identity.' },
+        ],
+      },
+      {
+        title: 'Games with private state',
+        items: [
+          { title: 'Poker / card game with hidden hands', description: 'Players cannot see each other cards, provably fair.' },
+          { title: 'Strategy game with fog of war', description: 'Hidden game state between players.' },
+          { title: "Liar's poker or bluffing games", description: 'Games where lying is part of the mechanic, privacy enables fair play.' },
+        ],
+      },
+      {
+        title: 'Private DeFi & commerce',
+        items: [
+          { title: 'Sealed-bid auction', description: 'Hidden bids until reveal, prevents front-running and bid manipulation.' },
+          { title: 'Dark pool / private orderbook', description: 'Hide trade intent from front-runners, MEV protection.' },
+          { title: 'Private prediction market', description: 'Hidden positions until market resolution.' },
+        ],
+      },
+      {
+        title: 'Private governance',
+        items: [
+          { title: 'Private voting system', description: 'Hide votes until tally, prove eligibility without revealing identity.' },
+        ],
+      },
+      {
+        title: 'Confidential transactions',
+        items: [
+          { title: 'Private payment app using Tongo', description: 'Confidential ERC20 transfers using ElGamal encryption and ZK proofs.' },
+          { title: 'Shielded wallet UI', description: 'Deposit/withdraw/transfer flows using StarkWare SDK.' },
+          { title: 'Privacy-first DeFi frontend', description: 'Private swaps, lending UIs.' },
+        ],
+      },
+      {
+        title: 'ZK proof verification',
+        items: [
+          { title: 'Verify Noir proofs on Starknet', description: 'Build a ZK app in Noir, deploy verifier using Garaga.' },
+          { title: 'Verify Circom/Groth16 proofs on Starknet', description: 'Port existing Circom circuits to Starknet verification.' },
+        ],
+      },
+      {
+        title: 'Onboarding & identity',
+        items: [
+          { title: 'ZK social login dApp using Sumo Login', description: 'Onboard users with JWT proofs, no seed phrases.' },
+        ],
+      },
+    ],
+  },
+  {
+    accent: 'border-amber-500/30 bg-amber-500/5',
+    groups: [
+      {
+        title: 'Yield & vaults',
+        items: [
+          { title: 'BTC yield vault', description: 'Intake BTC wrapper, borrow against it, deploy into stables, return yield.' },
+          { title: 'Tokenized BTC yield representation', description: 'Create a token representing yield-bearing BTC position.' },
+          { title: 'Vault curator/manager system', description: 'Curate and manage BTC vault strategies.' },
+          { title: 'Leverage looping for BTC', description: 'Automated leverage strategies for BTC holders.' },
+        ],
+      },
+      {
+        title: 'Private BTC DeFi',
+        items: [
+          { title: 'Private BTC swap', description: 'Trade BTC without revealing amounts.' },
+          { title: 'Private lending with BTC collateral', description: 'Borrow stables against BTC privately.' },
+          { title: 'Private yield on BTC', description: 'Earn yield without revealing position size.' },
+          { title: 'Private yield on stables', description: 'Earn yield on USDC privately.' },
+        ],
+      },
+      {
+        title: 'BTC primitives',
+        items: [
+          { title: 'BTC-backed CDP', description: 'Mint stablecoins against BTC collateral.' },
+          { title: 'BTC DCA (Dollar Cost Average) tool', description: 'Automated BTC purchases on Starknet.' },
+          { title: 'BTC staking interface', description: 'Stake wrapped BTC and earn STRK.' },
+        ],
+      },
+      {
+        title: 'Infrastructure',
+        items: [
+          { title: 'Cross-chain BTC bridge UI', description: 'Improved UX for bridging BTC to Starknet.' },
+        ],
+      },
+    ],
+  },
+  {
+    accent: 'border-snf-blue-500/30 bg-snf-blue-500/5',
+    groups: [
+      {
+        title: 'Idea sparks',
+        items: tracks[2].examples.map((ex) => ({ title: ex })),
+      },
+    ],
+  },
+];
+
 const mentors = [
   { name: 'Omar Espejel', role: m.mentor_omar_role(), org: m.mentor_org(), bio: m.mentor_omar_bio(), image: '/mentors/omar.jpg', xAccount: 'https://x.com/espejelomar', focus: 'privacy' },
   { name: 'Henri', role: m.mentor_henri_role(), org: m.mentor_org(), bio: m.mentor_henri_bio(), image: '/mentors/henri.png', xAccount: 'https://x.com/henrlihenrli', focus: 'general' },
@@ -173,6 +279,88 @@ const resources = [
   },
 ];
 
+const resourceSections = [
+  {
+    title: 'Core Documentation',
+    items: [
+      { name: 'Starknet Docs', url: 'https://docs.starknet.io', description: 'Official Starknet developer documentation.' },
+      { name: 'Starknet Developer Hub', url: 'https://www.starknet.io/developers/', description: 'Tutorials, frameworks, technical support.' },
+      { name: 'Cairo Language', url: 'https://starkware.co/cairo/', description: 'Cairo programming language overview.' },
+      { name: 'Starknet Basecamp', url: 'https://www.starknet.io/tutorials/starknet-basecamp-cairo/', description: 'Video tutorials for Cairo fundamentals.' },
+      { name: 'Cairo Book', url: 'https://book.cairo-lang.org/', description: 'Comprehensive Cairo language guide.' },
+    ],
+  },
+  {
+    title: 'Smart Contract Libraries',
+    items: [
+      { name: 'OpenZeppelin Cairo Contracts', url: 'https://github.com/OpenZeppelin/cairo-contracts', description: 'Battle-tested ERC20, ERC721, access control.' },
+      { name: 'OpenZeppelin Cairo Docs', url: 'https://docs.openzeppelin.com/contracts-cairo', description: 'Full documentation.' },
+      { name: 'Contracts Wizard for Cairo', url: 'https://wizard.openzeppelin.com/cairo', description: 'Interactive smart contract generator.' },
+    ],
+  },
+  {
+    title: 'Privacy Tools',
+    items: [
+      { name: 'Tongo SDK - Quick Start', url: 'https://docs.tongo.cash/sdk/quick-start.html', description: 'Confidential payments SDK by FAT Solutions.' },
+      { name: 'Tongo Protocol Intro', url: 'https://docs.tongo.cash/protocol/introduction.html', description: 'How Tongo works (ElGamal + ZK).' },
+      { name: 'Sumo Login', url: 'https://github.com/fatlabsxyz/sumo-login-cairo', description: 'ZK social login for Starknet.' },
+      { name: 'Sumo Login Website', url: 'https://sumologin.com/', description: 'Live demo and info.' },
+      { name: 'Garaga Documentation', url: 'https://garaga.gitbook.io/garaga', description: 'Verify Noir/Circom proofs on Starknet.' },
+      { name: 'Garaga npm package', url: 'https://www.npmjs.com/package/garaga', description: 'TypeScript SDK for Garaga.' },
+      { name: 'scaffold-garaga', url: 'https://github.com/KevinSheeranxyj/scaffold-garaga', description: 'Noir + Garaga + Starknet starter template.' },
+      { name: 'Semaphore Protocol', url: 'https://semaphore.pse.dev', description: 'ZK anonymous signaling protocol (reference implementation).' },
+      { name: 'Semaphore Docs', url: 'https://docs.semaphore.pse.dev', description: 'Technical documentation for Semaphore.' },
+      { name: 'Semaphore Learn', url: 'https://semaphore.pse.dev/learn', description: 'Introduction to anonymous interactions.' },
+    ],
+  },
+  {
+    title: 'Bitcoin & DeFi Tools',
+    items: [
+      { name: 'Vesu Developer Docs', url: 'https://docs.vesu.xyz/developers', description: "Starknet's lending protocol documentation." },
+      { name: 'Vesu Getting Started', url: 'https://docs.vesu.xyz/developers/getting-started', description: 'Start building on Vesu.' },
+      { name: 'Vesu Contract Addresses', url: 'https://docs.vesu.xyz/developers/contract-addresses', description: 'Deployed contract addresses.' },
+      { name: 'Starknet Bitcoin DeFi', url: 'https://www.starknet.io/blog/bitcoin-defi-domain/', description: 'Overview of BTC DeFi on Starknet.' },
+      { name: 'Starknet Staking', url: 'https://www.starknet.io/staking/', description: 'BTC and STRK staking guide.' },
+      { name: 'Xverse Starknet Bridge', url: 'https://www.xverse.app/blog/starknet-bridge', description: 'Bridge BTC to Starknet tutorial.' },
+      { name: 'Xverse Starknet Wallet', url: 'https://www.xverse.app/starknet-wallet', description: 'BTC + Starknet wallet.' },
+      { name: 'Ekubo DEX', url: 'https://defillama.com/protocol/ekubo', description: "Starknet's main DEX." },
+    ],
+  },
+  {
+    title: 'Development Frameworks',
+    items: [
+      { name: 'Scaffold-Stark', url: 'https://github.com/Scaffold-Stark/scaffold-eth-stark', description: 'Starter template for Starknet dApps.' },
+      { name: 'Starknet-Scaffold Guide', url: 'https://www.ready.co/blog/starknet-scaffold', description: 'Toolkit walkthrough.' },
+      { name: 'StarknetKit', url: 'https://www.starknetkit.com', description: 'Wallet connection toolkit.' },
+    ],
+  },
+  {
+    title: 'Identity & Naming',
+    items: [
+      { name: 'Starknet.id', url: 'https://starknet.id', description: 'Identity and naming service.' },
+      { name: 'Starknet.id Docs', url: 'https://docs.starknet.id', description: 'Developer documentation.' },
+    ],
+  },
+  {
+    title: 'Workshops (Video)',
+    items: [
+      { name: 'Privacy Preserving Apps Workshop', url: 'https://www.youtube.com/watch?v=vgawLi0gT98', description: 'Re{solve} hackathon workshop.' },
+      { name: 'ZK-SNARK Verification Workshop', url: 'https://www.youtube.com/watch?v=TxFLvXvYByM', description: 'Circom and Noir on Starknet.' },
+      { name: 'Scaffold-Stark Workshop', url: 'https://www.youtube.com/watch?v=dmUYUHRnZPg', description: 'Build dApps fast.' },
+    ],
+  },
+  {
+    title: 'Community & Support',
+    items: [
+      { name: 'Starknet Discord', url: 'https://discord.gg/starknet', description: 'Community support.' },
+      { name: 'Garaga Telegram', url: 'https://t.me/GaragaPairingCairo', description: 'Garaga support.' },
+      { name: 'Vesu Discord', url: 'https://discord.gg/G9Gxgujj8T', description: 'Vesu community.' },
+      { name: 'Vesu Telegram', url: 'https://telegram.me/VesuChat', description: 'Vesu chat.' },
+    ],
+  },
+];
+
+
 const testimonials = [
   {
     quote: m.testimonial_1_quote(),
@@ -226,6 +414,9 @@ const testimonials = [
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/junicode" rel="stylesheet" />
+
+    <!-- Prefetch DoraHacks registration -->
+    <link rel="prefetch" href="https://dorahacks.io/hackathon/redefine/detail" />
     
     <!-- Open Graph -->
     <meta property="og:title" content={ogTitle} />
@@ -386,12 +577,10 @@ const testimonials = [
       </div>
       
       <!-- Main Content -->
-      <div class="relative z-10 w-full max-w-6xl mx-auto">
-        <div class="grid items-center gap-10 lg:grid-cols-[3fr_2fr]">
-          <div class="hero-copy text-center lg:text-left">
+      <div class="relative z-10 text-center max-w-4xl mx-auto">
         
         <!-- Status badges row -->
-        <div class="hero-element gs-hidden flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-6 md:mb-8">
+        <div class="hero-element gs-hidden flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
           <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-3 py-1.5">
             <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -408,7 +597,7 @@ const testimonials = [
         </div>
         
         <!-- Starknet Branding -->
-        <div class="hero-element gs-hidden flex items-center justify-center lg:justify-start gap-2 mb-4">
+        <div class="hero-element gs-hidden flex items-center justify-center gap-2 mb-4">
           <img src="/partners/starknet-logo.png" alt="Starknet" class="h-6 w-6" />
           <span class="text-snf-white/70 text-sm md:text-base font-medium">{m.hero_presented_by()}</span>
         </div>
@@ -420,13 +609,13 @@ const testimonials = [
         </h1>
         
         <!-- Subtitle with highlighted words -->
-        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
           Build <span class="text-white font-semibold">Bitcoin</span> & <span class="text-purple-400 font-semibold">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-semibold">Up to $21,500 in prizes.</span> Apply for grants. Launch your project.
         </p>
         
         <!-- Dual countdown timers -->
         <div class="hero-element gs-hidden mb-8 md:mb-10">
-          <div class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-6 md:gap-12">
+          <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
             
             <!-- Submissions Begin countdown -->
             <div class="text-center" id="countdown-begin-container">
@@ -498,12 +687,12 @@ const testimonials = [
         </div>
 
         <!-- CTA Buttons - simplified -->
-        <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+        <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-3 justify-center">
           <a 
             href="https://dorahacks.io/hackathon/redefine/detail" 
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-gradient pulse-cta inline-flex items-center justify-center text-white px-6 py-3 rounded-full font-medium text-sm group"
+            class="btn-gradient pulse-cta inline-flex items-center justify-center text-white px-7 py-3.5 rounded-full font-semibold text-base shadow-lg shadow-snf-blue-500/30 group"
           >
             Register on DoraHacks
             <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
@@ -512,79 +701,22 @@ const testimonials = [
             href="https://t.me/+-5zNW47GSdQ1ZDkx"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-outline inline-flex items-center justify-center text-snf-white/70 hover:text-snf-white px-6 py-3 rounded-full font-medium text-sm"
+            class="btn-outline btn-outline-muted inline-flex items-center justify-center text-snf-white/50 hover:text-snf-white/80 px-5 py-2.5 rounded-full font-medium text-sm"
           >
             Join Telegram
           </a>
         </div>
         
         <!-- Backed by -->
-        <div class="hero-element gs-hidden mt-12 text-center lg:text-left">
+        <div class="hero-element gs-hidden mt-12">
           <p class="text-snf-white/30 text-xs uppercase tracking-[0.2em] mb-4">{m.hero_backed_by()}</p>
-          <div class="flex justify-center lg:justify-start items-center gap-8">
-            <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
-            <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
-            <img src="/partners/openzeppelin.png" alt="OpenZeppelin" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
+          <div class="flex justify-center items-center gap-8">
+            <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
+            <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
+            <img src="/partners/openzeppelin.png" alt="OpenZeppelin" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
       </div>
       </div>
       
-      </div>
-          
-          <div class="hero-visual hero-element gs-hidden relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none lg:justify-self-end">
-            <div class="hero-visual-frame">
-              <div class="hero-visual-glow"></div>
-              <img
-                src="/hero-hacker.svg"
-                alt="Hooded hacker silhouette with terminal glow"
-                class="hero-hacker"
-                loading="eager"
-                decoding="async"
-              />
-              <div class="hero-terminal" aria-hidden="true">
-                <div class="hero-terminal-header">
-                  <span class="hero-terminal-dot dot-red"></span>
-                  <span class="hero-terminal-dot dot-amber"></span>
-                  <span class="hero-terminal-dot dot-green"></span>
-                  <span class="hero-terminal-title">secure_session.log</span>
-                </div>
-                <div class="hero-terminal-lines">
-                  <span class="line-1"></span>
-                  <span class="line-2"></span>
-                  <span class="line-3"></span>
-                  <span class="line-4"></span>
-                  <span class="hero-terminal-cursor"></span>
-                </div>
-              </div>
-              <div class="hero-badges" aria-hidden="true">
-                <div class="hero-badge hero-badge-bitcoin">
-                  <Bitcoin class="w-4 h-4 text-amber-300" strokeWidth={1.5} />
-                </div>
-                <div class="hero-badge hero-badge-privacy">
-                  <Shield class="w-4 h-4 text-purple-300" strokeWidth={1.5} />
-                </div>
-              </div>
-              <div class="hero-code-stream" aria-hidden="true">
-                <span class="code-line code-1"></span>
-                <span class="code-line code-2"></span>
-                <span class="code-line code-3"></span>
-                <span class="code-line code-4"></span>
-              </div>
-              <div class="hero-proof-card" aria-hidden="true">
-                <div class="hero-proof-header">
-                  <span class="hero-proof-pill">stark proof</span>
-                  <span class="hero-proof-date">2026</span>
-                </div>
-                <div class="hero-proof-body">
-                  <span class="proof-line"></span>
-                  <span class="proof-line"></span>
-                  <span class="proof-line short"></span>
-                </div>
-              </div>
-              <div class="hero-scanlines"></div>
-              <div class="hero-vignette"></div>
-            </div>
-          </div>
-        </div>
       </div>
       
       <!-- Scroll indicator -->
@@ -600,10 +732,10 @@ const testimonials = [
     <!-- ============================================ -->
     <!-- VISUAL TIMELINE -->
     <!-- ============================================ -->
-    <section class="py-12 md:py-16 px-4 md:px-6 border-b border-snf-white/5 overflow-hidden">
+    <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 border-b border-snf-white/5 overflow-hidden section-divider-top">
       <div class="max-w-5xl mx-auto">
         <div class="section-number">1</div>
-        <p class="text-center text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-6 font-medium">{m.timeline_kicker()}</p>
+        <p class="font-subheading text-center text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-6 font-medium">{m.timeline_kicker()}</p>
         
         <!-- Timeline container -->
         <div class="relative">
@@ -690,42 +822,81 @@ const testimonials = [
     </section>
 
     <!-- ============================================ -->
-    <!-- TRACKS SECTION -->
+    <!-- TRACKS & PRIZES SECTION -->
     <!-- ============================================ -->
     <section id="tracks" class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         <div class="section-number">2</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_tracks_kicker()}</p>
+          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_tracks_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            {m.section_tracks_title()}
+            Tracks & prizes
           </h2>
-          <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3">
-            {m.section_tracks_subtitle()}
+          <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
+            Choose a track to see curated build ideas and prize guidance. Total prizes up to $21,500 —
+            <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-400 hover:text-snf-blue-300 transition-colors"> view the full breakdown on DoraHacks</a>.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-3 gap-4">
+        <div class="space-y-4">
           {tracks.map((track, i) => (
-            <div class:list={[
-              'group gs-hidden card-lift bg-snf-blue-900/10 rounded-xl p-5 hover:bg-snf-blue-900/20 transition-all duration-300',
-              i === 0 ? 'md:col-span-2 md:row-span-2' : '',
+            <details class:list={[
+              'track-panel rounded-2xl border bg-snf-white/[0.02] p-5 md:p-6',
+              trackIdeaGroups[i]?.accent ?? 'border-snf-white/10',
             ]}>
-              
-              <h3 class="font-display text-base font-semibold text-snf-white/90 mb-3">{track.name}</h3>
-              
-              <p class="text-snf-white/50 text-xs mb-4 leading-relaxed">{track.description}</p>
-              
-              <div class="flex flex-wrap gap-1.5">
-                {track.examples.map((ex) => (
-                  <span class="text-[10px] bg-snf-white/5 px-2 py-1 rounded-full text-snf-white/40">{ex}</span>
-                ))}
+              <summary class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 cursor-pointer">
+                <div class="flex items-start gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-snf-white/5 border border-snf-white/10 flex items-center justify-center">
+                    {i === 0 && <Shield class="w-5 h-5 text-purple-300" strokeWidth={1.5} />}
+                    {i === 1 && <Bitcoin class="w-5 h-5 text-amber-300" strokeWidth={1.5} />}
+                    {i === 2 && <Monitor class="w-5 h-5 text-snf-blue-300" strokeWidth={1.5} />}
+                  </div>
+                  <div>
+                    <h3 class="font-display text-lg md:text-xl text-snf-white">{track.name}</h3>
+                    <p class="font-subheading text-snf-white/50 text-xs md:text-sm mt-1">{track.description}</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 text-xs text-snf-white/40">
+                  <span class="hidden sm:inline">Ideas & prize notes</span>
+                  <span class="summary-icon">+</span>
+                </div>
+              </summary>
+
+              <div class="mt-5 grid gap-4 lg:grid-cols-[1fr_1.4fr]">
+                <div class="rounded-xl border border-snf-white/10 bg-snf-black/40 p-4">
+                  <p class="font-subheading text-[10px] uppercase tracking-[0.2em] text-snf-white/40">Prizes</p>
+                  <p class="text-snf-white/60 text-xs mt-2">
+                    Prizes are awarded across tracks based on impact, technical depth, and user experience.
+                  </p>
+                  <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-snf-blue-400 text-xs mt-3 hover:text-snf-blue-300 transition-colors">
+                    See prize breakdown
+                    <ArrowRight class="w-3.5 h-3.5" strokeWidth={2} />
+                  </a>
+                </div>
+                <div class="space-y-3">
+                  {trackIdeaGroups[i]?.groups.map((group) => (
+                    <details class="track-ideas-group rounded-xl border border-snf-white/10 bg-snf-white/[0.02] p-4">
+                      <summary class="flex items-center justify-between gap-4 font-subheading text-snf-white/70 text-xs md:text-sm uppercase tracking-[0.18em] cursor-pointer">
+                        <span>{group.title}</span>
+                        <span class="summary-icon">+</span>
+                      </summary>
+                      <div class="mt-4 space-y-3 text-xs md:text-sm text-snf-white/60">
+                        {group.items.map((item) => (
+                          <div class="rounded-lg bg-snf-black/40 border border-snf-white/5 px-3 py-2">
+                            <div class="text-snf-white/90 font-medium">{item.title}</div>
+                            {item.description && (
+                              <div class="text-snf-white/50 mt-1">{item.description}</div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                  ))}
+                </div>
               </div>
-              
-            </div>
+            </details>
           ))}
         </div>
-        
       </div>
     </section>
 
@@ -738,7 +909,7 @@ const testimonials = [
       <div class="max-w-5xl mx-auto">
         <div class="section-number">3</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.social_proof_kicker()}</p>
+          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.social_proof_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
             {m.social_proof_title()}
           </h2>
@@ -863,12 +1034,12 @@ const testimonials = [
       <div class="max-w-5xl mx-auto">
         <div class="section-number">4</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_kicker()}</p>
+          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            {m.resources_title()}
+            Resources & tooling
           </h2>
           <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-lg mx-auto">
-            {m.resources_subtitle()}
+            Start with the essentials, then go deeper with verified docs, SDKs, and support channels.
           </p>
         </div>
         
@@ -978,6 +1149,44 @@ const testimonials = [
               </div>
           ))}
         </div>
+
+        <!-- Resource Library -->
+        <div class="mt-12 md:mt-16">
+          <div class="text-center mb-8">
+            <p class="font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">Docs & tools index</p>
+            <h3 class="font-display text-lg md:text-xl lg:text-2xl font-bold text-snf-white">
+              Find what you need fast
+            </h3>
+            <p class="font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
+              Curated and verified by Starknet Foundation, StarkWare, and ecosystem partners.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            {resourceSections.map((section) => (
+              <details class="resource-panel rounded-xl border border-snf-white/10 bg-snf-white/[0.02] p-5">
+                <summary class="flex items-center justify-between gap-4 font-display text-sm md:text-base text-snf-white cursor-pointer">
+                  <span>{section.title}</span>
+                  <span class="summary-icon">+</span>
+                </summary>
+                <div class="mt-4 space-y-3 text-xs md:text-sm">
+                  {section.items.map((item) => (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="block rounded-lg border border-snf-white/5 bg-snf-black/40 px-3 py-2 hover:border-snf-blue-500/30 hover:bg-snf-black/60 transition-colors"
+                    >
+                      <div class="text-snf-white/90 font-medium">{item.name}</div>
+                      <div class="text-snf-white/50 mt-1">{item.description}</div>
+                    </a>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+
+        </div>
         
       </div>
     </section>
@@ -989,7 +1198,7 @@ const testimonials = [
       <div class="max-w-5xl mx-auto">
         <div class="section-number">5</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_mentors_kicker()}</p>
+          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_mentors_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
           {m.mentors_title()}
         </h2>
@@ -1094,7 +1303,7 @@ const testimonials = [
       <div class="max-w-2xl mx-auto">
         <div class="section-number">6</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_faq_kicker()}</p>
+          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_faq_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
           {m.faq_title()}
         </h2>
@@ -1135,7 +1344,7 @@ const testimonials = [
           href="https://dorahacks.io/hackathon/redefine/detail" 
           target="_blank"
           rel="noopener noreferrer"
-          class="gs-hidden inline-block btn-gradient text-white px-8 py-3 rounded-full font-medium text-base"
+          class="gs-hidden inline-block btn-gradient text-white px-9 py-3.5 rounded-full font-semibold text-base md:text-lg shadow-lg shadow-snf-blue-500/30"
         >
           {m.final_cta_button()}
         </a>
