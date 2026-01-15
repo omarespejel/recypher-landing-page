@@ -530,7 +530,7 @@ const testimonials = [
       
       </div>
           
-          <div class="hero-visual hero-element gs-hidden relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="hero-visual hero-element gs-hidden relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none lg:justify-self-end">
             <div class="hero-visual-frame">
               <div class="hero-visual-glow"></div>
               <img
@@ -540,6 +540,31 @@ const testimonials = [
                 loading="eager"
                 decoding="async"
               />
+              <div class="hero-terminal" aria-hidden="true">
+                <div class="hero-terminal-header">
+                  <span class="hero-terminal-dot dot-red"></span>
+                  <span class="hero-terminal-dot dot-amber"></span>
+                  <span class="hero-terminal-dot dot-green"></span>
+                  <span class="hero-terminal-title">secure_session.log</span>
+                </div>
+                <div class="hero-terminal-lines">
+                  <span class="line-1"></span>
+                  <span class="line-2"></span>
+                  <span class="line-3"></span>
+                  <span class="line-4"></span>
+                  <span class="hero-terminal-cursor"></span>
+                </div>
+              </div>
+              <div class="hero-badges" aria-hidden="true">
+                <div class="hero-badge hero-badge-bitcoin">
+                  <Bitcoin class="w-4 h-4 text-amber-300" strokeWidth={1.5} />
+                  <span>BTC</span>
+                </div>
+                <div class="hero-badge hero-badge-privacy">
+                  <Shield class="w-4 h-4 text-purple-300" strokeWidth={1.5} />
+                  <span>Privacy</span>
+                </div>
+              </div>
               <div class="hero-scanlines"></div>
               <div class="hero-vignette"></div>
             </div>
