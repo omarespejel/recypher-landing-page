@@ -271,7 +271,8 @@ const testimonials = [
       }
       
       .font-display {
-        font-family: 'Cooper Hewitt', system-ui, sans-serif;
+        font-family: 'Cooper Hewitt Heavy', 'Cooper Hewitt', system-ui, sans-serif;
+        font-weight: 800;
         letter-spacing: -0.02em;
       }
       
@@ -385,10 +386,12 @@ const testimonials = [
       </div>
       
       <!-- Main Content -->
-      <div class="relative z-10 text-center max-w-4xl mx-auto">
+      <div class="relative z-10 w-full max-w-6xl mx-auto">
+        <div class="grid items-center gap-10 lg:grid-cols-[3fr_2fr]">
+          <div class="hero-copy text-center lg:text-left">
         
         <!-- Status badges row -->
-        <div class="hero-element gs-hidden flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
+        <div class="hero-element gs-hidden flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-6 md:mb-8">
           <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-3 py-1.5">
             <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -405,7 +408,7 @@ const testimonials = [
         </div>
         
         <!-- Starknet Branding -->
-        <div class="hero-element gs-hidden flex items-center justify-center gap-2 mb-4">
+        <div class="hero-element gs-hidden flex items-center justify-center lg:justify-start gap-2 mb-4">
           <img src="/partners/starknet-logo.png" alt="Starknet" class="h-6 w-6" />
           <span class="text-snf-white/70 text-sm md:text-base font-medium">{m.hero_presented_by()}</span>
         </div>
@@ -417,13 +420,13 @@ const testimonials = [
         </h1>
         
         <!-- Subtitle with highlighted words -->
-        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
           Build <span class="text-white font-semibold">Bitcoin</span> & <span class="text-purple-400 font-semibold">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-semibold">Up to $21,500 in prizes.</span> Apply for grants. Launch your project.
         </p>
         
         <!-- Dual countdown timers -->
         <div class="hero-element gs-hidden mb-8 md:mb-10">
-          <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+          <div class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-6 md:gap-12">
             
             <!-- Submissions Begin countdown -->
             <div class="text-center" id="countdown-begin-container">
@@ -495,7 +498,7 @@ const testimonials = [
         </div>
 
         <!-- CTA Buttons - simplified -->
-        <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-3 justify-center">
+        <div class="hero-element gs-hidden flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
           <a 
             href="https://dorahacks.io/hackathon/redefine/detail" 
             target="_blank"
@@ -516,15 +519,32 @@ const testimonials = [
         </div>
         
         <!-- Backed by -->
-        <div class="hero-element gs-hidden mt-12">
+        <div class="hero-element gs-hidden mt-12 text-center lg:text-left">
           <p class="text-snf-white/30 text-xs uppercase tracking-[0.2em] mb-4">{m.hero_backed_by()}</p>
-          <div class="flex justify-center items-center gap-8">
+          <div class="flex justify-center lg:justify-start items-center gap-8">
             <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
             <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
             <img src="/partners/openzeppelin.png" alt="OpenZeppelin" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" />
       </div>
       </div>
       
+      </div>
+          
+          <div class="hero-visual hero-element gs-hidden relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+            <div class="hero-visual-frame">
+              <div class="hero-visual-glow"></div>
+              <img
+                src="/hero-hacker.svg"
+                alt="Hooded hacker silhouette with terminal glow"
+                class="hero-hacker"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="hero-scanlines"></div>
+              <div class="hero-vignette"></div>
+            </div>
+          </div>
+        </div>
       </div>
       
       <!-- Scroll indicator -->
