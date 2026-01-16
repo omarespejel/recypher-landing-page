@@ -89,7 +89,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Private DeFi and commerce',
+        title: m.track_ideas_group_defi_commerce(),
         items: [
           { title: 'Sealed-bid auction', description: 'Hidden bids until reveal, prevents front-running and bid manipulation.' },
           { title: 'Dark pool / private orderbook', description: 'Hide trade intent from front-runners, MEV protection.' },
@@ -103,7 +103,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Confidential transactions',
+        title: m.track_ideas_group_confidential(),
         items: [
           { title: 'Private payment app using Tongo', description: 'Confidential ERC20 transfers using ElGamal encryption and ZK proofs.' },
           { title: 'Shielded wallet UI', description: 'Deposit/withdraw/transfer flows using StarkWare SDK.' },
@@ -138,7 +138,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Private BTC DeFi',
+        title: m.track_ideas_group_private_btc(),
         items: [
           { title: 'Private BTC swap', description: 'Trade BTC without revealing amounts.' },
           { title: 'Private lending with BTC collateral', description: 'Borrow stables against BTC privately.' },
@@ -534,8 +534,7 @@ const testimonials = [
       <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-2">
         <!-- Short name on mobile, full name on desktop -->
         <span class="font-display font-semibold text-sm md:text-lg text-snf-white/90 truncate uppercase">
-          <span class="hidden sm:inline">{hackathonName}</span>
-          <span class="sm:hidden">BTC × PRIVACY</span>
+          BTC × PRIVACY
         </span>
         <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
           <LanguageSwitcher />
@@ -591,9 +590,15 @@ const testimonials = [
         </div>
         
         <!-- Main Title -->
-        <h1 class="hero-element gs-hidden font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 md:mb-8 uppercase" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
-          <span class="text-white">{m.hero_title_line1()}&#123;define&#125;</span><br/>
-          <span class="bg-gradient-to-r from-purple-400 via-purple-500 to-snf-blue-500 bg-clip-text text-transparent">{m.hero_title_line2()}</span>
+        <h1 class="hero-element gs-hidden font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 md:mb-8 uppercase">
+          <span class="sr-only">Starknet Hackathon Re&#123;define&#125;</span>
+          <img
+            src="/main-website/starknet-hackathon-redefine-hero.png"
+            alt="Starknet Hackathon Re{define}"
+            class="mx-auto w-full max-w-lg md:max-w-xl lg:max-w-2xl h-auto"
+            loading="eager"
+            decoding="async"
+          />
         </h1>
         
         <!-- Subtitle -->
@@ -701,7 +706,6 @@ const testimonials = [
         <div class="hero-element gs-hidden mt-12">
           <p class="text-snf-white/30 text-xs uppercase tracking-[0.2em] mb-4" style="font-family: 'Martian Mono', monospace;">{m.hero_backed_by()}</p>
           <div class="flex justify-center items-center gap-8">
-            <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
             <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
             <img src="/partners/openzeppelin.png" alt="OpenZeppelin" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
       </div>
