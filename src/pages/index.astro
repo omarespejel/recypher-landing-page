@@ -73,7 +73,7 @@ const trackIdeaGroups = [
     accent: 'border-purple-500/30 bg-purple-500/5',
     groups: [
       {
-        title: 'ZK protocol implementations',
+        title: m.track_ideas_group_zk_protocol(),
         items: [
           { title: 'Implement Semaphore on Starknet', description: 'Port the Semaphore protocol to Cairo for anonymous group membership and signaling.' },
           { title: 'Build Cairo verifiers for Sigma protocols', description: 'Implement zero-knowledge Sigma protocol verifiers in Cairo.' },
@@ -82,7 +82,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Games with private state',
+        title: m.track_ideas_group_games(),
         items: [
           { title: 'Poker / card game with hidden hands', description: 'Players cannot see each other cards, provably fair.' },
           { title: 'Strategy game with fog of war', description: 'Hidden game state between players.' },
@@ -90,7 +90,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Private DeFi & commerce',
+        title: 'Private DeFi and commerce',
         items: [
           { title: 'Sealed-bid auction', description: 'Hidden bids until reveal, prevents front-running and bid manipulation.' },
           { title: 'Dark pool / private orderbook', description: 'Hide trade intent from front-runners, MEV protection.' },
@@ -98,7 +98,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Private governance',
+        title: m.track_ideas_group_governance(),
         items: [
           { title: 'Private voting system', description: 'Hide votes until tally, prove eligibility without revealing identity.' },
         ],
@@ -112,14 +112,14 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'ZK proof verification',
+        title: m.track_ideas_group_zk_verification(),
         items: [
           { title: 'Verify Noir proofs on Starknet', description: 'Build a ZK app in Noir, deploy verifier using Garaga.' },
           { title: 'Verify Circom/Groth16 proofs on Starknet', description: 'Port existing Circom circuits to Starknet verification.' },
         ],
       },
       {
-        title: 'Onboarding & identity',
+        title: m.track_ideas_group_onboarding(),
         items: [
           { title: 'ZK social login dApp using Sumo Login', description: 'Onboard users with JWT proofs, no seed phrases.' },
         ],
@@ -130,7 +130,7 @@ const trackIdeaGroups = [
     accent: 'border-amber-500/30 bg-amber-500/5',
     groups: [
       {
-        title: 'Yield & vaults',
+        title: m.track_ideas_group_yield(),
         items: [
           { title: 'BTC yield vault', description: 'Intake BTC wrapper, borrow against it, deploy into stables, return yield.' },
           { title: 'Tokenized BTC yield representation', description: 'Create a token representing yield-bearing BTC position.' },
@@ -148,7 +148,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'BTC primitives',
+        title: m.track_ideas_group_btc_primitives(),
         items: [
           { title: 'BTC-backed CDP', description: 'Mint stablecoins against BTC collateral.' },
           { title: 'BTC DCA (Dollar Cost Average) tool', description: 'Automated BTC purchases on Starknet.' },
@@ -156,7 +156,7 @@ const trackIdeaGroups = [
         ],
       },
       {
-        title: 'Infrastructure',
+        title: m.track_ideas_group_infrastructure(),
         items: [
           { title: 'Cross-chain BTC bridge UI', description: 'Improved UX for bridging BTC to Starknet.' },
         ],
@@ -167,7 +167,7 @@ const trackIdeaGroups = [
     accent: 'border-snf-blue-500/30 bg-snf-blue-500/5',
     groups: [
       {
-        title: 'Idea sparks',
+        title: m.track_ideas_group_idea_sparks(),
         items: tracks[2].examples.map((ex) => ({ title: ex })),
       },
     ],
@@ -223,16 +223,16 @@ const faqs = [
 
 const stats = [
   { 
-    kicker: 'ZK Prover',
-    value: 'STWO', 
+    kicker: m.stat_kicker_zk_prover(),
+    value: m.stat_value_stwo(), 
     label: m.stat_1_label(),
     icon: 'zap',
     gradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
     accent: 'text-amber-400',
   },
   { 
-    kicker: 'BTC Staked',
-    value: '$200M+', 
+    kicker: m.stat_kicker_btc_staked(),
+    value: m.stat_value_200m(), 
     label: m.stat_2_label(), 
     count: { value: 200, prefix: '$', suffix: 'M+' },
     icon: 'bitcoin',
@@ -240,8 +240,8 @@ const stats = [
     accent: 'text-orange-400',
   },
   { 
-    kicker: 'Privacy Layer',
-    value: 'Ztarknet', 
+    kicker: m.stat_kicker_privacy_layer(),
+    value: m.stat_value_ztarknet(), 
     label: m.stat_3_label(),
     icon: 'shield',
     gradient: 'from-purple-500/20 via-violet-500/10 to-transparent',
@@ -281,17 +281,14 @@ const resources = [
 
 const resourceSections = [
   {
-    title: 'Core Documentation',
+    title: m.resources_section_core_docs(),
     items: [
       { name: 'Starknet Docs', url: 'https://docs.starknet.io', description: 'Official Starknet developer documentation.' },
-      { name: 'Starknet Developer Hub', url: 'https://www.starknet.io/developers/', description: 'Tutorials, frameworks, technical support.' },
-      { name: 'Cairo Language', url: 'https://starkware.co/cairo/', description: 'Cairo programming language overview.' },
-      { name: 'Starknet Basecamp', url: 'https://www.starknet.io/tutorials/starknet-basecamp-cairo/', description: 'Video tutorials for Cairo fundamentals.' },
       { name: 'Cairo Book', url: 'https://book.cairo-lang.org/', description: 'Comprehensive Cairo language guide.' },
     ],
   },
   {
-    title: 'Smart Contract Libraries',
+    title: m.resources_section_smart_contracts(),
     items: [
       { name: 'OpenZeppelin Cairo Contracts', url: 'https://github.com/OpenZeppelin/cairo-contracts', description: 'Battle-tested ERC20, ERC721, access control.' },
       { name: 'OpenZeppelin Cairo Docs', url: 'https://docs.openzeppelin.com/contracts-cairo', description: 'Full documentation.' },
@@ -299,8 +296,9 @@ const resourceSections = [
     ],
   },
   {
-    title: 'Privacy Tools',
+    title: m.resources_section_privacy(),
     items: [
+      { name: 'Starknet Privacy Toolkit', url: 'https://github.com/omarespejel/starknet-privacy-toolkit', description: 'End-to-end reference: Tongo private donations + Noir/Garaga verified donor badges.' },
       { name: 'Tongo SDK - Quick Start', url: 'https://docs.tongo.cash/sdk/quick-start.html', description: 'Confidential payments SDK by FAT Solutions.' },
       { name: 'Tongo Protocol Intro', url: 'https://docs.tongo.cash/protocol/introduction.html', description: 'How Tongo works (ElGamal + ZK).' },
       { name: 'Sumo Login', url: 'https://github.com/fatlabsxyz/sumo-login-cairo', description: 'ZK social login for Starknet.' },
@@ -314,8 +312,11 @@ const resourceSections = [
     ],
   },
   {
-    title: 'Bitcoin & DeFi Tools',
+    title: m.resources_section_bitcoin_defi(),
     items: [
+      { name: 'LayerSwap Starknet Docs', url: 'https://docs.layerswap.io/integration/UI/Widget/Starknet/Starknet', description: 'LayerSwap Starknet integration documentation.' },
+      { name: 'Atomiq Docs', url: 'https://docs.atomiq.exchange/', description: 'Atomiq documentation for Bitcoin to Starknet bridge.' },
+      { name: 'Garden Docs Quickstart', url: 'https://docs.garden.finance/developers/sdk/nodejs/quickstart', description: 'Garden SDK quickstart for bridging Bitcoin.' },
       { name: 'Vesu Developer Docs', url: 'https://docs.vesu.xyz/developers', description: "Starknet's lending protocol documentation." },
       { name: 'Vesu Getting Started', url: 'https://docs.vesu.xyz/developers/getting-started', description: 'Start building on Vesu.' },
       { name: 'Vesu Contract Addresses', url: 'https://docs.vesu.xyz/developers/contract-addresses', description: 'Deployed contract addresses.' },
@@ -327,7 +328,7 @@ const resourceSections = [
     ],
   },
   {
-    title: 'Development Frameworks',
+    title: m.resources_section_frameworks(),
     items: [
       { name: 'Scaffold-Stark', url: 'https://github.com/Scaffold-Stark/scaffold-stark-2', description: 'Starter template for Starknet dApps.' },
       { name: 'Scaffold-Stark Docs', url: 'https://scaffoldstark.com/docs', description: 'Official documentation and guides.' },
@@ -335,24 +336,16 @@ const resourceSections = [
     ],
   },
   {
-    title: 'Identity & Naming',
-    items: [
-      { name: 'Starknet.id', url: 'https://starknet.id', description: 'Identity and naming service.' },
-      { name: 'Starknet.id Docs', url: 'https://docs.starknet.id', description: 'Developer documentation.' },
-    ],
-  },
-  {
-    title: 'Workshops (Video)',
+    title: m.resources_section_workshops(),
     items: [
       { name: 'Privacy Preserving Apps Workshop', url: 'https://www.youtube.com/watch?v=vgawLi0gT98', description: 'Re{solve} hackathon workshop.' },
       { name: 'ZK-SNARK Verification Workshop', url: 'https://www.youtube.com/watch?v=TxFLvXvYByM', description: 'Circom and Noir on Starknet.' },
-      { name: 'Scaffold-Stark Workshop', url: 'https://www.youtube.com/watch?v=dmUYUHRnZPg', description: 'Build dApps fast.' },
     ],
   },
   {
-    title: 'Community & Support',
+    title: m.resources_section_community(),
     items: [
-      { name: 'Starknet Discord', url: 'https://discord.gg/starknet', description: 'Community support.' },
+      { name: 'Starknet Discord', url: 'https://discord.com/invite/starknet-community', description: 'Community support.' },
       { name: 'Garaga Telegram', url: 'https://t.me/GaragaPairingCairo', description: 'Garaga support.' },
       { name: 'Vesu Discord', url: 'https://discord.gg/G9Gxgujj8T', description: 'Vesu community.' },
       { name: 'Vesu Telegram', url: 'https://telegram.me/VesuChat', description: 'Vesu chat.' },
@@ -609,9 +602,7 @@ const testimonials = [
         </h1>
         
         <!-- Subtitle with highlighted words -->
-        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
-          Build <span class="text-white font-semibold">Bitcoin</span> & <span class="text-purple-400 font-semibold">Privacy</span> apps on Starknet. <span class="text-snf-blue-400 font-semibold">Up to $21,500 in prizes.</span> Apply for grants. Launch your project.
-        </p>
+        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed" set:html={m.hero_subtitle_build().replace(m.hero_subtitle_bitcoin_highlight(), `<span class="text-white font-semibold">${m.hero_subtitle_bitcoin_highlight()}</span>`).replace(m.hero_subtitle_privacy_highlight(), `<span class="text-purple-400 font-semibold">${m.hero_subtitle_privacy_highlight()}</span>`).replace(m.hero_subtitle_prizes_highlight(), `<span class="text-snf-blue-400 font-semibold">${m.hero_subtitle_prizes_highlight()}</span>`)} />
         
         <!-- Dual countdown timers -->
         <div class="hero-element gs-hidden mb-8 md:mb-10">
@@ -694,7 +685,7 @@ const testimonials = [
             rel="noopener noreferrer"
             class="btn-gradient pulse-cta inline-flex items-center justify-center text-white px-7 py-3.5 rounded-full font-semibold text-base shadow-lg shadow-snf-blue-500/30 group"
           >
-            Register on DoraHacks
+            {m.cta_register_primary()}
             <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
           </a>
           <a 
@@ -703,7 +694,7 @@ const testimonials = [
             rel="noopener noreferrer"
             class="btn-outline btn-outline-muted inline-flex items-center justify-center text-snf-white/50 hover:text-snf-white/80 px-5 py-2.5 rounded-full font-medium text-sm"
           >
-            Join Telegram
+            {m.cta_join_telegram()}
           </a>
         </div>
         
@@ -752,7 +743,7 @@ const testimonials = [
                   <span class="text-snf-blue-500 font-bold">1</span>
               </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Jan 15</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_jan15()}</p>
                   <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step1_title()}</h3>
                   <p class="text-snf-white/40 text-xs">{m.timeline_step1_desc()}</p>
             </div>
@@ -766,7 +757,7 @@ const testimonials = [
                   <span class="text-snf-white/60 font-bold">2</span>
                 </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Feb 1</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_feb1()}</p>
                   <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step2_title()}</h3>
                   <p class="text-snf-white/40 text-xs">{m.timeline_step2_desc()}</p>
                 </div>
@@ -780,7 +771,7 @@ const testimonials = [
                   <span class="text-snf-white/60 font-bold">3</span>
                 </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Feb 1-28</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_feb1_28()}</p>
                   <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step3_title()}</h3>
                   <p class="text-snf-white/40 text-xs">{m.timeline_step3_desc()}</p>
                 </div>
@@ -794,7 +785,7 @@ const testimonials = [
                   <span class="text-snf-white/60 font-bold">4</span>
                 </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Feb 28</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_feb28()}</p>
                   <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step4_title()}</h3>
                   <p class="text-snf-white/40 text-xs">{m.timeline_step4_desc()}</p>
                 </div>
@@ -810,7 +801,7 @@ const testimonials = [
                   </svg>
                 </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">Mar 15</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_mar15()}</p>
                   <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step5_title()}</h3>
                   <p class="text-snf-white/40 text-xs">{m.timeline_step5_desc()}</p>
                 </div>
@@ -830,11 +821,11 @@ const testimonials = [
         <div class="text-center mb-10">
           <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_tracks_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            Tracks & prizes
+            {m.tracks_title()}
           </h2>
           <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
-            Every track includes real project ideas for hackers, collected by Starknet Foundation, StarkWare experts, and ecosystem partners. Total prizes up to $21,500 —
-            <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-400 hover:text-snf-blue-300 transition-colors"> view the full breakdown on DoraHacks</a>.
+            {m.tracks_subtitle_ideas()}
+            <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-400 hover:text-snf-blue-300 transition-colors"> {m.tracks_view_breakdown()}</a>.
           </p>
         </div>
         
@@ -859,24 +850,24 @@ const testimonials = [
                       'track-pill',
                       i === 0 ? 'track-pill--privacy' : i === 1 ? 'track-pill--bitcoin' : 'track-pill--open',
                     ]}>
-                      Curated hacker ideas
+                      {m.tracks_curated_ideas()}
                     </span>
                   </div>
                 </div>
                 <div class="flex items-center gap-3 text-xs text-snf-white/40">
-                  <span class="hidden sm:inline">Hacker ideas & prize notes</span>
+                  <span class="hidden sm:inline">{m.tracks_ideas_prize_notes()}</span>
                   <span class="summary-icon">+</span>
                 </div>
               </summary>
 
               <div class="mt-5 grid gap-4 lg:grid-cols-[1fr_1.4fr]">
                 <div class="rounded-xl border border-snf-white/10 bg-snf-black/40 p-4">
-                  <p class="font-subheading text-[10px] uppercase tracking-[0.2em] text-snf-white/40">Prizes</p>
+                  <p class="font-subheading text-[10px] uppercase tracking-[0.2em] text-snf-white/40">{m.tracks_prizes_label()}</p>
                   <p class="text-snf-white/60 text-xs mt-2">
-                    Prizes are awarded across tracks based on impact, technical depth, and user experience.
+                    {m.tracks_prizes_description()}
                   </p>
                   <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-snf-blue-400 text-xs mt-3 hover:text-snf-blue-300 transition-colors">
-                    See prize breakdown
+                    {m.tracks_see_breakdown()}
                     <ArrowRight class="w-3.5 h-3.5" strokeWidth={2} />
                   </a>
                 </div>
@@ -1043,10 +1034,10 @@ const testimonials = [
         <div class="text-center mb-10">
           <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_kicker()}</p>
           <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
-            Resources & tooling
+            {m.resources_tooling_title()}
           </h2>
           <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-lg mx-auto">
-            Start with the essentials, then go deeper with verified docs, SDKs, and support channels.
+            {m.resources_tooling_subtitle()}
           </p>
         </div>
         
@@ -1063,7 +1054,7 @@ const testimonials = [
             <div class="relative h-full bg-gradient-to-br from-snf-blue-500/10 via-purple-500/5 to-transparent rounded-xl p-5 md:p-6 border border-snf-blue-500/20 hover:border-snf-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-snf-blue-500/10">
               <!-- Badge -->
               <span class="absolute top-3 right-3 px-2 py-0.5 bg-snf-blue-500/20 border border-snf-blue-500/30 rounded-full text-[9px] md:text-[10px] text-snf-blue-400 font-medium uppercase tracking-wider">
-                Developers
+                {m.resources_badge_developers()}
               </span>
               
                 <!-- Icon -->
@@ -1079,13 +1070,11 @@ const testimonials = [
               </p>
               
               <!-- Features -->
-              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4">
-                Free · Beginner-friendly · <span class="text-snf-blue-400">Available now</span>
-              </p>
+              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4" set:html={m.resources_academy_features().replace('<Available>', '<span class="text-snf-blue-400">').replace('</Available>', '</span>')} />
               
               <!-- CTA -->
               <span class="inline-flex items-center gap-2 text-snf-blue-400 text-xs md:text-sm font-medium group-hover:gap-3 transition-all duration-200">
-                Visit Academy
+                {m.resources_visit_academy()}
                 <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" strokeWidth={2} />
               </span>
             </div>
@@ -1101,7 +1090,7 @@ const testimonials = [
             <div class="relative h-full bg-gradient-to-br from-purple-500/10 via-snf-blue-500/5 to-transparent rounded-xl p-5 md:p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
               <!-- Badge -->
               <span class="absolute top-3 right-3 px-2 py-0.5 bg-purple-500/20 border border-purple-500/30 rounded-full text-[9px] md:text-[10px] text-purple-400 font-medium uppercase tracking-wider">
-                Founders
+                {m.resources_badge_founders()}
               </span>
               
               <!-- Icon (YouTube/Play) -->
@@ -1113,20 +1102,18 @@ const testimonials = [
               </div>
               
               <h3 class="font-display text-lg md:text-xl font-bold mb-2 text-snf-white group-hover:text-purple-400 transition-colors duration-200">
-                Founder Basecamp
+                {m.resources_founder_basecamp_title()}
               </h3>
               <p class="text-snf-white/50 text-xs md:text-sm mb-3 leading-relaxed">
-                From idea to investor-ready pitch — watch at your own pace
+                {m.resources_founder_basecamp_desc()}
               </p>
               
               <!-- Features -->
-              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4">
-                Free · Bite-sized videos · <span class="text-purple-400">Available now</span>
-              </p>
+              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4" set:html={m.resources_founder_features().replace('<Available>', '<span class="text-purple-400">').replace('</Available>', '</span>')} />
               
               <!-- CTA -->
               <span class="inline-flex items-center gap-2 text-purple-400 text-xs md:text-sm font-medium group-hover:gap-3 transition-all duration-200">
-                Watch Playlist
+                {m.resources_watch_playlist()}
                 <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" strokeWidth={2} />
               </span>
             </div>
@@ -1160,12 +1147,12 @@ const testimonials = [
         <!-- Resource Library -->
         <div class="mt-12 md:mt-16">
           <div class="text-center mb-8">
-            <p class="font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">Docs & tools index</p>
+            <p class="font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_docs_index_kicker()}</p>
             <h3 class="font-display text-lg md:text-xl lg:text-2xl font-bold text-snf-white">
-              Find what you need fast
+              {m.resources_docs_index_title()}
             </h3>
             <p class="font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
-              Curated and verified by Starknet Foundation, StarkWare, and ecosystem partners.
+              {m.resources_docs_index_subtitle()}
             </p>
           </div>
 
@@ -1173,10 +1160,7 @@ const testimonials = [
             {resourceSections.map((section) => (
               <details class="resource-panel rounded-xl border border-snf-white/10 bg-snf-white/[0.02] p-5">
                 <summary class="flex items-center justify-between gap-4 font-display text-sm md:text-base text-snf-white cursor-pointer">
-                  <div class="flex items-center gap-3">
-                    <span>{section.title}</span>
-                    <span class="resource-chip">Verified</span>
-                  </div>
+                  <span>{section.title}</span>
                   <span class="summary-icon">+</span>
                 </summary>
                 <div class="mt-4 space-y-3 text-xs md:text-sm">
@@ -1245,7 +1229,7 @@ const testimonials = [
                     target="_blank"
                     rel="noopener noreferrer"
                     class="mt-3 inline-flex items-center gap-1.5 text-snf-white/40 hover:text-snf-blue-500 text-xs transition-colors duration-200"
-                    aria-label={`Follow ${mentor.name} on X`}
+                    aria-label={m.aria_follow_on_x({ name: mentor.name })}
                   >
                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -1284,7 +1268,7 @@ const testimonials = [
                     target="_blank"
                     rel="noopener noreferrer"
                     class="mt-3 inline-flex items-center gap-1.5 text-snf-white/40 hover:text-snf-blue-500 text-xs transition-colors duration-200"
-                    aria-label={`Follow ${mentor.name} on X`}
+                    aria-label={m.aria_follow_on_x({ name: mentor.name })}
                   >
                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -1298,10 +1282,10 @@ const testimonials = [
         
         <!-- Focus legend -->
         <div class="flex items-center justify-center gap-6 mt-6 text-[10px] text-snf-white/40 gs-hidden">
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Bitcoin</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> Privacy</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> DeFi</span>
-          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-snf-blue-500"></span> General</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> {m.mentors_focus_bitcoin()}</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-purple-500"></span> {m.mentors_focus_privacy()}</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> {m.mentors_focus_defi()}</span>
+          <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-snf-blue-500"></span> {m.mentors_focus_general()}</span>
         </div>
         
       </div>
@@ -1389,7 +1373,7 @@ const testimonials = [
         <div class="mt-6 pt-6 border-t border-snf-white/5 text-center">
           <p class="text-snf-white/40 text-xs mb-3">{m.footer_community_title()}</p>
           <div class="flex flex-wrap justify-center gap-4 text-xs">
-            <a href="https://discord.gg/starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_discord()}</a>
+            <a href="https://discord.com/invite/starknet-community" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_discord()}</a>
             <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_twitter()}</a>
             <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_forum()}</a>
             <a href="https://t.me/+-5zNW47GSdQ1ZDkx" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_telegram()}</a>
