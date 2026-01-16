@@ -10,7 +10,6 @@ import Monitor from '../components/icons/Monitor.astro';
 import Shield from '../components/icons/Shield.astro';
 import Users from '../components/icons/Users.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
-import SuccessPath from '../components/SuccessPath.astro';
 import * as m from '../paraglide/messages';
 
 const hackathonName = 'Re{define} Hackathon';
@@ -405,6 +404,7 @@ const testimonials = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/cooper-hewitt" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/junicode" rel="stylesheet" />
 
@@ -578,38 +578,34 @@ const testimonials = [
             <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
-            <span class="text-purple-300 text-sm font-medium">{m.badge_virtual()}</span>
+            <span class="text-purple-300 text-sm font-medium uppercase" style="font-family: 'Martian Mono', monospace;">{m.badge_virtual()}</span>
           </div>
           <div class="inline-flex items-center gap-2 bg-snf-blue-500/10 border border-snf-blue-500/20 rounded-full px-3 py-1.5">
             <span class="w-2 h-2 bg-snf-blue-500 rounded-full animate-pulse"></span>
-            <span class="text-snf-blue-400 text-sm font-medium">Register anytime until Feb 28</span>
+            <span class="text-snf-blue-400 text-sm font-medium uppercase" style="font-family: 'Martian Mono', monospace;">Register anytime until Feb 28</span>
           </div>
           <div class="inline-flex items-center gap-2 bg-snf-white/5 border border-snf-white/10 rounded-full px-3 py-1.5">
-            <span class="text-snf-white/70 text-sm font-medium">Feb 1–28, 2026</span>
+            <span class="text-snf-white/70 text-sm font-medium uppercase" style="font-family: 'Martian Mono', monospace;">Feb 1–28, 2026</span>
           </div>
-        </div>
-        
-        <!-- Starknet Branding -->
-        <div class="hero-element gs-hidden flex items-center justify-center gap-2 mb-4">
-          <img src="/partners/starknet-logo.png" alt="Starknet" class="h-6 w-6" />
-          <span class="text-snf-white/70 text-sm md:text-base font-medium">{m.hero_presented_by()}</span>
         </div>
         
         <!-- Main Title -->
-        <h1 class="hero-element gs-hidden font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 md:mb-8" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
+        <h1 class="hero-element gs-hidden font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 md:mb-8 uppercase" aria-label={`${m.hero_title_line1()} ${m.hero_title_line2()}`}>
           <span class="text-white">{m.hero_title_line1()}&#123;define&#125;</span><br/>
           <span class="bg-gradient-to-r from-purple-400 via-purple-500 to-snf-blue-500 bg-clip-text text-transparent">{m.hero_title_line2()}</span>
         </h1>
         
-        <!-- Subtitle with highlighted words -->
-        <p class="hero-element gs-hidden font-subheading text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed" set:html={m.hero_subtitle_build().replace(m.hero_subtitle_bitcoin_highlight(), `<span class="text-white font-semibold">${m.hero_subtitle_bitcoin_highlight()}</span>`).replace(m.hero_subtitle_privacy_highlight(), `<span class="text-purple-400 font-semibold">${m.hero_subtitle_privacy_highlight()}</span>`).replace(m.hero_subtitle_prizes_highlight(), `<span class="text-snf-blue-400 font-semibold">${m.hero_subtitle_prizes_highlight()}</span>`)} />
+        <!-- Subtitle -->
+        <p class="hero-element gs-hidden text-snf-white/70 text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 leading-relaxed" style="font-family: 'Martian Mono', monospace;">
+          {m.hero_subtitle_build()}
+        </p>
         
         <!-- Dual countdown timers -->
         <div class="hero-element gs-hidden mb-8 md:mb-10">
           <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
             
             <!-- Submissions Begin countdown -->
-            <div class="text-center" id="countdown-begin-container">
+            <div class="text-center" id="countdown-begin-container" style="font-family: 'Inter', sans-serif;">
               <p class="text-snf-blue-400 text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] uppercase mb-2 md:mb-3 font-medium">{m.countdown_submissions_begin()}</p>
               <div class="flex justify-center gap-1.5 md:gap-2" id="countdown-begin">
                 <div class="text-center">
@@ -644,7 +640,7 @@ const testimonials = [
             <div class="countdown-divider block md:hidden w-24 h-px bg-snf-white/10"></div>
             
             <!-- Submissions End countdown -->
-            <div class="text-center">
+            <div class="text-center" style="font-family: 'Inter', sans-serif;">
               <p class="text-snf-white/40 text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] uppercase mb-2 md:mb-3">{m.countdown_submissions_end()}</p>
               <div class="flex justify-center gap-1.5 md:gap-2" id="countdown-end">
                 <div class="text-center">
@@ -683,7 +679,8 @@ const testimonials = [
             href="https://dorahacks.io/hackathon/redefine/detail" 
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-gradient pulse-cta inline-flex items-center justify-center text-white px-7 py-3.5 rounded-full font-semibold text-base shadow-lg shadow-snf-blue-500/30 group"
+            class="btn-gradient pulse-cta inline-flex items-center justify-center text-white px-7 py-3.5 rounded-full font-semibold text-base shadow-lg shadow-snf-blue-500/30 group uppercase"
+            style="font-family: 'Martian Mono', monospace;"
           >
             {m.cta_register_primary()}
             <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
@@ -692,7 +689,8 @@ const testimonials = [
             href="https://t.me/+-5zNW47GSdQ1ZDkx"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn-outline btn-outline-muted inline-flex items-center justify-center text-snf-white/50 hover:text-snf-white/80 px-5 py-2.5 rounded-full font-medium text-sm"
+            class="btn-outline btn-outline-muted inline-flex items-center justify-center text-snf-white/50 hover:text-snf-white/80 px-5 py-2.5 rounded-full font-medium text-sm uppercase"
+            style="font-family: 'Martian Mono', monospace;"
           >
             {m.cta_join_telegram()}
           </a>
@@ -700,7 +698,7 @@ const testimonials = [
         
         <!-- Backed by -->
         <div class="hero-element gs-hidden mt-12">
-          <p class="text-snf-white/30 text-xs uppercase tracking-[0.2em] mb-4">{m.hero_backed_by()}</p>
+          <p class="text-snf-white/30 text-xs uppercase tracking-[0.2em] mb-4" style="font-family: 'Martian Mono', monospace;">{m.hero_backed_by()}</p>
           <div class="flex justify-center items-center gap-8">
             <img src="/partners/starknet-foundation.png" alt="Starknet Foundation" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
             <img src="/partners/starkware.png" alt="StarkWare" class="h-6 md:h-7 w-auto partner-logo-dark opacity-50 hover:opacity-80 transition-opacity" loading="lazy" decoding="async" />
@@ -726,7 +724,7 @@ const testimonials = [
     <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 border-b border-snf-white/5 overflow-hidden section-divider-top">
       <div class="max-w-5xl mx-auto">
         <div class="section-number">1</div>
-        <p class="font-subheading text-center text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-6 font-medium">{m.timeline_kicker()}</p>
+        <p class="text-center text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-6 font-medium" style="font-family: 'Martian Mono', monospace;">{m.timeline_kicker()}</p>
         
         <!-- Timeline container -->
         <div class="relative">
@@ -743,9 +741,9 @@ const testimonials = [
                   <span class="text-snf-blue-500 font-bold">1</span>
               </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_jan15()}</p>
-                  <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step1_title()}</h3>
-                  <p class="text-snf-white/40 text-xs">{m.timeline_step1_desc()}</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1" style="font-family: 'Martian Mono', monospace;">{m.timeline_date_jan15()}</p>
+                  <h3 class="text-snf-white/90 font-medium text-sm mb-1" style="font-family: 'Inter', sans-serif;">{m.timeline_step1_title()}</h3>
+                  <p class="text-snf-white/40 text-xs" style="font-family: 'Inter', sans-serif;">{m.timeline_step1_desc()}</p>
             </div>
               </div>
         </div>
@@ -757,9 +755,9 @@ const testimonials = [
                   <span class="text-snf-white/60 font-bold">2</span>
                 </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_feb1()}</p>
-                  <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step2_title()}</h3>
-                  <p class="text-snf-white/40 text-xs">{m.timeline_step2_desc()}</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1" style="font-family: 'Martian Mono', monospace;">{m.timeline_date_feb1()}</p>
+                  <h3 class="text-snf-white/90 font-medium text-sm mb-1" style="font-family: 'Inter', sans-serif;">{m.timeline_step2_title()}</h3>
+                  <p class="text-snf-white/40 text-xs" style="font-family: 'Inter', sans-serif;">{m.timeline_step2_desc()}</p>
                 </div>
               </div>
             </div>
@@ -772,8 +770,8 @@ const testimonials = [
                 </div>
                 <div class="md:mt-4">
                   <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_feb1_28()}</p>
-                  <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step3_title()}</h3>
-                  <p class="text-snf-white/40 text-xs">{m.timeline_step3_desc()}</p>
+                  <h3 class="text-snf-white/90 font-medium text-sm mb-1" style="font-family: 'Inter', sans-serif;">{m.timeline_step3_title()}</h3>
+                  <p class="text-snf-white/40 text-xs" style="font-family: 'Inter', sans-serif;">{m.timeline_step3_desc()}</p>
                 </div>
               </div>
             </div>
@@ -785,9 +783,9 @@ const testimonials = [
                   <span class="text-snf-white/60 font-bold">4</span>
                 </div>
                 <div class="md:mt-4">
-                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_feb28()}</p>
-                  <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step4_title()}</h3>
-                  <p class="text-snf-white/40 text-xs">{m.timeline_step4_desc()}</p>
+                  <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1" style="font-family: 'Martian Mono', monospace;">{m.timeline_date_feb28()}</p>
+                  <h3 class="text-snf-white/90 font-medium text-sm mb-1" style="font-family: 'Inter', sans-serif;">{m.timeline_step4_title()}</h3>
+                  <p class="text-snf-white/40 text-xs" style="font-family: 'Inter', sans-serif;">{m.timeline_step4_desc()}</p>
                 </div>
               </div>
             </div>
@@ -802,8 +800,8 @@ const testimonials = [
                 </div>
                 <div class="md:mt-4">
                   <p class="text-snf-white/40 text-[10px] uppercase tracking-wider mb-1">{m.timeline_date_mar15()}</p>
-                  <h3 class="text-snf-white/90 font-medium text-sm mb-1">{m.timeline_step5_title()}</h3>
-                  <p class="text-snf-white/40 text-xs">{m.timeline_step5_desc()}</p>
+                  <h3 class="text-snf-white/90 font-medium text-sm mb-1" style="font-family: 'Inter', sans-serif;">{m.timeline_step5_title()}</h3>
+                  <p class="text-snf-white/40 text-xs" style="font-family: 'Inter', sans-serif;">{m.timeline_step5_desc()}</p>
                 </div>
               </div>
             </div>
@@ -819,11 +817,11 @@ const testimonials = [
       <div class="max-w-6xl mx-auto">
         <div class="section-number">2</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_tracks_kicker()}</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium" style="font-family: 'Martian Mono', monospace;">{m.section_tracks_kicker()}</p>
+          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight uppercase">
             {m.tracks_title()}
           </h2>
-          <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
+          <p class="gs-hidden text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto" style="font-family: 'Inter', sans-serif;">
             {m.tracks_subtitle_ideas()}
             <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-400 hover:text-snf-blue-300 transition-colors"> {m.tracks_view_breakdown()}</a>.
           </p>
@@ -844,8 +842,8 @@ const testimonials = [
                     {i === 2 && <Monitor class="w-5 h-5 text-snf-blue-300" strokeWidth={1.5} />}
                   </div>
                   <div>
-                    <h3 class="font-display text-lg md:text-xl text-snf-white">{track.name}</h3>
-                    <p class="font-subheading text-snf-white/50 text-xs md:text-sm mt-1">{track.description}</p>
+                    <h3 class="font-display text-lg md:text-xl text-snf-white uppercase not-italic">{track.name}</h3>
+                    <p class="text-snf-white/50 text-xs md:text-sm mt-1" style="font-family: 'Inter', sans-serif;">{track.description}</p>
                     <span class:list={[
                       'track-pill',
                       i === 0 ? 'track-pill--privacy' : i === 1 ? 'track-pill--bitcoin' : 'track-pill--open',
@@ -855,18 +853,18 @@ const testimonials = [
                   </div>
                 </div>
                 <div class="flex items-center gap-3 text-xs text-snf-white/40">
-                  <span class="hidden sm:inline">{m.tracks_ideas_prize_notes()}</span>
+                  <span class="hidden sm:inline uppercase" style="font-family: 'Martian Mono', monospace;">{m.tracks_ideas_prize_notes()}</span>
                   <span class="summary-icon">+</span>
                 </div>
               </summary>
 
               <div class="mt-5 grid gap-4 lg:grid-cols-[1fr_1.4fr]">
                 <div class="rounded-xl border border-snf-white/10 bg-snf-black/40 p-4">
-                  <p class="font-subheading text-[10px] uppercase tracking-[0.2em] text-snf-white/40">{m.tracks_prizes_label()}</p>
-                  <p class="text-snf-white/60 text-xs mt-2">
+                  <p class="text-[10px] uppercase tracking-[0.2em] text-snf-white/40" style="font-family: 'Martian Mono', monospace;">{m.tracks_prizes_label()}</p>
+                  <p class="text-snf-white/60 text-xs mt-2" style="font-family: 'Inter', sans-serif;">
                     {m.tracks_prizes_description()}
                   </p>
-                  <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-snf-blue-400 text-xs mt-3 hover:text-snf-blue-300 transition-colors">
+                  <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-snf-blue-400 text-xs mt-3 hover:text-snf-blue-300 transition-colors uppercase" style="font-family: 'Martian Mono', monospace;">
                     {m.tracks_see_breakdown()}
                     <ArrowRight class="w-3.5 h-3.5" strokeWidth={2} />
                   </a>
@@ -874,16 +872,16 @@ const testimonials = [
                 <div class="space-y-3">
                   {trackIdeaGroups[i]?.groups.map((group) => (
                     <details class="track-ideas-group rounded-xl border border-snf-white/10 bg-snf-white/[0.02] p-4">
-                      <summary class="flex items-center justify-between gap-4 font-subheading text-snf-white/70 text-xs md:text-sm uppercase tracking-[0.18em] cursor-pointer">
+                      <summary class="flex items-center justify-between gap-4 text-snf-white/70 text-xs md:text-sm uppercase tracking-[0.18em] cursor-pointer" style="font-family: 'Martian Mono', monospace;">
                         <span>{group.title}</span>
                         <span class="summary-icon">+</span>
                       </summary>
                       <div class="mt-4 space-y-3 text-xs md:text-sm text-snf-white/60">
                         {group.items.map((item) => (
                           <div class="rounded-lg bg-snf-black/40 border border-snf-white/5 px-3 py-2">
-                            <div class="text-snf-white/90 font-medium">{item.title}</div>
+                            <div class="text-snf-white/90 font-medium" style="font-family: 'Inter', sans-serif;">{item.title}</div>
                             {item.description && (
-                              <div class="text-snf-white/50 mt-1">{item.description}</div>
+                              <div class="text-snf-white/50 mt-1" style="font-family: 'Inter', sans-serif;">{item.description}</div>
                             )}
                           </div>
                         ))}
@@ -898,8 +896,6 @@ const testimonials = [
       </div>
     </section>
 
-    <SuccessPath />
-
     <!-- ============================================ -->
     <!-- SOCIAL PROOF SECTION -->
     <!-- ============================================ -->
@@ -907,11 +903,11 @@ const testimonials = [
       <div class="max-w-5xl mx-auto">
         <div class="section-number">3</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.social_proof_kicker()}</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium" style="font-family: 'Martian Mono', monospace;">{m.social_proof_kicker()}</p>
+          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight uppercase">
             {m.social_proof_title()}
           </h2>
-          <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-lg mx-auto">
+          <p class="gs-hidden text-snf-white/40 text-sm mt-3 max-w-lg mx-auto" style="font-family: 'Inter', sans-serif;">
             {m.social_proof_note()}
           </p>
         </div>
@@ -947,16 +943,16 @@ const testimonials = [
         <!-- Metrics row -->
         <div class="grid grid-cols-3 gap-3 mb-8">
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
-            <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">12+</div>
-            <p class="text-snf-white/40 text-xs mt-1">{m.metric_teams_funded()}</p>
+            <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold" style="font-family: 'Inter', sans-serif;">12+</div>
+            <p class="text-snf-white/40 text-xs mt-1" style="font-family: 'Inter', sans-serif;">{m.metric_teams_funded()}</p>
           </div>
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
             <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">4</div>
-            <p class="text-snf-white/40 text-xs mt-1">{m.metric_projects_launched()}</p>
+            <p class="text-snf-white/40 text-xs mt-1" style="font-family: 'Inter', sans-serif;">{m.metric_projects_launched()}</p>
           </div>
           <div class="bg-snf-white/[0.02] rounded-lg p-4 text-center card-lift">
-            <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold">500+</div>
-            <p class="text-snf-white/40 text-xs mt-1">{m.metric_builders_supported()}</p>
+            <div class="text-snf-blue-500 text-2xl md:text-3xl font-bold" style="font-family: 'Inter', sans-serif;">500+</div>
+            <p class="text-snf-white/40 text-xs mt-1" style="font-family: 'Inter', sans-serif;">{m.metric_builders_supported()}</p>
           </div>
           </div>
 
@@ -967,11 +963,11 @@ const testimonials = [
             <div class="flex items-start gap-3 mb-4">
               <div class="w-10 h-10 rounded-full bg-snf-blue-500/20 flex items-center justify-center text-snf-blue-500 text-lg font-bold flex-shrink-0">M</div>
               <div>
-                <div class="text-snf-white/90 font-medium text-sm">{m.testimonial_1_author()}</div>
-                <div class="text-snf-blue-500/70 text-xs">{m.testimonial_1_role({ solve: "{solve}" })}</div>
+                <div class="text-snf-white/90 font-medium text-sm" style="font-family: 'Inter', sans-serif;">{m.testimonial_1_author()}</div>
+                <div class="text-snf-blue-500/70 text-xs" style="font-family: 'Inter', sans-serif;">{m.testimonial_1_role({ solve: "{solve}" })}</div>
           </div>
           </div>
-            <p class="text-snf-white/60 text-sm leading-relaxed">"{m.testimonial_1_quote()}"</p>
+            <p class="text-snf-white/60 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">"{m.testimonial_1_quote()}"</p>
         </div>
         
           <!-- Testimonial 2 -->
@@ -979,11 +975,11 @@ const testimonials = [
             <div class="flex items-start gap-3 mb-3">
               <div class="w-8 h-8 rounded-full bg-snf-blue-500/20 flex items-center justify-center text-snf-blue-500 text-sm font-bold flex-shrink-0">C</div>
               <div>
-                <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_2_author()}</div>
-                <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_2_role()}</div>
+                <div class="text-snf-white/90 font-medium text-xs" style="font-family: 'Inter', sans-serif;">{m.testimonial_2_author()}</div>
+                <div class="text-snf-blue-500/70 text-[10px]" style="font-family: 'Inter', sans-serif;">{m.testimonial_2_role()}</div>
         </div>
       </div>
-            <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_2_quote()}"</p>
+            <p class="text-snf-white/50 text-xs leading-relaxed" style="font-family: 'Inter', sans-serif;">"{m.testimonial_2_quote()}"</p>
           </div>
           
           <!-- Testimonial 3 -->
@@ -991,11 +987,11 @@ const testimonials = [
             <div class="flex items-start gap-3 mb-3">
               <div class="w-8 h-8 rounded-full bg-snf-blue-500/20 flex items-center justify-center text-snf-blue-500 text-sm font-bold flex-shrink-0">S</div>
               <div>
-                <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_3_author()}</div>
-                <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_3_role({ solve: "{solve}" })}</div>
+                <div class="text-snf-white/90 font-medium text-xs" style="font-family: 'Inter', sans-serif;">{m.testimonial_3_author()}</div>
+                <div class="text-snf-blue-500/70 text-[10px]" style="font-family: 'Inter', sans-serif;">{m.testimonial_3_role({ solve: "{solve}" })}</div>
         </div>
             </div>
-            <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_3_quote()}"</p>
+            <p class="text-snf-white/50 text-xs leading-relaxed" style="font-family: 'Inter', sans-serif;">"{m.testimonial_3_quote()}"</p>
       </div>
       
           <!-- Testimonial 4 -->
@@ -1003,11 +999,11 @@ const testimonials = [
             <div class="flex items-start gap-3 mb-3">
               <div class="w-8 h-8 rounded-full bg-snf-blue-500/20 flex items-center justify-center text-snf-blue-500 text-sm font-bold flex-shrink-0">D</div>
               <div>
-                <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_4_author()}</div>
-                <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_4_role({ solve: "{solve}" })}</div>
+                <div class="text-snf-white/90 font-medium text-xs" style="font-family: 'Inter', sans-serif;">{m.testimonial_4_author()}</div>
+                <div class="text-snf-blue-500/70 text-[10px]" style="font-family: 'Inter', sans-serif;">{m.testimonial_4_role({ solve: "{solve}" })}</div>
             </div>
             </div>
-            <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_4_quote()}"</p>
+            <p class="text-snf-white/50 text-xs leading-relaxed" style="font-family: 'Inter', sans-serif;">"{m.testimonial_4_quote()}"</p>
           </div>
           
           <!-- Testimonial 5 -->
@@ -1015,11 +1011,11 @@ const testimonials = [
             <div class="flex items-start gap-3 mb-3">
               <div class="w-8 h-8 rounded-full bg-snf-blue-500/20 flex items-center justify-center text-snf-blue-500 text-sm font-bold flex-shrink-0">T</div>
               <div>
-                <div class="text-snf-white/90 font-medium text-xs">{m.testimonial_5_author()}</div>
-                <div class="text-snf-blue-500/70 text-[10px]">{m.testimonial_5_role({ solve: "{solve}" })}</div>
+                <div class="text-snf-white/90 font-medium text-xs" style="font-family: 'Inter', sans-serif;">{m.testimonial_5_author()}</div>
+                <div class="text-snf-blue-500/70 text-[10px]" style="font-family: 'Inter', sans-serif;">{m.testimonial_5_role({ solve: "{solve}" })}</div>
               </div>
             </div>
-            <p class="text-snf-white/50 text-xs leading-relaxed">"{m.testimonial_5_quote()}"</p>
+            <p class="text-snf-white/50 text-xs leading-relaxed" style="font-family: 'Inter', sans-serif;">"{m.testimonial_5_quote()}"</p>
           </div>
         </div>
       </div>
@@ -1032,11 +1028,11 @@ const testimonials = [
       <div class="max-w-5xl mx-auto">
         <div class="section-number">4</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_kicker()}</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium" style="font-family: 'Martian Mono', monospace;">{m.resources_kicker()}</p>
+          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight uppercase">
             {m.resources_tooling_title()}
           </h2>
-          <p class="gs-hidden font-subheading text-snf-white/40 text-sm mt-3 max-w-lg mx-auto">
+          <p class="gs-hidden text-snf-white/40 text-sm mt-3 max-w-lg mx-auto" style="font-family: 'Inter', sans-serif;">
             {m.resources_tooling_subtitle()}
           </p>
         </div>
@@ -1053,7 +1049,7 @@ const testimonials = [
           >
             <div class="relative h-full bg-gradient-to-br from-snf-blue-500/10 via-purple-500/5 to-transparent rounded-xl p-5 md:p-6 border border-snf-blue-500/20 hover:border-snf-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-snf-blue-500/10">
               <!-- Badge -->
-              <span class="absolute top-3 right-3 px-2 py-0.5 bg-snf-blue-500/20 border border-snf-blue-500/30 rounded-full text-[9px] md:text-[10px] text-snf-blue-400 font-medium uppercase tracking-wider">
+              <span class="absolute top-3 right-3 px-2 py-0.5 bg-snf-blue-500/20 border border-snf-blue-500/30 rounded-full text-[9px] md:text-[10px] text-snf-blue-400 font-medium uppercase tracking-wider" style="font-family: 'Martian Mono', monospace;">
                 {m.resources_badge_developers()}
               </span>
               
@@ -1062,18 +1058,18 @@ const testimonials = [
                 <GraduationCap class="w-6 h-6 text-snf-blue-500" strokeWidth={1.5} />
               </div>
               
-              <h3 class="font-display text-lg md:text-xl font-bold mb-2 text-snf-white group-hover:text-snf-blue-400 transition-colors duration-200">
+              <h3 class="font-display text-lg md:text-xl font-bold mb-2 text-snf-white group-hover:text-snf-blue-400 transition-colors duration-200 uppercase">
                 {m.resource_academy_title()}
               </h3>
-              <p class="text-snf-white/50 text-xs md:text-sm mb-3 leading-relaxed">
+              <p class="text-snf-white/50 text-xs md:text-sm mb-3 leading-relaxed" style="font-family: 'Inter', sans-serif;">
                 {m.resource_academy_description()}
               </p>
               
               <!-- Features -->
-              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4" set:html={m.resources_academy_features().replace('<Available>', '<span class="text-snf-blue-400">').replace('</Available>', '</span>')} />
+              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4" style="font-family: 'Inter', sans-serif;" set:html={m.resources_academy_features().replace('<Available>', '<span class="text-snf-blue-400">').replace('</Available>', '</span>')} />
               
               <!-- CTA -->
-              <span class="inline-flex items-center gap-2 text-snf-blue-400 text-xs md:text-sm font-medium group-hover:gap-3 transition-all duration-200">
+              <span class="inline-flex items-center gap-2 text-snf-blue-400 text-xs md:text-sm font-medium group-hover:gap-3 transition-all duration-200 uppercase" style="font-family: 'Martian Mono', monospace;">
                 {m.resources_visit_academy()}
                 <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" strokeWidth={2} />
               </span>
@@ -1089,7 +1085,7 @@ const testimonials = [
           >
             <div class="relative h-full bg-gradient-to-br from-purple-500/10 via-snf-blue-500/5 to-transparent rounded-xl p-5 md:p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
               <!-- Badge -->
-              <span class="absolute top-3 right-3 px-2 py-0.5 bg-purple-500/20 border border-purple-500/30 rounded-full text-[9px] md:text-[10px] text-purple-400 font-medium uppercase tracking-wider">
+              <span class="absolute top-3 right-3 px-2 py-0.5 bg-purple-500/20 border border-purple-500/30 rounded-full text-[9px] md:text-[10px] text-purple-400 font-medium uppercase tracking-wider" style="font-family: 'Martian Mono', monospace;">
                 {m.resources_badge_founders()}
               </span>
               
@@ -1101,18 +1097,18 @@ const testimonials = [
                 </svg>
               </div>
               
-              <h3 class="font-display text-lg md:text-xl font-bold mb-2 text-snf-white group-hover:text-purple-400 transition-colors duration-200">
+              <h3 class="font-display text-lg md:text-xl font-bold mb-2 text-snf-white group-hover:text-purple-400 transition-colors duration-200 uppercase">
                 {m.resources_founder_basecamp_title()}
               </h3>
-              <p class="text-snf-white/50 text-xs md:text-sm mb-3 leading-relaxed">
+              <p class="text-snf-white/50 text-xs md:text-sm mb-3 leading-relaxed" style="font-family: 'Inter', sans-serif;">
                 {m.resources_founder_basecamp_desc()}
               </p>
               
               <!-- Features -->
-              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4" set:html={m.resources_founder_features().replace('<Available>', '<span class="text-purple-400">').replace('</Available>', '</span>')} />
+              <p class="text-snf-white/40 text-[10px] md:text-xs mb-4" style="font-family: 'Inter', sans-serif;" set:html={m.resources_founder_features().replace('<Available>', '<span class="text-purple-400">').replace('</Available>', '</span>')} />
               
               <!-- CTA -->
-              <span class="inline-flex items-center gap-2 text-purple-400 text-xs md:text-sm font-medium group-hover:gap-3 transition-all duration-200">
+              <span class="inline-flex items-center gap-2 text-purple-400 text-xs md:text-sm font-medium group-hover:gap-3 transition-all duration-200 uppercase" style="font-family: 'Martian Mono', monospace;">
                 {m.resources_watch_playlist()}
                 <ArrowRight class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-200" strokeWidth={2} />
               </span>
@@ -1126,7 +1122,7 @@ const testimonials = [
           {resources.filter(r => r.comingSoon).map((resource) => (
             <div class="gs-hidden bg-snf-white/[0.02] rounded-lg md:rounded-xl p-4 md:p-5 opacity-50 relative">
               <!-- Coming Soon Badge -->
-              <span class="absolute top-3 right-3 px-2 py-0.5 bg-snf-white/10 rounded-full text-[9px] md:text-[10px] text-snf-white/50 uppercase tracking-wider">{m.badge_coming_soon()}</span>
+              <span class="absolute top-3 right-3 px-2 py-0.5 bg-snf-white/10 rounded-full text-[9px] md:text-[10px] text-snf-white/50 uppercase tracking-wider" style="font-family: 'Martian Mono', monospace;">{m.badge_coming_soon()}</span>
               
               <!-- Icon -->
               <div class="w-8 h-8 md:w-10 md:h-10 bg-snf-blue-900/40 rounded-lg flex items-center justify-center mb-3 md:mb-4">
@@ -1138,8 +1134,8 @@ const testimonials = [
                   )}
                 </div>
                 
-              <h3 class="font-display text-sm md:text-base font-semibold mb-1 md:mb-1.5 text-snf-white/50">{resource.title}</h3>
-              <p class="text-snf-white/30 text-[10px] md:text-xs leading-relaxed">{resource.description}</p>
+              <h3 class="font-display text-sm md:text-base font-semibold mb-1 md:mb-1.5 text-snf-white/50 uppercase">{resource.title}</h3>
+              <p class="text-snf-white/30 text-[10px] md:text-xs leading-relaxed" style="font-family: 'Inter', sans-serif;">{resource.description}</p>
               </div>
           ))}
         </div>
@@ -1147,11 +1143,11 @@ const testimonials = [
         <!-- Resource Library -->
         <div class="mt-12 md:mt-16">
           <div class="text-center mb-8">
-            <p class="font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.resources_docs_index_kicker()}</p>
-            <h3 class="font-display text-lg md:text-xl lg:text-2xl font-bold text-snf-white">
+            <p class="text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium" style="font-family: 'Martian Mono', monospace;">{m.resources_docs_index_kicker()}</p>
+            <h3 class="font-display text-lg md:text-xl lg:text-2xl font-bold text-snf-white uppercase">
               {m.resources_docs_index_title()}
             </h3>
-            <p class="font-subheading text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto">
+            <p class="text-snf-white/40 text-sm mt-3 max-w-2xl mx-auto" style="font-family: 'Inter', sans-serif;">
               {m.resources_docs_index_subtitle()}
             </p>
           </div>
@@ -1159,7 +1155,7 @@ const testimonials = [
           <div class="grid md:grid-cols-2 gap-4">
             {resourceSections.map((section) => (
               <details class="resource-panel rounded-xl border border-snf-white/10 bg-snf-white/[0.02] p-5">
-                <summary class="flex items-center justify-between gap-4 font-display text-sm md:text-base text-snf-white cursor-pointer">
+                <summary class="flex items-center justify-between gap-4 font-display text-sm md:text-base text-snf-white cursor-pointer uppercase" style="font-family: 'Martian Mono', monospace;">
                   <span>{section.title}</span>
                   <span class="summary-icon">+</span>
                 </summary>
@@ -1171,8 +1167,8 @@ const testimonials = [
                       rel="noopener noreferrer"
                       class="block rounded-lg border border-snf-white/5 bg-snf-black/40 px-3 py-2 hover:border-snf-blue-500/30 hover:bg-snf-black/60 transition-colors"
                     >
-                      <div class="text-snf-white/90 font-medium">{item.name}</div>
-                      <div class="text-snf-white/50 mt-1">{item.description}</div>
+                      <div class="text-snf-white/90 font-medium" style="font-family: 'Inter', sans-serif;">{item.name}</div>
+                      <div class="text-snf-white/50 mt-1" style="font-family: 'Inter', sans-serif;">{item.description}</div>
                     </a>
                   ))}
                 </div>
@@ -1192,11 +1188,11 @@ const testimonials = [
       <div class="max-w-5xl mx-auto">
         <div class="section-number">5</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_mentors_kicker()}</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium" style="font-family: 'Martian Mono', monospace;">{m.section_mentors_kicker()}</p>
+          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight uppercase">
           {m.mentors_title()}
         </h2>
-          <p class="font-subheading text-snf-white/40 text-sm mt-3 gs-hidden">
+          <p class="text-snf-white/40 text-sm mt-3 gs-hidden" style="font-family: 'Inter', sans-serif;">
             {m.mentors_subtitle()}
           </p>
         </div>
@@ -1218,10 +1214,10 @@ const testimonials = [
                     loading="lazy"
                   />
                 </div>
-                <p class="font-display font-bold text-sm md:text-base text-snf-white/95">{mentor.name}</p>
-                <p class="text-snf-white/50 text-xs mt-0.5">{mentor.role}</p>
-                <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5">{mentor.org}</p>
-                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed">{mentor.bio}</p>
+                <p class="font-display font-bold text-sm md:text-base text-snf-white/95 uppercase">{mentor.name}</p>
+                <p class="text-snf-white/50 text-xs mt-0.5" style="font-family: 'Inter', sans-serif;">{mentor.role}</p>
+                <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5" style="font-family: 'Inter', sans-serif;">{mentor.org}</p>
+                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed" style="font-family: 'Inter', sans-serif;">{mentor.bio}</p>
                 
                 {mentor.xAccount && (
                   <a 
@@ -1257,10 +1253,10 @@ const testimonials = [
                     loading="lazy"
                   />
                 </div>
-                <p class="font-display font-bold text-sm md:text-base text-snf-white/95">{mentor.name}</p>
-                <p class="text-snf-white/50 text-xs mt-0.5">{mentor.role}</p>
-                <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5">{mentor.org}</p>
-                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed">{mentor.bio}</p>
+                <p class="font-display font-bold text-sm md:text-base text-snf-white/95 uppercase">{mentor.name}</p>
+                <p class="text-snf-white/50 text-xs mt-0.5" style="font-family: 'Inter', sans-serif;">{mentor.role}</p>
+                <p class="text-snf-blue-500 text-[10px] font-medium mt-0.5" style="font-family: 'Inter', sans-serif;">{mentor.org}</p>
+                <p class="text-snf-white/40 text-[11px] mt-2 leading-relaxed" style="font-family: 'Inter', sans-serif;">{mentor.bio}</p>
                 
                 {mentor.xAccount && (
                   <a 
@@ -1297,8 +1293,8 @@ const testimonials = [
       <div class="max-w-2xl mx-auto">
         <div class="section-number">6</div>
         <div class="text-center mb-10">
-          <p class="gs-hidden font-subheading text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium">{m.section_faq_kicker()}</p>
-          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight">
+          <p class="gs-hidden text-snf-blue-500 text-xs tracking-[0.25em] uppercase mb-2 font-medium" style="font-family: 'Martian Mono', monospace;">{m.section_faq_kicker()}</p>
+          <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold leading-tight uppercase">
           {m.faq_title()}
         </h2>
         </div>
@@ -1307,11 +1303,11 @@ const testimonials = [
           {faqs.map((faq, i) => (
             <div class="faq-item gs-hidden border-b border-snf-white/5" data-state="closed" data-faq-index={i}>
               <button type="button" class="faq-toggle group w-full flex justify-between items-center py-4 text-left" aria-expanded="false" aria-controls={`faq-answer-${i}`}>
-                <h3 class="font-medium text-sm text-snf-white/80 group-hover:text-snf-white transition-colors">{faq.q}</h3>
+                <h3 class="font-medium text-sm text-snf-white/80 group-hover:text-snf-white transition-colors uppercase" style="font-family: 'Martian Mono', monospace;">{faq.q}</h3>
                 <ChevronDown class="w-4 h-4 text-snf-white/30 transition-transform duration-200 faq-chevron flex-shrink-0 ml-3" strokeWidth={2} />
               </button>
               <div id={`faq-answer-${i}`} class="faq-answer" role="region">
-                <p class="text-snf-white/40 text-xs leading-relaxed pb-4">{faq.a}</p>
+                <p class="text-snf-white/40 text-xs leading-relaxed pb-4" style="font-family: 'Inter', sans-serif;">{faq.a}</p>
               </div>
             </div>
           ))}
@@ -1326,11 +1322,11 @@ const testimonials = [
     <section class="py-12 md:py-16 lg:py-24 px-4 md:px-6 section-divider-top">
       <div class="max-w-xl mx-auto text-center">
         
-        <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight">
+        <h2 class="gs-hidden font-display text-xl md:text-2xl lg:text-3xl font-bold mb-4 leading-tight uppercase">
           {m.final_cta_title()}
         </h2>
         
-        <p class="gs-hidden font-subheading text-snf-white/50 text-sm mb-8 max-w-md mx-auto">
+        <p class="gs-hidden text-snf-white/50 text-sm mb-8 max-w-md mx-auto" style="font-family: 'Inter', sans-serif;">
           {m.final_cta_subtitle()}
         </p>
         
@@ -1338,12 +1334,13 @@ const testimonials = [
           href="https://dorahacks.io/hackathon/redefine/detail" 
           target="_blank"
           rel="noopener noreferrer"
-          class="gs-hidden inline-block btn-gradient text-white px-9 py-3.5 rounded-full font-semibold text-base md:text-lg shadow-lg shadow-snf-blue-500/30"
+          class="gs-hidden inline-block btn-gradient text-white px-9 py-3.5 rounded-full font-semibold text-base md:text-lg shadow-lg shadow-snf-blue-500/30 uppercase"
+          style="font-family: 'Martian Mono', monospace;"
         >
           {m.final_cta_button()}
         </a>
         
-        <p class="gs-hidden text-snf-white/30 text-xs mt-6">
+        <p class="gs-hidden text-snf-white/30 text-xs mt-6" style="font-family: 'Inter', sans-serif;">
           {m.final_cta_note()}
         </p>
         
@@ -1358,12 +1355,12 @@ const testimonials = [
         
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
           <div class="flex flex-col md:flex-row items-center gap-1 md:gap-2 text-xs md:text-sm text-center">
-            <span class="font-display font-semibold text-snf-white/80">{hackathonName}</span>
-            <span class="hidden md:inline text-snf-white/20">{m.footer_by()}</span>
-            <span class="text-snf-blue-500 text-[10px] md:text-xs">{m.hero_powered_by_org()}</span>
+            <span class="font-display font-semibold text-snf-white/80 uppercase">{hackathonName}</span>
+            <span class="hidden md:inline text-snf-white/20" style="font-family: 'Inter', sans-serif;">{m.footer_by()}</span>
+            <span class="text-snf-blue-500 text-[10px] md:text-xs" style="font-family: 'Inter', sans-serif;">{m.hero_powered_by_org()}</span>
         </div>
         
-          <div class="flex gap-4 md:gap-6 text-[10px] md:text-xs text-snf-white/30">
+          <div class="flex gap-4 md:gap-6 text-[10px] md:text-xs text-snf-white/30" style="font-family: 'Inter', sans-serif;">
             <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white/60 transition-colors duration-200">{m.footer_twitter()}</a>
             <a href="https://discord.com/invite/starknet-community" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white/60 transition-colors duration-200">{m.footer_discord()}</a>
             <a href="https://starknet.io" target="_blank" rel="noopener noreferrer" class="hover:text-snf-white/60 transition-colors duration-200">{m.footer_starknet()}</a>
@@ -1371,8 +1368,8 @@ const testimonials = [
       </div>
 
         <div class="mt-6 pt-6 border-t border-snf-white/5 text-center">
-          <p class="text-snf-white/40 text-xs mb-3">{m.footer_community_title()}</p>
-          <div class="flex flex-wrap justify-center gap-4 text-xs">
+          <p class="text-snf-white/40 text-xs mb-3" style="font-family: 'Inter', sans-serif;">{m.footer_community_title()}</p>
+          <div class="flex flex-wrap justify-center gap-4 text-xs" style="font-family: 'Inter', sans-serif;">
             <a href="https://discord.com/invite/starknet-community" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_discord()}</a>
             <a href="https://twitter.com/Starknet" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_twitter()}</a>
             <a href="https://dorahacks.io/hackathon/redefine/detail" target="_blank" rel="noopener noreferrer" class="text-snf-blue-500/70 hover:text-snf-blue-500 transition-colors duration-200">{m.footer_forum()}</a>
@@ -1391,7 +1388,8 @@ const testimonials = [
         href="https://dorahacks.io/hackathon/redefine/detail" 
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 btn-gradient text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-lg shadow-snf-blue-500/30"
+        class="inline-flex items-center gap-2 btn-gradient text-white px-5 py-2.5 rounded-full font-medium text-sm shadow-lg shadow-snf-blue-500/30 uppercase"
+        style="font-family: 'Martian Mono', monospace;"
       >
         <span>{m.floating_cta()}</span>
         <ArrowRight class="w-4 h-4" strokeWidth={2} />

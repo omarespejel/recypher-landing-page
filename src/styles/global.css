@@ -1823,6 +1823,7 @@ details[open] > summary .summary-icon {
   font-size: 11px;
   color: rgba(243, 242, 241, 0.7);
   transition: all 0.2s ease;
+  font-family: 'Martian Mono', monospace;
 }
 
 .trust-badge:hover {
