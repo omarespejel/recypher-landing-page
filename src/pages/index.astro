@@ -439,7 +439,7 @@ const testimonials = [
     
     <title>{pageTitle}</title>
     
-    <!-- Fonts loaded via CDN: Cooper Hewitt, Junicode, Martian Mono -->
+    <!-- Fonts loaded via CDN: Cooper Hewitt, Junicode, Martian Mono, Inter -->
     
     <!-- Global Styles -->
     <style is:global>
@@ -450,7 +450,7 @@ const testimonials = [
       body {
         background-color: #070512;
         color: #F3F2F1;
-        font-family: 'Martian Mono', monospace;
+        font-family: 'Inter', sans-serif;
         overflow-x: hidden;
       }
       
@@ -533,7 +533,7 @@ const testimonials = [
       <div class="scroll-progress" id="scroll-progress"></div>
       <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-2">
         <!-- Short name on mobile, full name on desktop -->
-        <span class="font-display font-semibold text-sm md:text-lg text-snf-white/90 truncate uppercase">
+        <span class="font-martian font-semibold text-sm md:text-lg text-snf-white/90 truncate uppercase">
           BTC × PRIVACY
         </span>
         <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
@@ -574,18 +574,18 @@ const testimonials = [
         
         <!-- Status badges row -->
         <div class="hero-element gs-hidden flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
-          <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-3 py-1.5">
-            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 rounded-full px-2.5 py-1">
+            <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
-            <span class="text-purple-300 text-sm font-medium uppercase" style="font-family: 'Martian Mono', monospace;">{m.badge_virtual()}</span>
+            <span class="text-purple-300 text-xs font-medium uppercase" style="font-family: 'Martian Mono', monospace;">{m.badge_virtual()}</span>
           </div>
-          <div class="inline-flex items-center gap-2 bg-snf-blue-500/10 border border-snf-blue-500/20 rounded-full px-3 py-1.5">
-            <span class="w-2 h-2 bg-snf-blue-500 rounded-full animate-pulse"></span>
-            <span class="text-snf-blue-400 text-sm font-medium uppercase" style="font-family: 'Martian Mono', monospace;">Register anytime until Feb 28</span>
+          <div class="inline-flex items-center gap-2 bg-snf-blue-500/10 border border-snf-blue-500/20 rounded-full px-2.5 py-1">
+            <span class="w-1.5 h-1.5 bg-snf-blue-500 rounded-full animate-pulse"></span>
+            <span class="text-snf-blue-400 text-xs font-medium uppercase" style="font-family: 'Martian Mono', monospace;">Register anytime until Feb 28</span>
           </div>
-          <div class="inline-flex items-center gap-2 bg-snf-white/5 border border-snf-white/10 rounded-full px-3 py-1.5">
-            <span class="text-snf-white/70 text-sm font-medium uppercase" style="font-family: 'Martian Mono', monospace;">Feb 1–28, 2026</span>
+          <div class="inline-flex items-center gap-2 bg-snf-white/5 border border-snf-white/10 rounded-full px-2.5 py-1">
+            <span class="text-snf-white/70 text-xs font-medium uppercase" style="font-family: 'Martian Mono', monospace;">Feb 1–28, 2026</span>
           </div>
         </div>
         

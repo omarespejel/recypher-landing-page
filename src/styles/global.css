@@ -14,14 +14,15 @@ body {
 }
 
 /* Fonts:
-   - Headings: Cooper Hewitt Heavy
-   - Subheadings: Junicode
-   - Content: Martian Mono
+   - Headings: Cooper Hewitt Heavy (all caps)
+   - Subheadings/Buttons: Martian Mono (all caps)
+   - Body: Inter
+   - Accent Subheadings (rare): Junicode
 */
 
 /* Apply font defaults */
 body {
-  font-family: 'Martian Mono', monospace;
+  font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
@@ -31,6 +32,10 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .font-subheading {
   font-family: 'Junicode', Georgia, serif;
+}
+
+.font-martian {
+  font-family: 'Martian Mono', monospace;
 }
 
 .text-display-xl {
@@ -1608,6 +1613,7 @@ details summary::-webkit-details-marker {
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  font-family: 'Martian Mono', monospace;
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: rgba(243, 242, 241, 0.7);
   background: rgba(12, 10, 24, 0.5);
@@ -1684,6 +1690,7 @@ details[open] > summary .summary-icon {
   font-size: 9px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  font-family: 'Martian Mono', monospace;
   border: 1px solid rgba(91, 126, 207, 0.4);
   color: rgba(191, 219, 254, 0.9);
   background: rgba(91, 126, 207, 0.12);
