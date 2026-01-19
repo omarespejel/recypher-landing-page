@@ -532,10 +532,15 @@ const testimonials = [
     <nav class="fixed top-0 w-full z-50 bg-snf-black/90 backdrop-blur-2xl">
       <div class="scroll-progress" id="scroll-progress"></div>
       <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-2">
-        <!-- Short name on mobile, full name on desktop -->
-        <span class="font-martian font-semibold text-sm md:text-lg text-snf-white/90 truncate uppercase">
-          BTC × PRIVACY
-        </span>
+        <!-- Hackathon logo -->
+        <a href="/" class="flex items-center h-8 md:h-10 flex-shrink-0">
+          <img 
+            src="/main-website/starknet-hackathon-redefine-hero.png" 
+            alt="Starknet Hackathon Re{define}" 
+            class="h-full max-h-10 w-auto max-w-[200px] md:max-w-[240px] object-contain opacity-90 hover:opacity-100 transition-opacity"
+            loading="eager"
+          />
+        </a>
         <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
           <LanguageSwitcher />
           <a 
